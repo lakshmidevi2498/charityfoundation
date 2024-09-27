@@ -42,7 +42,7 @@ const NavbarComponent = () => {
         border: '0',
         cursor: 'pointer',
         position: 'relative',
-        zIndex:1, // Ensure the button is positioned relative for the background
+        zIndex:1,  
 
         '&:hover .button-bg': {
             filter: 'blur(10px)',
@@ -78,7 +78,7 @@ const NavbarComponent = () => {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" sx={{ backgroundColor: "#107A66" }}>
+                <AppBar position="static" sx={{ backgroundColor: "#107A66" ,height:"80px",justifyContent:"center"}}>
                     <Toolbar>
 
                         <Grid container alignItems="center" justifyContent="space-between">

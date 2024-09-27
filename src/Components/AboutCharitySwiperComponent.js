@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useRef } from 'react';
 import Controls from '../commons/controls';  
-import theme from '../Utilities/Theme';
+import theme from '../Utilities/Theme'; 
 
 const images = [
     "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
@@ -24,11 +24,14 @@ const MySwiper = () => {
         <Controls.Grid item xs={12} sx={{ position: 'relative' }}>
           <Swiper
             spaceBetween={10}
-            pagination={{ clickable: true }}
+            pagination={{
+              clickable: true,
+              el: '.swiper-pagination',  
+            }}
             onSwiper={(swiper) => { swiperRef.current = swiper; }}
             breakpoints={{
-              1440: { slidesPerView: 3 },
-              1024: { slidesPerView: 3 },
+              1440: { slidesPerView: 2 },
+              1024: { slidesPerView: 2 },
               764: { slidesPerView: 1 },
               576: { slidesPerView: 1 },
               320: { slidesPerView: 1 },
@@ -47,9 +50,10 @@ const MySwiper = () => {
                 </Controls.Card>
               </SwiperSlide>
             ))}
+            {/* Custom Pagination */}
+            <div className="swiper-pagination"></div>
           </Swiper>
   
-           
           <Controls.Grid
             style={{
               cursor: 'pointer',
@@ -62,13 +66,13 @@ const MySwiper = () => {
               padding: '2px',
               transform: 'translateY(-50%)',
               border: "2px solid green",
+              display:"flex"
             }}
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <Controls.ChevronLeft />
           </Controls.Grid>
   
-          
           <Controls.Grid
             style={{
               cursor: 'pointer',
@@ -81,6 +85,7 @@ const MySwiper = () => {
               padding: '2px',
               transform: 'translateY(-50%)',
               border: "2px solid green",
+              display:"flex"
             }}
             onClick={() => swiperRef.current?.slideNext()}
           >
@@ -89,6 +94,6 @@ const MySwiper = () => {
         </Controls.Grid>
       </Controls.Grid>
     );
-  };
-  
-  export default MySwiper;
+};
+
+export default MySwiper;

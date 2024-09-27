@@ -7,9 +7,9 @@ import MySwiper from './AboutCharitySwiperComponent';
 const AboutCharityComponent = () => {
   return (
     <Controls.Grid container justifyContent='center' my={3} xs={12}>
-      <Controls.Grid item xs={11} md={11} container spacing={4} sx={{}}>
+      <Controls.Grid item xs={9} container   sx={{  border:"" }}>
 
-        <Controls.Grid item xs={11}  sx={{ textAlign: 'left', }}>
+        <Controls.Grid item xs={12} sx={{ textAlign: 'left',paddingLeft: 0 }}>
           <Button
             variant='outlined'
             sx={{
@@ -39,16 +39,16 @@ const AboutCharityComponent = () => {
           </Typography>
         </Controls.Grid>
 
-        <Controls.Grid xs={12} sx={{ display: "flex", justifyContent: "center", paddingLeft: "28px" }} gap={2} mt={2}>
-  <Controls.Grid xs={4} sx={{ display: "flex", flexDirection: "column", width: "100%" }}> 
-    <Typography variant='body1' sx={{ textAlign: "justify", flexGrow: 1 }}>  
-      We are India's most trusted and also best in transparent crowdfunding platform, with a vision to create a social impact. Our unique model allows people from across the globe to donate towards raising funds for products required by NGOs and charities in India, which are then delivered to them by us. required by NGOs and charities in India, which are then delivered to them by us.
-    </Typography>
-  </Controls.Grid>
-  <Controls.Grid item xs={9} md={10}>
-    <MySwiper />
-  </Controls.Grid>
-</Controls.Grid>
+        <Controls.Grid xs={12} sx={{ display: "flex", justifyContent: "center",  }} mt={2}>
+          <Controls.Grid xs={5} sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+            <Typography variant='body1' sx={{ textAlign: "justify", flexGrow: 1 ,fontFamily:"poppins",fontSize:"17px"}}>
+              We are India's most trusted and also best in transparent crowdfunding platform, with a vision to create a social impact. Our unique model allows people from across the globe to donate towards raising funds for products required by NGOs and charities in India, which are then delivered to them by us. required by NGOs and charities in India, which are then delivered to them by us. We are India's most trusted and also best in transparent crowdfunding platform, with a vision to create a social impact. Our unique model allows people from across the globe to donate towards raising funds for products required by NGOs and charities in India, trusted and also best in transparent crowdfunding platform, with a vision to create a social impact. Our unique model allows people which are then delivered to them by us. 
+            </Typography>
+          </Controls.Grid>
+          <Controls.Grid item xs={7}  >
+            <MySwiper />
+          </Controls.Grid>
+        </Controls.Grid>
 
       </Controls.Grid>
     </Controls.Grid>

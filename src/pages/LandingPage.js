@@ -5,6 +5,10 @@ import AboutCharityComponent from '../Components/AboutCharityComponent'
 import MySwiper from '../Components/AboutCharitySwiperComponent'
 import WhatWeDoComponent from '../Components/WhatWeDoComponent'
 import Revolution from '../Components/Revolution'
+import OurFunFactsComponent from '../Components/OurFunFactsComponent'
+import LatestCauseComponent from '../Components/LatestCauseComponent'
+import VolunteerComponent from '../Components/VolunteerComponent'
+import FooterComponent from '../Components/FooterComponent'
 
 const LandingPage = () => {
   return (
@@ -14,6 +18,10 @@ const LandingPage = () => {
     <AboutCharityComponent/>
     <WhatWeDoComponent/>
     <Revolution/>
+    <OurFunFactsComponent/>
+    <LatestCauseComponent/>
+    <VolunteerComponent/>
+    <FooterComponent/>
     </>
   )
 }

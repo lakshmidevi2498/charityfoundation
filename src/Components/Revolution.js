@@ -5,7 +5,7 @@ import theme from '../Utilities/Theme'
 const Revolution = () => {
     return (
         <>
-            <Controls.Grid container xs={12} sx={{ justifyContent: "center" ,border:"2px solid red"}}>
+            <Controls.Grid container xs={12} sx={{ justifyContent: "center" ,}} my={7}>
                 <Controls.Grid item xs={12}>
                     <Controls.Typography variant='h5' sx={{
                         color: theme.palette.one.green, fontFamily: 'Poppins',
@@ -15,9 +15,9 @@ const Revolution = () => {
                         textAlign: 'center',
                     }}>Join the Revolution</Controls.Typography>
 
-                    <Controls.Grid item sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",paddingX:"50px"}} xs={8}gap={3}>
-                        <Controls.TextField label="Enter Message" size='small' sx={{ width: '40%' }}></Controls.TextField>
-                        <Controls.Button variant='contained' sx={{color:theme.palette.one.main,backgroundColor:theme.palette.one.green,textTransform:"inherit" }}>Submit  Message</Controls.Button>
+                    <Controls.Grid item sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",}} xs={8}gap={3}>
+                        <Controls.TextField label="Enter Message" size='small' sx={{ width: '25%', }} xs={6}></Controls.TextField>
+                        <Controls.Button variant='contained' sx={{color:theme.palette.one.main,backgroundColor:theme.palette.one.green,textTransform:"inherit",paddingX:"60px",paddingY:"8px" }} xs={6}>Submit  Message</Controls.Button>
                     </Controls.Grid>
                 </Controls.Grid>
 
