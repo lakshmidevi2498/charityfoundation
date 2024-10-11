@@ -1,136 +1,120 @@
 import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles'; 
+import AppBar from '@mui/material/AppBar';  
+import { NavLink } from 'react-router-dom';  
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Controls from '../commons/controls';
+import AnimatedButton from './AnimatedButton';
 
 const NavbarComponent = () => {
-    const [activeLink, setActiveLink] = useState('Home');
+  const [activeLink, setActiveLink] = useState('Home');
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 600px)');  
 
+  const handleLinkClick = (link) => {
+    setActiveLink(link); 
+    setDrawerOpen(false);
+  };
 
-    const handleLinkClick = (link) => {
-        setActiveLink(link);
-    };
-    const links = [
-        { name: 'Home', href: '#' },
-        { name: 'About Us', href: '#' },
-        { name: 'Get Involved', href: '#' },
-        { name: 'Our work', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Contact Us', href: '#' },
-    ];
-    const ButtonWrapper = styled('div')({
-        position: 'relative',
-    });
+  const toggleDrawer = (open) => (event) => {
+   
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      alert("cvbnm")
+      return;
+    }
+    setDrawerOpen(open);
+  };
 
-    const StyledButton = styled(Button)(({ theme }) => ({
-        display: 'block',
-        fontSize: '15px',
-        lineHeight: '10px',
-        fontWeight: 200,
-        textTransform: 'inherit',
-        padding: "15px",
-        backgroundColor: '#ffc700',
-        color: 'black',
-        borderRadius: '50px',
-        border: '0',
-        cursor: 'pointer',
-        position: 'relative',
-        zIndex:1,  
+  const links = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/aboutus' },
+    { name: 'Get Involved', href: '/getinvolved' },
+    { name: 'Our Work', href: '/ourwork' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact Us', href: '/contactus' },
+  ];
 
-        '&:hover .button-bg': {
-            filter: 'blur(10px)',
-            transition: 'filter .4s ease-in',
-        },
-    }));
+ 
 
-    const ButtonBg = styled('div')({
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: 'calc(100% + 4px)',
-        height: 'calc(100% + 4px)',
-        background: 'linear-gradient(90deg,     #219D80 68.23%, #FFFFFF 100%)',
-        backgroundSize: '600% 600%',
-        borderRadius: '50px',
-        animation: 'AnimateBorder 4s ease infinite',
-        zIndex: 0,
-        transform: 'translate(-2px, -2px)',
-    });
+  const drawerLinks = (
+    <Controls.Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={() => setDrawerOpen(false)}  
+      onKeyDown={() => setDrawerOpen(false)}
+    >
+      <Controls.List>
+        {links.map((link) => (
+          <Controls.ListItem
+            button
+            key={link.name}
+            component={NavLink}  
+            to={link.href}
+            onClick={() => handleLinkClick(link.name)}  
+            style={({ isActive }) => ({
+              color: isActive ? '#ffc700' : 'black',  
+              textDecoration: 'none', 
+            })}
+          >
+            <Controls.ListItemText
+              primary={link.name}
+            />
+          </Controls.ListItem>
+        ))}
+      </Controls.List>
+    </Controls.Box>
+  );
 
-    const GlobalStyles = () => {
-        return (
-            <style>{`
-                @keyframes AnimateBorder {
-                    0% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                    100% { background-position: 0% 50%; }
-                }
-            `}</style>
-        );
-    };
-    return (
-        <>
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" sx={{ backgroundColor: "#107A66" ,height:"80px",justifyContent:"center"}}>
-                    <Toolbar>
+  return (
+    <>
+      <Controls.Box sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}>
+        <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "60px", sm: '80px' }, justifyContent: 'center', padding: { xs: "10px", sm: "10px", md: "20px" } }}>
+          <Controls.Grid container alignItems="center" justifyContent="space-between">
+            <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } }} gap={1}>
+              <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={1} />
+              <Controls.Typography variant="h5" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { xs: "10px", sm: "" } }}>
+                Foundation
+              </Controls.Typography>
+            </Controls.Grid>
 
-                        <Grid container alignItems="center" justifyContent="space-between">
-                            <Grid item sx={{ display: "flex" }} gap={1}>
-                                
-                                {/* <img src="assests/images/Vector.png" alt="Vector Image" className="" width='30px' height="30px"/> */}
-                                <Box component="img" src="assests/images/Vector.png" alt="Vector Image" width='30px' height="30px"mt={1}/>
-                                <Typography variant="h5" component="div" mt={1}>
-                                    Foundation
-                                </Typography>
-                            </Grid>
+            {isMobile ? (
+              <Controls.Grid item sx={{ order: { xs: 3, sm: 2 } }}>
+                <Controls.IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
+                  <Controls.MenuIcon />
+                </Controls.IconButton>
+              </Controls.Grid>
+            ) : (
+              <Controls.Grid item sx={{ order: { xs: 3, sm: 2 } }}>
+                <Controls.Box sx={{ display: 'flex', gap: {xs:3,sm:2,md:3} }}>
+                  {links.map((link) => (
+                    <NavLink  
+                      key={link.name}
+                      to={link.href}
+                      style={({ isActive }) => ({
+                        color: isActive ? '#ffc700' : 'white',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                      })}
+                      onClick={() => handleLinkClick(link.name)}  
+                    >
+                      {link.name}
+                    </NavLink>
+                  ))}
+                </Controls.Box>
+              </Controls.Grid>
+            )}
 
+            <Controls.Grid item sx={{ order: { xs: 2, sm: 3 } }}>
+              <AnimatedButton/>
+            </Controls.Grid>
+          </Controls.Grid>
+        </AppBar>
 
-                            <Grid item>
-                                <Box sx={{ display: 'flex', gap: 3 }}>
-                                    {links.map((link) => (
-                                        <Link
-                                            key={link.name}
-                                            href={link.href}
-                                            color="inherit"
-                                            underline="none"
-                                            sx={{
-                                                color: activeLink === link.name ? '#ffc700' : 'white',
-                                                cursor: 'pointer',
-                                                '&:hover': {
-                                                    color: '#ffc700',
-                                                }
-                                            }}
-                                            onClick={() => handleLinkClick(link.name)}
-                                        >
-                                            {link.name}
-                                        </Link>
-                                    ))}
-                                </Box>
-                            </Grid>
-
-
-                            <Grid item>
-                                <ButtonWrapper>
-                                    <ButtonBg className="button-bg" />
-                                    <StyledButton>
-                                        Donate Now
-                                    </StyledButton>
-                                </ButtonWrapper>
-                                <GlobalStyles />
-                            </Grid>
-                        </Grid>
-                    </Toolbar>
-                </AppBar>
-            </Box>
-        </>
-    );
-}
+        <Controls.Drawer anchor="right" open={ drawerOpen} onClose={toggleDrawer(false)}>
+          {drawerLinks}
+        </Controls.Drawer>
+      </Controls.Box>
+    </>
+  );
+};
 
 export default NavbarComponent;

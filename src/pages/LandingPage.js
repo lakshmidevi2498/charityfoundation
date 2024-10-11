@@ -19,8 +19,8 @@ const LandingPage = () => {
     <WhatWeDoComponent/>
     <Revolution/>
     <OurFunFactsComponent/>
-    <LatestCauseComponent/>
-    <VolunteerComponent/>
+    <LatestCauseComponent/> 
+    <VolunteerComponent textColor="black"/>
     <FooterComponent/>
     </>
   )

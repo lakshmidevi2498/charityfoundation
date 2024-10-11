@@ -1,15 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Controls from '../commons/controls';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import theme from '../Utilities/Theme';
+import { useNavigate } from 'react-router-dom';
 
-const SwiperComponent = ({ images }) => {
-    const swiperRef = useRef(null);
-
+const SwiperComponent = ({ images,swiperRef }) => {
+    const navigate = useNavigate()
+    const handleDonatePage = () => {
+        navigate('/donate')
+      }
+ 
     return (
         <>
-            <Controls.Grid container justifyContent='center' sx={{ overflow: 'hidden', position: 'relative',paddingY:"40px" }} >
+            <Controls.Grid container justifyContent='center' sx={{ overflow: 'hidden', position: 'relative',paddingY:"20px" }} >
     <Controls.Grid item xs={12}>
         <Swiper
             spaceBetween={20}   
@@ -23,7 +27,8 @@ const SwiperComponent = ({ images }) => {
             }}
         >
             {images.map((item, index) => (
-                <SwiperSlide key={index} style={{ width: '100%', }} >
+                <Controls.Grid item xs={12} sm={6} md={4} lg={3} >
+                <SwiperSlide  style={{ width: '100%', }} key={index}>
                     <Controls.Card sx={{boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.2)' ,border:"1px solid lightgray",borderRadius:"2px"}} >
                         <Controls.CardMedia
                             component='img'
@@ -56,16 +61,17 @@ const SwiperComponent = ({ images }) => {
                                 <Controls.Typography variant='h6' sx={{ fontFamily: "Montserrat", fontSize: "16px" }}>${item.raised}</Controls.Typography>
                                 <Controls.Typography mt={1} sx={{ fontFamily: "Montserrat", fontSize: "16px" }}>${item.goal}</Controls.Typography>
                             </Controls.Grid>
-                            <Controls.Button variant='outlined' sx={{ color: theme.palette.one.green, border: "2px solid #107A66" }}>Donate now</Controls.Button>
+                            <Controls.Button variant='outlined' sx={{ color: theme.palette.one.green, border: "2px solid #107A66" }} onClick={handleDonatePage}>Donate now</Controls.Button>
                         </Controls.CardContent>
                     </Controls.Card>
                 </SwiperSlide>
+                </Controls.Grid>
             ))}
         </Swiper>
     </Controls.Grid>
 
      
-    <Controls.Grid
+    {/* <Controls.Grid
         style={{
             cursor: 'pointer',
             backgroundColor: "#D9F5EE",
@@ -100,7 +106,7 @@ const SwiperComponent = ({ images }) => {
         onClick={() => swiperRef.current?.slideNext()}
     >
         <Controls.ChevronRight />
-    </Controls.Grid>
+    </Controls.Grid> */}
 </Controls.Grid>
 
         </>
