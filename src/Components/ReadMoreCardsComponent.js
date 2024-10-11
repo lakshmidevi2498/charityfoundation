@@ -83,7 +83,7 @@ const ReadMoreCardsComponent = () => {
                                                     borderRadius: "30px",
                                                     textTransform: "initial",
                                                     paddingY: "7px",
-                                                    paddingX: {xs:"7px",sm:"15px"},
+                                                    paddingX: {xs:"7px",sm:"10px"},
                                                     fontWeight: "bold",
                                                     fontSize: {xs:"18px",sm:"20px"},
                                                 }}
@@ -117,7 +117,7 @@ const ReadMoreCardsComponent = () => {
                                                 sx={{ position: "absolute", top: 15, right: "20px", color: theme.palette.one.main ,width:"15px",height:"15px"}}
                                             />
                                             <Controls.Typography
-                                                variant="h6"
+                                                variant="caption1"
                                                 component="div"
                                                 sx={{ color: theme.palette.one.main, fontSize: "18px" }}
                                             >

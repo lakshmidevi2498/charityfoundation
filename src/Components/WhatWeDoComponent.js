@@ -47,17 +47,17 @@ const WhatWeDoComponent = () => {
 
       <Controls.Box sx={{ position: 'relative', zIndex: 3, }} >
         <Controls.Grid item sx={{ justifyContent: "center", zIndex: 2, }} >
-          <Controls.Grid item sx={{ justifyContent: "center", margin: "auto", zIndex: 2 }} container xs={9}>
-            <Controls.Typography variant='' sx={{ margin: "auto", textAlign: "center", zIndex: 2, fontSize: { xs: "40px", sm: "44px" } }}>What we do?</Controls.Typography>
+          <Controls.Grid item sx={{ justifyContent: "center", margin: "auto", zIndex: 2 }} container xs={10} md={10}lg={9}>
+            <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", zIndex: 2, fontSize: { xs: "40px", sm: "44px" } }}>What we do?</Controls.Typography>
             <Controls.Grid item sx={{}}>
-              <Controls.Typography variant='' sx={{ margin: "auto", textAlign: "center", color: theme.palette.one.main, fontSize: { xs: "15px", sm: "20px" } }}>
+              <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", color: theme.palette.one.main, fontSize: { xs: "15px", sm: "20px" } }}>
                 The greatness of a community is most accurately measured by the compassionate actions of its members. It is more blessed to give than to receive. A charity that costs nothing is worth nothing. Here about Charity:
               </Controls.Typography>
               <Controls.Grid container justifyContent='center' spacing={2} mt={2}>
                 {content.map((item, index) => (
-                  <Controls.Grid key={index} item xs={12} sm={6} lg={4}>
+                  <Controls.Grid key={index} item xs={12} sm={6} lg={4} >
                     {isMobile ? (
-                      <Controls.Card sx={{ background: 'transparent', textAlign: 'center' }}>
+                      <Controls.Card sx={{ background: 'transparent', textAlign: 'center' ,}}>
                         <Controls.CardMedia
                           component="img"
                           src={item.gif}
@@ -74,9 +74,11 @@ const WhatWeDoComponent = () => {
                         />
 
                         <Controls.CardContent>
-                          <Controls.Typography variant='body1' sx={{ color: theme.palette.one.main }}>
+                          <Controls.Grid item>
+                          <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main }}>
                             {item.text}
                           </Controls.Typography>
+                          </Controls.Grid>
                           <Controls.Button
                             variant='contained'
                             sx={{
@@ -107,9 +109,11 @@ const WhatWeDoComponent = () => {
                           />
                         </Controls.Grid>
                         <Controls.Grid item xs={7}  >
-                          <Controls.Typography variant='body1' sx={{ color: theme.palette.one.main }}>
+                        <Controls.Grid item>
+                          <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main }}>
                             {item.text}
                           </Controls.Typography>
+                          </Controls.Grid>
                           <Controls.Button
                             variant='contained'
                             sx={{

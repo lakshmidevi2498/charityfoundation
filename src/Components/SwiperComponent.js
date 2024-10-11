@@ -38,11 +38,15 @@ const SwiperComponent = ({ images,swiperRef }) => {
                             sx={{  objectFit: 'cover' }}
                         />
                         <Controls.CardContent>
-                            <Controls.Typography variant='h6' sx={{ color: theme.palette.one.green, fontWeight: "bold", fontFamily: theme.palette.caption2, textAlign: "left" }}>{item.text}</Controls.Typography>
-                            <Controls.Typography variant='h6' sx={{ fontWeight: "bold", fontFamily: theme.palette.caption2 }}>{item.name}</Controls.Typography>
+                            <Controls.Grid item>
+                            <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: "bold",   textAlign: "left" }}>{item.text}</Controls.Typography>
+                            </Controls.Grid>
+                            <Controls.Grid item>
+                            <Controls.Typography variant='caption2' sx={{ fontWeight: "bold",fontSize:{xs:"18px",md:"22px"}   }}>{item.name}</Controls.Typography>
+                            </Controls.Grid>
                             <Controls.Typography sx={{ fontSize: "14px" }}>{item.descp}</Controls.Typography>
                             <Controls.Grid item sx={{ justifyContent: "space-between", display: 'flex' }}>
-                                <Controls.Typography variant='h6' sx={{ fontFamily: theme.palette.caption2, fontSize: "16px" }}>Donate</Controls.Typography>
+                                <Controls.Typography variant='caption2' sx={{  fontSize: "16px" }}>Donate</Controls.Typography>
                                 <Controls.Typography variant='caption2'mt={1} >{item.percent}%</Controls.Typography>
                             </Controls.Grid>
                             <Controls.LinearProgress
@@ -58,8 +62,8 @@ const SwiperComponent = ({ images,swiperRef }) => {
                                 }}
                             />
                             <Controls.Grid item sx={{ justifyContent: "space-between", display: 'flex' }}>
-                                <Controls.Typography variant='h6' sx={{ fontFamily: "Montserrat", fontSize: "16px" }}>${item.raised}</Controls.Typography>
-                                <Controls.Typography mt={1} sx={{ fontFamily: "Montserrat", fontSize: "16px" }}>${item.goal}</Controls.Typography>
+                                <Controls.Typography variant='caption2' sx={{   fontSize: "16px" }}>${item.raised}</Controls.Typography>
+                                <Controls.Typography variant='caption2' mt={1} sx={{  fontSize: "16px" }}>${item.goal}</Controls.Typography>
                             </Controls.Grid>
                             <Controls.Button variant='outlined' sx={{ color: theme.palette.one.green, border: "2px solid #107A66" }} onClick={handleDonatePage}>Donate now</Controls.Button>
                         </Controls.CardContent>

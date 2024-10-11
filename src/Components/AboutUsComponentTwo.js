@@ -6,7 +6,7 @@ const AboutUsComponentTwo = () => {
   return (
     <>
       <Controls.Grid container justifyContent="center" mt={5}   >
-        <Controls.Grid item xs={10}>
+        <Controls.Grid item xs={10} md={11} lg={10}>
           <Controls.Grid container justifyContent="center" sx={{ display: { xs: "block", md: "flex" } }}>
             
             
@@ -24,13 +24,12 @@ const AboutUsComponentTwo = () => {
               }}
             >
               <Controls.Grid item>
-                <Controls.Typography>About us</Controls.Typography>
+                <Controls.Typography variant='caption2' sx={{fontSize:{xs:'18px',sm:"20px"}}}>About us</Controls.Typography>
               </Controls.Grid>
               <Controls.Grid item>
-                <Controls.Typography
-                  sx={{
-                    fontFamily: 'Lato',
-                    fontSize: '39px',
+                <Controls.Typography variant='caption4'
+                  sx={{ 
+                    fontSize: {xs:"30px",md:'39px'},
                     fontWeight: 700,
                     lineHeight: '50px',
                     textAlign: 'left',
@@ -41,9 +40,8 @@ const AboutUsComponentTwo = () => {
                 </Controls.Typography>
               </Controls.Grid>
               <Controls.Grid item>
-                <Controls.Typography
-                  sx={{
-                    fontFamily: 'Montserrat',
+                <Controls.Typography variant='caption2'
+                  sx={{ 
                     fontSize: '16px',
                     fontWeight: 500,
                     lineHeight: '24px',
@@ -55,9 +53,8 @@ const AboutUsComponentTwo = () => {
               </Controls.Grid>
               <br />
               <Controls.Grid item>
-                <Controls.Typography
-                  sx={{
-                    fontFamily: 'Montserrat',
+                <Controls.Typography variant='caption2'
+                  sx={{ 
                     fontSize: '16px',
                     fontWeight: 500,
                     lineHeight: '24px',

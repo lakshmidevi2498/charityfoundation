@@ -13,15 +13,15 @@ const AboutUsComponentFour = () => {
     return (
         <>
             <Controls.Grid container justifyContent='center' my={5}>
-                <Controls.Grid item xs={10} sx={{ justifyContent: "center" }}>
+                <Controls.Grid item xs={10} md={11} lg={10}sx={{ justifyContent: "center" }}>
                     <Controls.Grid item >
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
-                            <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                            <Controls.Typography variant='caption4' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
                                 About
                             </Controls.Typography>
                             <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
                         </Controls.Box>
-                        <Controls.Typography sx={{ color: theme.palette.one.green, fontFamily: "lato", fontWeight: 700, fontSize: "30px" }}>Our Features</Controls.Typography>
+                        <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontFamily: "lato", fontWeight: 700, fontSize: "30px" }}>Our Features</Controls.Typography>
 
                     </Controls.Grid>
                     <Controls.Grid container justifyContent="center" spacing={2} >
@@ -46,12 +46,14 @@ const AboutUsComponentFour = () => {
                                         height="100px"
                                     />
                                     <Controls.CardContent sx={{ textAlign: "start" ,padding:"5px"}}>
-                                        <Controls.Typography
+                                        <Controls.Grid item>
+                                        <Controls.Typography variant='caption4'
                                             sx={{ fontSize: "18px", fontWeight: "bold", fontFamily: "lato" }}
                                         >
                                             {item.h1}
                                         </Controls.Typography>
-                                        <Controls.Typography sx={{ fontSize: "14px", fontFamily: "poppins" }} my={2}>
+                                        </Controls.Grid>
+                                        <Controls.Typography variant='caption4' sx={{ fontSize: "14px", fontFamily: "poppins" }} my={2}>
                                             {item.descp}
                                         </Controls.Typography>
                                         <Controls.List sx={{ listStyleType: "numbers",paddingLeft:"10px" ,}}>

@@ -34,12 +34,12 @@ const FooterComponent = () => {
                     <Controls.Grid container sx={{ display: "flex", justifyContent: "space-between" }} mb={3}>
 
                         <Controls.Grid item xs={12} sm={6} md={4} lg={2}>
-                            <Controls.Typography variant='h5' sx={{ fontWeight: "bold" }}>
+                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>
                                 Who We Are?
                             </Controls.Typography>
                             <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc', }}>
                                 {content1.map((item, index) => (
-                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item', }}>
+                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item',fontFamily:"poppins" }}>
                                         {item}
                                     </Controls.ListItem>
                                 ))}
@@ -48,10 +48,10 @@ const FooterComponent = () => {
 
 
                         <Controls.Grid item xs={12} sm={6} md={4} >
-                            <Controls.Typography variant='h5' sx={{ fontWeight: "bold" }}>What We Do?</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>What We Do?</Controls.Typography>
                             <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                 {content2.map((item, index) => (
-                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', }}>{item}</Controls.ListItem>
+                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
                                 ))}
                             </Controls.List>
                         </Controls.Grid>
@@ -59,20 +59,20 @@ const FooterComponent = () => {
 
                         <Controls.Grid item xs={12} sm={6} md={4}>
                             <Controls.Grid item>
-                                <Controls.Typography variant='h5' sx={{ fontWeight: "bold" }}>Get Involved</Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>Get Involved</Controls.Typography>
                                 <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                     {content3.map((item, index) => (
-                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', }}>{item}</Controls.ListItem>
+                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
                                     ))}
                                 </Controls.List>
                             </Controls.Grid>
 
 
                             <Controls.Grid item>
-                                <Controls.Typography variant='h5' sx={{ fontWeight: "bold" }}>For any queries</Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>For any queries</Controls.Typography>
                                 <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                     {content4.map((item, index) => (
-                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', }}>{item}</Controls.ListItem>
+                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
                                     ))}
                                 </Controls.List>
                             </Controls.Grid>
@@ -108,7 +108,7 @@ const FooterComponent = () => {
                 </Controls.Grid>
                 <Controls.Grid sx={{ justifyContent: "center", textAlign: "center", display: "flex" }} mt={3} gap={1}>
                         <Controls.Box component='img' src='./assests/images/Vector (1).png'  sx={{width:{xs:"25px",sm:"30px"},height:{xs:"25px",sm:"30px"}}} />
-                        <Controls.Typography sx={{ fontWeight: "bold",fontSize:{xs:"12px",sm:"15px"} }}>All copyrights Reserved 2024 | Terms and Conditions | Privacy Policy | Charity No: ACT1002</Controls.Typography>
+                        <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"12px",sm:"15px"} }}>All copyrights Reserved 2024 | Terms and Conditions | Privacy Policy | Charity No: ACT1002</Controls.Typography>
                     </Controls.Grid>
             </Controls.Grid>
         </Controls.Grid>

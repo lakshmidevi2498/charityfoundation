@@ -24,12 +24,16 @@ const NeedHelpComponent = () => {
   return (
     <>
       <Controls.Grid container justifyContent="center" my={5}>
-        <Controls.Grid item xs={10} sx={{ justifyContent: "center", }}>
-          <Controls.Typography sx={{ color: theme.palette.one.green, textAlign: "left", fontWeight: 700, fontSize: {xs:'24px',sm:"26px"}, fontFamily: "poppins", }}>Still Need Help</Controls.Typography>
-          <Controls.Typography sx={{ fontFamily: "poppins", }}>We enjoy adapting our strategies to offer We believe in the equal value of every human being and the importance of respecting and honoring each individual; we know that change happens through people. every client the best solutions that are at the forefront of the industry.</Controls.Typography>
+        <Controls.Grid item xs={10}md={11} lg={10} sx={{ justifyContent: "center", }}>
+          <Controls.Grid item>
+          <Controls.Typography variant="caption1"sx={{ color: theme.palette.one.green, textAlign: "left", fontWeight: 700, fontSize: {xs:'24px',sm:"26px"},   }}>Still Need Help</Controls.Typography>
+          </Controls.Grid>
+          <Controls.Grid item>
+          <Controls.Typography variant="caption1"sx={{   }}>We enjoy adapting our strategies to offer We believe in the equal value of every human being and the importance of respecting and honoring each individual; we know that change happens through people. every client the best solutions that are at the forefront of the industry.</Controls.Typography>
+          </Controls.Grid>
           <Controls.Grid container display='flex' spacing={{xs:2,sm:5,md:5,lg:10}}  >
   {content.map((item, index) => (
-    <Controls.Grid item sx={{ fontFamily: "Montserrat", }} key={index} xs={12} sm={6} md={4} mt={3}>
+    <Controls.Grid item   key={index} xs={12} sm={6} md={4} mt={3}>
       <Controls.Card
         sx={{
           backgroundColor: "rgba(242, 194, 26, 0.16)",
@@ -60,8 +64,12 @@ const NeedHelpComponent = () => {
             height='50px'
             alt={item.text}
           />
-          <Controls.Typography sx={{ fontSize: "24px",fontWeight:700 ,  fontFamily: "Montserrat",}} my={2}>{item.text}</Controls.Typography>
-          <Controls.Typography sx={{ fontSize: '15px' , fontFamily: "Montserrat" ,paddingX:"10px"}}>{item.descp}</Controls.Typography>
+          <Controls.Grid item>
+          <Controls.Typography variant="caption2" sx={{ fontSize: "24px",fontWeight:700 ,   }} my={2}>{item.text}</Controls.Typography>
+          </Controls.Grid>
+          <Controls.Grid item>
+          <Controls.Typography variant="caption2" sx={{ fontSize: '15px'   ,paddingX:"10px"}}>{item.descp}</Controls.Typography>
+          </Controls.Grid>
         </Controls.Grid>
       </Controls.Card>
     </Controls.Grid>

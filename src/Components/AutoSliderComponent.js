@@ -68,13 +68,13 @@ const AutoSlider = () => {
   return (
     <>
       <Controls.Grid container justifyContent='center' >
-        <Controls.Grid item xs={11} md={10} sx={{ justifyContent: "center", textAlign: "center", }} my={3}>
+        <Controls.Grid item xs={10} md={11}lg={10} sx={{ justifyContent: "center", textAlign: "center", }} my={3}>
           <Controls.Grid item >
-            <Controls.Typography sx={{ color: "#F2C21A", fontSize: { xs:"22px",sm:"24px",md: "32px",lg:"38px" }, fontWeight: 700, fontFamily: "lato" }}>Our volunteers are our everyday heroes in the truest sense
+            <Controls.Typography variant= "caption4"sx={{ color: "#F2C21A", fontSize: { xs:"22px",sm:"26px",md: "32px",lg:"38px" }, fontWeight: 700,  }}>Our volunteers are our everyday heroes in the truest sense
             </Controls.Typography>
           </Controls.Grid>
           <Controls.Grid item >
-            <Controls.Typography sx={{ fontSize: { xs: "14px",sm: "16px" ,lg:"20px"}, fontFamily: "poppins", }}>Volunteering at Foundation is a transformational learning experience that will enable you to make a difference where it’s needed the most.</Controls.Typography>
+            <Controls.Typography variant= "caption1" sx={{ fontSize: { xs: "14px",sm: "18px" ,lg:"20px"},   }}>Volunteering at Foundation is a transformational learning experience that will enable you to make a difference where it’s needed the most.</Controls.Typography>
           </Controls.Grid>
 
 
@@ -134,8 +134,12 @@ const AutoSlider = () => {
                     }}
                   />
                   <Controls.CardContent sx={{ textAlign: "center" }}>
-                    <Controls.Typography sx={{ fontWeight: "bold" }}>{item.name}</Controls.Typography>
-                    <Controls.Typography variant="" sx={{ fontSize: "12px", }}>{item.desig}</Controls.Typography>
+                    <Controls.Grid item>
+                    <Controls.Typography variant= "caption4" sx={{ fontWeight: "bold" }}>{item.name}</Controls.Typography>
+                    </Controls.Grid>
+                    <Controls.Grid item>
+                    <Controls.Typography variant= "caption4" sx={{ fontSize: "12px", }}>{item.desig}</Controls.Typography>
+                    </Controls.Grid>
                     <Controls.Grid item sx={{ display: "flex", justifyContent: "center" }} mt={1}>{item.icons}</Controls.Grid>
                   </Controls.CardContent>
                 </Controls.Card>

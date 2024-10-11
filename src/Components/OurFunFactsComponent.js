@@ -13,7 +13,7 @@ const OurFunFactsComponent = () => {
   return (
     <>
       <Controls.Box   position= 'relative'paddingY= "30px" >
-        <Controls.Grid container xs={12} sx={{ justifyContent: "center", }} item>
+        <Controls.Grid container xs={12} sx={{ justifyContent: "center", }} item >
           <Controls.Box
             sx={{
               position: 'absolute',
@@ -26,39 +26,42 @@ const OurFunFactsComponent = () => {
             }}
           />
           <Controls.Box
+          component='img'
+          src="./assests/images/header-bg 2.png"
+          height="480px"
             sx={{
+              height:"100%",
+              width:"100%",
               position: 'absolute',
               top: 0,
               left: 0,
               right: 0,
-              bottom: 0,
-              backgroundImage: 'url(./assests/images/bgimage.png)',
-              backgroundSize: 'cover',
+              bottom: 0, 
+              objectFit: 'cover',
               opacity: 0.5,
               zIndex: 1
             }}
           />
           <Controls.Box sx={{ position: 'relative', zIndex: 3, }}>
-            <Controls.Grid container sx={{ justifyContent: "center", margin: "auto", alignItems: "center", }} item xs={12}>
+            <Controls.Grid container sx={{ justifyContent: "center", margin: "auto", alignItems: "center", }} item xs={12}  >
 
-              <Controls.Grid item xs={11} sx={{ paddingX: "30px", }}>
-                <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px" }}>
-                  <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+              <Controls.Grid item xs={10} md={11} lg={10} sx={{ }} >
+                <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px",paddingX:{sm:"8px",lg:"10px" }}} >
+                  <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
+                    <Controls.Typography variant='caption4' sx={{  fontSize: "18px", }} >
                       Our Fun Facts
                     </Controls.Typography>
-                    <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
+                    <Controls.Divider sx={{ flexBasis: '50px', height: '2px', width: "50px" }} />
                   </Controls.Box>
-                  <Controls.Typography variant='h5' sx={{ fontFamily: 'Montserrat', fontSize: { xs: "18px", sm: "22px" }, fontWeight: 700, color: '#252A34', marginY: "10px" }}>
+                  <Controls.Typography variant='caption4' sx={{   fontSize: { xs: "18px", sm: "22px" }, fontWeight: 700, color: '#252A34', marginY: "10px" }}>
                     We Believe that We can Save<br /> More Life’s with you
                   </Controls.Typography>
                 </Controls.Grid>
               </Controls.Grid>
-              <Controls.Grid xs={10} sm={11} item >
+              <Controls.Grid xs={10} sm={10} md={11} lg={10}item  >
                 <Controls.Grid
                   container
-                  sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }}
-                  spacing={2}
+                  sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }} 
                 >
                   {cards.map((item, index) => (
                     <Controls.Grid
@@ -69,16 +72,16 @@ const OurFunFactsComponent = () => {
                     >
                       <Controls.Card
                         sx={{
-                          backgroundColor: theme.palette.one.green,
-                          paddingX: "15px",
+                          backgroundColor: theme.palette.one.green, 
                           height: "300px",
-                          width: "217px",
+                          width: {xs:"307px",sm:"300px",md:"300px",lg:"247px"},
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',
                           justifyContent: 'center',
                           textAlign: 'center',
                           transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                          marginBottom:"10px",
                           '&:hover': {
                             transform: "scale(1.07)",
                             boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
@@ -92,13 +95,13 @@ const OurFunFactsComponent = () => {
                           sx={{ marginBottom: "15px" }}
                         />
                         <Controls.Typography
-                          variant="h4"
+                          variant='caption4'
                           sx={{ color: theme.palette.one.main }}
                         >
                           {item.Number}+
                         </Controls.Typography>
                         <Controls.Typography
-                          variant="body1"  
+                          variant='caption4'  
                           sx={{ color: theme.palette.one.main }}
                         >
                           {item.text}

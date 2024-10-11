@@ -24,7 +24,7 @@ const AboutUsComponentFive = () => {
                         clickable: true,
                         el: ".swiper-pagination",
                         renderBullet: (index, className) => {
-                            return `<span class="${className}" style="width: 30px; height: 4px; background-color: white; display: inline-block; margin: 0 2px; border-radius: 2px;"></span>`;
+                            return `<span class="${className}" style="width: 30px; height: 4px; background-color: white; display: inline-block; margin: 0 2px; border-radius: 2px; borderRadius:2px solid red"></span>`;
                         },
                     }}
                     modules={[Pagination]}
@@ -42,13 +42,19 @@ const AboutUsComponentFive = () => {
                             <Controls.Grid item xs={9} sx={{ justifyContent: "center", margin: "auto", textAlign: "center" }}>
                                 <Controls.Grid item sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} gap={1}>
                                     <Controls.Divider sx={{ backgroundColor: theme.palette.one.main, width: { xs: "50px", }, }} />
-                                    <Controls.Typography sx={{ color: theme.palette.one.main }}>Our Testimonials</Controls.Typography>
+                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main }}>Our Testimonials</Controls.Typography>
                                     <Controls.Divider sx={{ backgroundColor: theme.palette.one.main, width: { xs: "50px", }, }} />
                                 </Controls.Grid>
-                                <Controls.Typography sx={{ color: "#F2C21A", fontSize: "25px", fontWeight: "bold" }}>What People Say</Controls.Typography>
+                                <Controls.Grid item>
+                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A", fontSize: "25px", fontWeight: "bold" }}>What People Say</Controls.Typography>
+                                </Controls.Grid>
                                 <Controls.Box my={2} component='img' src={item.img} width="150px" height="150px" sx={{ borderRadius: '10px' }} />
-                                <Controls.Typography sx={{ color: "#F2C21A" }}>{item.name}</Controls.Typography>
-                                <Controls.Typography sx={{ color: theme.palette.one.main }} my={2}>{item.desig}</Controls.Typography>
+                                <Controls.Grid item>
+                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A" }}>{item.name}</Controls.Typography>
+                                </Controls.Grid>
+                                <Controls.Grid item>
+                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main }} my={2}>{item.desig}</Controls.Typography>
+                                </Controls.Grid>
                                 <Controls.Grid item sx={{ position: 'relative' }}>
 
                                     <Controls.Box
@@ -56,34 +62,35 @@ const AboutUsComponentFive = () => {
                                         src='./assests/images/Group.png'
                                         alt="quote"
                                         width='200px'
-                                        height='200px' 
+                                        height='200px'
                                         sx={{
                                             position: "absolute",
-                                            top: {  sm: 10, lg: 5, xl: 5 },
+                                            top: { sm: 20, lg: 6, xl: 9 },
                                             left: { sm: 260, md: 360, lg: 520, xl: 540 },
                                             width: '50px',
                                             height: '50px',
                                             zIndex: 1,
                                             justifyContent: "center",
-                                            margin: "auto", 
-                                            dispaly:{ xs:"none", sm: "block" },
+                                            margin: "auto",
+                                            display: { xs: "none", sm: "block" },
                                             // border:{xs:"none"}
                                         }}
                                     />
 
-
-                                    <Controls.Typography
-                                        sx={{
-                                            color: theme.palette.one.main,
-                                            textAlign: "center",
-                                            fontSize: { xs: "12px", md: "14px" },
-                                            position: "relative",
-                                            zIndex: 2, 
-                                        }}
-                                        mb={5}
-                                    >
-                                        {item.descp}
-                                    </Controls.Typography>
+                                    <Controls.Grid item mb={5}>
+                                        <Controls.Typography variant='caption2'
+                                            sx={{
+                                                color: theme.palette.one.main,
+                                                textAlign: "center",
+                                                fontSize: { xs: "12px", md: "14px" },
+                                                position: "relative",
+                                                zIndex: 2,
+                                            }}
+                                            mb={0}
+                                        >
+                                            {item.descp}
+                                        </Controls.Typography>
+                                    </Controls.Grid>
                                 </Controls.Grid>
 
                             </Controls.Grid>

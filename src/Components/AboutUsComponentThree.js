@@ -20,8 +20,8 @@ const AboutUsComponentThree = () => {
     ]
     return (
         <>
-            <Controls.Grid container justifyContent="center" mt={5} >
-                <Controls.Grid item xs={10} sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
+            <Controls.Grid container justifyContent="center" mt={5}  >
+                <Controls.Grid item xs={10} md={11} lg={10} sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
                     <Controls.Grid container sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", }}>
 
 
@@ -37,19 +37,18 @@ const AboutUsComponentThree = () => {
                                 marginBlockStart: "auto",
                                 paddingY: "40px",
                                 textAlign: "start",
-                                paddingRight: { md: "15px", lg: "0px" }
+                                paddingRight: { md: "15px", lg: "0px" }, 
                             }}
                         >
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                                <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                                <Controls.Typography variant='caption2' sx={{ fontSize: "18px", }} >
                                     Welcome to charity
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
                             </Controls.Box>
                             <Controls.Grid item>
-                                <Controls.Typography
-                                    sx={{
-                                        fontFamily: 'Lato',
+                                <Controls.Typography variant='caption4'
+                                    sx={{ 
                                         fontSize: { xs: "30px", sm: '32px', md: "28px", lg: "30px" },
                                         fontWeight: 700,
                                         lineHeight: '50px',
@@ -62,9 +61,8 @@ const AboutUsComponentThree = () => {
                                 </Controls.Typography>
                             </Controls.Grid>
                             <Controls.Grid item>
-                                <Controls.Typography
-                                    sx={{
-                                        fontFamily: 'Montserrat',
+                                <Controls.Typography variant='caption2'
+                                    sx={{ 
                                         fontSize: '16px',
                                         fontWeight: 500,
                                         lineHeight: '24px',
@@ -82,9 +80,9 @@ const AboutUsComponentThree = () => {
                                         <Controls.Grid item  xs={5} sx={{ backgroundColor: "#EDF7F5", padding: {xs:"10px",sm:"20px"} }}>
                                             <Controls.Grid item sx={{ display: "flex", }} gap={1}>
                                                 <Controls.Box component='img' src={item.icon} width="20px" height="20px" />
-                                                <Controls.Typography sx={{ color: theme.palette.one.green, fontWeight: 600, fontFamily: "Nunito", fontSize: { xs: "12px", sm: "14px", md: "12px", lg: "16px" } }}>{item.text}</Controls.Typography>
+                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: 600,   fontSize: { xs: "12px", sm: "14px", md: "12px", lg: "16px" } }}>{item.text}</Controls.Typography>
                                             </Controls.Grid>
-                                            <Controls.Typography sx={{ fontSize: { xs: "10px", sm: "12px",lg:"14px" } }}>{item.descp}</Controls.Typography>
+                                            <Controls.Typography variant='caption2' sx={{ fontSize: { xs: "10px", sm: "12px",lg:"14px" } }}>{item.descp}</Controls.Typography>
                                         </Controls.Grid>
                                     </React.Fragment>
                                 ))}
@@ -94,8 +92,8 @@ const AboutUsComponentThree = () => {
                                 {bar.map((item, index) => (
                                     <>
                                         <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between" }} key={index}>
-                                            <Controls.Typography>{item.text}</Controls.Typography>
-                                            <Controls.Typography>{item.percentage}%</Controls.Typography>
+                                            <Controls.Typography variant='caption2'>{item.text}</Controls.Typography>
+                                            <Controls.Typography variant='caption2'>{item.percentage}%</Controls.Typography>
 
                                         </Controls.Grid>
                                         <Controls.LinearProgress
@@ -126,7 +124,7 @@ const AboutUsComponentThree = () => {
                                 position: 'relative',
                                 marginBottom: { xs: "0px", sm: '30px' },
                                 display: 'flex',
-                                justifyContent: { xs: 'center', md: 'flex-start' },
+                                justifyContent: { xs: 'center', md: 'flex-start' }, 
                             }}
                         >
                             <Controls.Box
@@ -135,8 +133,8 @@ const AboutUsComponentThree = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid #219D8078",
-                                    width: { xs: "100%", sm: "300px", md: "340px", lg: "470px" },
-                                    height: { xs: "100%", sm: "250px", md: "330px", lg: "350px" },
+                                    width: { xs: "100%", sm: "310px", md: "340px", lg: "470px" },
+                                    height: { xs: "100%", sm: "320px", md: "370px", lg: "350px" },
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "0 40px" },
                                     display: "block",
@@ -153,12 +151,12 @@ const AboutUsComponentThree = () => {
                                     backgroundColor: theme.palette.one.main,
                                     position: "absolute",
                                     zIndex: 2,
-                                    top: { xs: "75%", sm: "90%", md: "75%", lg: "80%" },
-                                    left: { xs: "69%", sm: "70%", md: "85%", lg: "70%" },
+                                    top: { xs: "75%", sm: "90%", md: "73%", lg: "80%" },
+                                    left: { xs: "69%", sm: "60%", md: "68%", lg: "70%" },
                                     transform: "translate(-50%, -50%)",
                                     border: "10px solid #219D8078",
-                                    width: { xs: "147px", sm: "270px", md: "270px", lg: "330px" },
-                                    height: { xs: "130px", sm: "180px", md: "260px", lg: "250px" },
+                                    width: { xs: "147px", sm: "280px", md: "290px", lg: "330px" },
+                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "250px" },
                                     display: {xs:"none",sm:"flex"},
                                     justifyContent: "center",
                                     alignItems: "center",

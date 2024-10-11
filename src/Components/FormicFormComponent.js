@@ -250,7 +250,7 @@ const FormicFormComponent = ({ initialValues, validationSchema, dispatch, data }
                                             <Field
                                                 name="customAmount"
                                                 as={Controls.TextField}
-                                                label="Custom Amount"
+                                                label="Custom Your Amount"
                                                 id="outlined-size-small"
                                                 placeholder="Custom Amount"
                                                 size="small"
@@ -283,7 +283,7 @@ const FormicFormComponent = ({ initialValues, validationSchema, dispatch, data }
                                 </Controls.Grid>
 
                                 <Controls.Grid item sx={{ display: { xs: "block", }, justifyContent: { xs: "center", md: 'space-between' } }} gap={2}>
-                                    <Controls.Grid item xs={12} sx={{ mb: { xs: 2, sm: 3 }, mt: { xs: 2 } }}>
+                                    <Controls.Grid item xs={12} sx={{ mb: { xs: 2, sm: 3 }, mt: { xs: 3 } }}>
                                         <Field
                                             name="fname"
                                             as={Controls.TextField}

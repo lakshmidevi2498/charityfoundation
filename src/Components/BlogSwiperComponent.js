@@ -26,7 +26,7 @@ const BlogSwiperComponent = () => {
                     <Controls.Grid item xs={12} sx={{ justifyContent: "space-between", display: "flex" }}>
                         <Controls.Grid item mb={3}>
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                                <Controls.Typography variant='caption1' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
                                     Latest News
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />

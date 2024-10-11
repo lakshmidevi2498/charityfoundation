@@ -125,26 +125,25 @@
   border: 2px solid white;    
   transform: scale(1.2); 
 }
-/* Console.css */
+ 
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .2em solid orange; /* The typewriter cursor */
-  white-space: pre-wrap; /* Keeps the text on a single line initially */
-  margin: 0 auto; /* Center the text */
-  display: inline-block; /* Allow wrapping of the text */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden;  
+  border-right: .2em solid orange;  
+  white-space: pre-wrap; 
+  margin: 0 auto;  
+  display: inline-block; 
+  letter-spacing: .15em;  
   animation: 
-    typing 10s steps(50, end), /* Adjust typing duration */
-    blink-caret .75s step-end infinite; /* Blink effect for the cursor */
+    typing 10s steps(50, end),  
+    blink-caret .75s step-end infinite;  
 }
 
-/* The typing effect */
+ 
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
 }
-
-/* The typewriter cursor effect */
+ 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: orange; }
@@ -163,17 +162,19 @@
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+ 
 @media (min-width: 1024px) {
   .custom-text {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .custom-text {
     font-size: 74px;
   }
 }
+
+
 
 
 

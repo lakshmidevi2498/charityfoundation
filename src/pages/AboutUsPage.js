@@ -6,8 +6,7 @@ import AboutUsComponentTwo from '../Components/AboutUsComponentTwo'
 import AboutUsComponentThree from '../Components/AboutUsComponentThree'
 import AboutUsComponentFour from '../Components/AboutUsComponentFour'
 import AboutUsComponentFive from '../Components/AboutUsComponentFive'
-import VolunteerComponent from '../Components/VolunteerComponent'
-import theme from '../Utilities/Theme'
+import VolunteerComponent from '../Components/VolunteerComponent' 
 import FooterComponent from '../Components/FooterComponent'
 
 const AboutUsPage = () => {

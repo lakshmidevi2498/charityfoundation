@@ -87,8 +87,7 @@ const ContactComponent = () => {
                     <Controls.Grid
                         item
                         xs={12} 
-                        lg={9}
-                        // display='flex' 
+                        lg={9}  
                         justifyContent='center'
                         margin='auto'sx={{display:{xs:"none",md:"flex"}}}
                     >
@@ -149,7 +148,7 @@ const ContactComponent = () => {
                                                     padding: 1,
                                                 }}
                                             >
-                                                <Controls.Typography variant='caption' sx={{ color: 'white', textAlign: 'center' }}>
+                                                <Controls.Typography variant='caption1' sx={{ color: 'white', textAlign: 'center' }}>
                                                     Charity begins at home, but should not end there.
                                                 </Controls.Typography>
                                                 <Controls.Button

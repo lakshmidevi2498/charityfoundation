@@ -49,14 +49,14 @@ const AboutUsComponentsOne = () => {
               fontSize:{xs:"30px",sm:"48px"}
             }}item xs={11} sm={10} md={8}
           >
-            <Controls.Typography variant=''  sx={{}}>
+            <Controls.Typography variant='caption4'  sx={{}}>
               The best way to find yourself is to lose   yourself in the 
-              <Controls.Typography
-                component="span" variant=''
+              <Controls.Box
+                component="span"  
                 sx={{ color: theme.palette.one.yellow,  }}
               >
               &nbsp;service of others.
-              </Controls.Typography>
+              </Controls.Box>
             </Controls.Typography>
           </Controls.Grid>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';  
-import { NavLink } from 'react-router-dom';  
+import { NavLink, useNavigate } from 'react-router-dom';  
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Controls from '../commons/controls';
 import AnimatedButton from './AnimatedButton';
@@ -8,7 +8,9 @@ import AnimatedButton from './AnimatedButton';
 const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState('Home');
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 600px)');  
+  const isMobile = useMediaQuery('(max-width: 600px)'); 
+  
+  const navigate = useNavigate()
 
   const handleLinkClick = (link) => {
     setActiveLink(link); 
@@ -64,14 +66,18 @@ const NavbarComponent = () => {
     </Controls.Box>
   );
 
+  const handleHome = () => {
+    navigate('/')
+  }
+
   return (
     <>
       <Controls.Box sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}>
         <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "60px", sm: '80px' }, justifyContent: 'center', padding: { xs: "10px", sm: "10px", md: "20px" } }}>
           <Controls.Grid container alignItems="center" justifyContent="space-between">
-            <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } }} gap={1}>
+            <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } ,cursor:"pointer"}} gap={1} onClick={handleHome}>
               <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={1} />
-              <Controls.Typography variant="h5" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { xs: "10px", sm: "" } }}>
+              <Controls.Typography variant="caption4" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { md: "5px",sm:"10px"  } }}>
                 Foundation
               </Controls.Typography>
             </Controls.Grid>

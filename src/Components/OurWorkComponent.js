@@ -17,7 +17,7 @@ const [more ,setMore] = useState(false)
     return (
         <>
             <Controls.Grid container justifyContent='center' mt={5}>
-                <Controls.Grid item xs={10} sx={{ justifyContent: "center" }}>
+                <Controls.Grid item xs={10} md={11} lg={10}sx={{ justifyContent: "center" }}>
                     <Controls.Grid item mb={2}>
                         <Controls.Button
                             variant='outlined'

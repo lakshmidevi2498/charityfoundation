@@ -28,14 +28,14 @@ const GalleryComponent = () => {
                         </Controls.Typography>
                     </Controls.Grid>
 
-                    {/* Container for Images */}
+                     
                     <Controls.Grid
                         container
                         justifyContent='center'
                         display='flex'
                         alignItems='center'
                         margin='auto'
-                        sx={{ maxWidth: '100%' }} // Ensures the images take the full available space
+                        sx={{ maxWidth: '100%' }}  
                     >
                         {images.map((img, index) => (
                             <Controls.Grid
@@ -60,6 +60,7 @@ const GalleryComponent = () => {
                                         "&:hover": {
                                           transform: "scaleY(1.09) ",  
                                         },
+                                        mb:2
 
                                     }}
                                 >

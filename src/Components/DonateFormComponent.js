@@ -32,7 +32,7 @@ const DonateFormComponent = () => {
     return (
         <>
             <Controls.Grid container justifyContent='center' py={4}>
-                <Controls.Grid item xs={12} md={10} sx={{ justifyContent: {  md: "space-between"}, display: {xs:'block',md:"flex"},  padding:{sm:"20px",md:"0px"}}} gap={2}>
+                <Controls.Grid item xs={12} md={11} lg={10} sx={{ justifyContent: {  md: "space-between"}, display: {xs:'block',md:"flex"},  padding:{sm:"20px",md:"0px"}}} gap={2}>
                     <Controls.Grid item xs={12} md={6}  paddingX={{xs:"10px",md:"0px"}}>
                         <Controls.Grid item xs={12}>
                             <Controls.Grid item>

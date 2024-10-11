@@ -11,7 +11,7 @@ const OurWorkImageComponent = () => {
                     xs={12} 
                     sx={{
                         width: '100vw',
-                        height: {xs:"100vh",sm:"100vh"},  
+                        height:"100vh",  
                         position: 'relative', 
                         overflow: 'hidden',
                     }}

@@ -7,12 +7,12 @@ import Controls from '../commons/controls';
 import theme from '../Utilities/Theme'; 
 
 const images = [
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg",
-    "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/502/788/datas/original.jpg", 
+    "./assests/images/unsplash_AEaTUnvneik.png",
+    "./assests/images/unsplash_7MD4DR9jbP0.png",
+    "./assests/images/unsplash_8ldqRkOk5oo.png",
+    "./assests/images/unsplash_f8ld5zt3a3k.png",
+    "./assests/images/unsplash_iYtYZ5H-9ws.png",
+    "./assests/images/unsplash_jEEYZsaxbH4.png", 
 ];
 
 const MySwiper = () => {

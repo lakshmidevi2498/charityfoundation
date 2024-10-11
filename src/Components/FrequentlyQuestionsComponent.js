@@ -19,10 +19,10 @@ const FrequentlyQuestionsComponent = () => {
         <>
             <Controls.Grid container justifyContent='center' >
                 <Controls.Grid item sx={{ backgroundColor: "rgba(242, 194, 26, 0.10)", justifyContent: "center", alignItems: "center", display: 'flex' }} xs={12}>
-                    <Controls.Grid item xs={12} md={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, padding: "20px", alignItems: "center" }}>
+                    <Controls.Grid item xs={10} sm={11} md={11} lg={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, paddingY: "20px", alignItems: "center" }}gap={1}>
                         <Controls.Grid item xs={12} md={6}>
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                                <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                                <Controls.Typography variant='caption2' sx={{  fontSize: "18px", }} >
                                     Have Any Question ?
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
@@ -67,7 +67,7 @@ const FrequentlyQuestionsComponent = () => {
                                             <Controls.Typography variant='caption1' sx={{ fontSize: "18px", fontWeight: "bold" }}>{item.title}</Controls.Typography>
                                         </Controls.AccordionSummary>
                                         <Controls.AccordionDetails>
-                                            <Controls.Typography variant='caption2' sx={{ fontSize: "16px", }}>
+                                            <Controls.Typography variant='caption1' sx={{ fontSize: "16px", }}>
                                                 {item.descp}
                                             </Controls.Typography>
                                         </Controls.AccordionDetails>

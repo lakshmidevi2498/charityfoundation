@@ -6,7 +6,7 @@ const YourSupportComponent = () => {
   return (
     <>
     <Controls.Grid container justifyContent="center" mt={5} >
-                <Controls.Grid item xs={10} sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
+                <Controls.Grid item xs={10} md={11} lg={10}sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
                     <Controls.Grid container sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", }}>
 
 
@@ -26,14 +26,13 @@ const YourSupportComponent = () => {
                             }}
                         >
                             
-                                <Controls.Typography variant='body' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                                <Controls.Typography variant='caption4' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
                                     Get Involved
                                 </Controls.Typography>
                                 
                             <Controls.Grid item>
-                                <Controls.Typography
-                                    sx={{
-                                        fontFamily: 'Lato',
+                                <Controls.Typography variant='caption4'
+                                    sx={{ 
                                         fontSize: { xs: "30px", sm: '32px', md: "28px", lg: "30px" },
                                         fontWeight: 700,
                                         lineHeight: '50px',
@@ -45,9 +44,8 @@ const YourSupportComponent = () => {
                                 </Controls.Typography>
                             </Controls.Grid>
                             <Controls.Grid item>
-                                <Controls.Typography
-                                    sx={{
-                                        fontFamily: 'Montserrat',
+                                <Controls.Typography variant='caption2'
+                                    sx={{ 
                                         fontSize: {xs:"14px",lg:'16px'},
                                         fontWeight: 500,
                                         lineHeight: '24px',
@@ -58,9 +56,9 @@ const YourSupportComponent = () => {
                                 </Controls.Typography>
                             </Controls.Grid><br/>
                             <Controls.Grid item>
-                                <Controls.Typography
+                                <Controls.Typography variant='caption2'
                                     sx={{
-                                        fontFamily: 'Montserrat',
+                                        
                                         fontSize: {xs:"14px",lg:'16px'},
                                         fontWeight: 500,
                                         lineHeight: '24px',

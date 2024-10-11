@@ -2,7 +2,7 @@ import React from 'react'
 import Controls from '../commons/controls'
 import theme from '../Utilities/Theme'
 import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup'; 
+import * as Yup from 'yup';
 
 const validationSchema = Yup.object().shape({
     fname: Yup.string()
@@ -35,24 +35,38 @@ const GetInTouchComponent = () => {
 
     return (
         <>
-            <Controls.Grid container justifyContent='center' sx={{
-                boxShadow: 3,
-                borderRadius: '8px',
-            }}>
-                <Controls.Grid item xs={11} sm={10} sx={{ justifyContent: "center", paddingY: "30px" ,height:"auto"}} >
-                    <Controls.Grid item paddingX={{xs:"0px",md:"15px",lg:"20px"}}>
-                    <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px" } }}>
-                            Latest Causes
-                        </Controls.Typography>
-                        <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px", marginLeft: '8px' }} />
-                    </Controls.Box>
-                    <Controls.Grid item >
-                        <Controls.Typography variant='caption1' sx={{ fontSize: "24px", fontWeight: "bold" }}>Send me a message</Controls.Typography>
+            <Controls.Grid
+                container
+                justifyContent='center'
+                sx={{
+                    boxShadow: 3,
+                    borderRadius: '8px',
+                }}>
+                <Controls.Grid
+                    item xs={11} sm={10} md={11} lg={10}
+                    sx={{ justifyContent: "center", paddingY: "30px", height: "auto" }} >
+
+                    <Controls.Grid item paddingX={{ xs: "0px", md: "15px", lg: "20px" }}>
+                        <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px" } }}>
+                               Get In Touch
+                            </Controls.Typography>
+                            <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px", marginLeft: '8px' }} />
+                        </Controls.Box>
+                        <Controls.Grid item my={2}>
+                        <Controls.Typography variant='caption1' sx={{ fontSize: "24px", fontWeight: "bold" }} >Send me a message</Controls.Typography>
+                        </Controls.Grid>                    
                     </Controls.Grid>
-                    </Controls.Grid>
-                    <Controls.Grid container display={{ xs: "block", md: 'flex' }} justifyContent={{ xs: "center", md: 'space-between' }} gap={1} height={{ xs: "740px", sm: "820px", md: '350px' }}   >
-                        <Controls.Grid item xs={12} md={7.5} justifyContent='center' margin="auto">
+
+                    <Controls.Grid
+                        container
+                        display={{ xs: "block", md: 'flex' }}
+                        justifyContent={{ xs: "center", md: 'space-between' }}
+                        gap={1}
+                        height="auto"
+                        sx={{ flexGrow: 1 , }} 
+                    >
+                        <Controls.Grid item xs={12} md={6} lg={7.5} justifyContent='center'>
                             <Formik
                                 initialValues={initialValues}
                                 validationSchema={validationSchema}
@@ -60,124 +74,131 @@ const GetInTouchComponent = () => {
                             >
                                 {({ errors, touched, isSubmitting }) => (
                                     <Form>
+                                        <Controls.Grid item sx={{ height: "auto" }}>
+                                            <Controls.Grid
+                                                item
+                                                sx={{ display: { xs: "block", md: 'flex' }, justifyContent: { xs: "center", md: 'space-between' } }}
+                                                gap={2}
+                                            >
+                                                <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
+                                                    <Field
+                                                        name="fname"
+                                                        as={Controls.TextField}
+                                                        label="First Name"
+                                                        size="small"
+                                                        fullWidth
+                                                        sx={{
+                                                            '& .MuiInputBase-input': {
+                                                                backgroundColor: theme.palette.one.fields,
+                                                            },
+                                                        }}
+                                                        error={touched.fname && Boolean(errors.fname)}
+                                                        helperText={touched.fname && errors.fname}
+                                                    />
+                                                </Controls.Grid>
+                                                <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
+                                                    <Field
+                                                        name="lname"
+                                                        as={Controls.TextField}
+                                                        label="Last Name"
+                                                        size="small"
+                                                        fullWidth
+                                                        sx={{
+                                                            '& .MuiInputBase-input': {
+                                                                backgroundColor: theme.palette.one.fields,
+                                                            },
+                                                        }}
+                                                        error={touched.lname && Boolean(errors.lname)}
+                                                        helperText={touched.lname && errors.lname}
+                                                    />
+                                                </Controls.Grid>
+                                            </Controls.Grid>
 
-                                        <Controls.Grid item sx={{ display: { xs: "block", md: 'flex' }, justifyContent: { xs: "center", md: 'space-between' } }} gap={2}>
-                                            <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
+                                            <Controls.Grid
+                                                item
+                                                sx={{ display: { xs: "block", md: 'flex' }, justifyContent: { xs: "center", md: 'space-between' } }}
+                                                gap={2}
+                                            >
+                                                <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
+                                                    <Field
+                                                        name="email"
+                                                        as={Controls.TextField}
+                                                        label="Email"
+                                                        size="small"
+                                                        fullWidth
+                                                        sx={{
+                                                            '& .MuiInputBase-input': {
+                                                                backgroundColor: theme.palette.one.fields,
+                                                            },
+                                                        }}
+                                                        error={touched.email && Boolean(errors.email)}
+                                                        helperText={touched.email && errors.email}
+                                                    />
+                                                </Controls.Grid>
+                                                <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
+                                                    <Field
+                                                        name="phone"
+                                                        as={Controls.TextField}
+                                                        label="Phone"
+                                                        size="small"
+                                                        fullWidth
+                                                        sx={{
+                                                            '& .MuiInputBase-input': {
+                                                                backgroundColor: theme.palette.one.fields,
+                                                            },
+                                                        }}
+                                                        error={touched.phone && Boolean(errors.phone)}
+                                                        helperText={touched.phone && errors.phone}
+                                                    />
+                                                </Controls.Grid>
+                                            </Controls.Grid>
+
+                                            <Controls.Grid item xs={12}>
                                                 <Field
-                                                    name="fname"
+                                                    name="message"
                                                     as={Controls.TextField}
-                                                    label="First Name"
-                                                    id="outlined-size-small"
-                                                    Placeholder="Your"
+                                                    label="Message"
                                                     size="small"
+                                                    multiline
+                                                    rows={4}
                                                     fullWidth
                                                     sx={{
-                                                        '& .MuiInputBase-input': {
+                                                        '& .MuiInputBase-root': {
                                                             backgroundColor: theme.palette.one.fields,
+                                                            padding: 0,
+                                                            borderRadius: 1,
+                                                        },
+                                                        '& .MuiInputBase-input': {
+                                                            padding: '10px',
+                                                            height: 'auto',
+                                                            boxSizing: 'border-box',
                                                         },
                                                     }}
-                                                    error={touched.fname && Boolean(errors.fname)}
-                                                    helperText={touched.fname && errors.fname}
-
+                                                    error={touched.message && Boolean(errors.message)}
+                                                    helperText={touched.message && errors.message}
                                                 />
                                             </Controls.Grid>
-                                            <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
-                                                < Field
-                                                    name="lname"
-                                                    as={Controls.TextField}
-                                                    label="Last Name"
-                                                    id="outlined-size-small"
-                                                    Placeholder="Name"
-                                                    size="small"
-                                                    fullWidth
-                                                    sx={{
-                                                        '& .MuiInputBase-input': {
-                                                            backgroundColor: theme.palette.one.fields,
-                                                        },
-                                                    }}
-                                                    error={touched.lname && Boolean(errors.lname)}
-                                                    helperText={touched.lname && errors.lname}
-                                                />
-                                            </Controls.Grid>
-                                        </Controls.Grid>
-                                        <Controls.Grid item sx={{ display: { xs: "block", md: 'flex' }, justifyContent: { xs: "center", md: 'space-between' } }} gap={2} >
-                                            <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }} gap={1}>
-
-                                                < Field
-                                                    name="email"
-                                                    as={Controls.TextField}
-                                                    label="Email"
-                                                    id="outlined-size-small"
-                                                    Placeholder="Your Email"
-                                                    size="small"
-                                                    fullWidth
-                                                    sx={{
-                                                        '& .MuiInputBase-input': {
-                                                            backgroundColor: theme.palette.one.fields,
-                                                        },
-                                                    }}
-                                                    error={touched.email && Boolean(errors.email)}
-                                                    helperText={touched.email && errors.email}
-                                                />
-                                            </Controls.Grid>
-                                            <Controls.Grid item xs={12} md={6} sx={{ mb: { xs: 1, sm: 2 } }}>
-                                                < Field
-                                                    name="phone"
-                                                    as={Controls.TextField}
-                                                    label="Phone"
-                                                    id="outlined-size-small"
-                                                    Placeholder="+91"
-                                                    size="small"
-                                                    fullWidth
-                                                    sx={{
-                                                        '& .MuiInputBase-input': {
-                                                            backgroundColor: theme.palette.one.fields,
-                                                        },
-                                                    }}
-                                                    error={touched.phone && Boolean(errors.phone)}
-                                                    helperText={touched.phone && errors.phone}
-                                                />
-                                            </Controls.Grid>
-                                        </Controls.Grid>
-                                        <Controls.Grid item xs={12}>
-                                            < Field
-                                                name="message"
-                                                as={Controls.TextField}
-                                                label="Message"
-                                                id="outlined-size-small"
-                                                Placeholder="Type your Message Here.."
-                                                size="small"
-                                                multiline
-                                                rows={4}
-                                                fullWidth
-                                                sx={{
-                                                    '& .MuiInputBase-root': {
-                                                        backgroundColor: theme.palette.one.fields,
-                                                        padding: 0,
-                                                        borderRadius: 1,
-                                                    },
-                                                    '& .MuiInputBase-input': {
-                                                        padding: '10px',
-                                                        height: 'auto',
-                                                        boxSizing: 'border-box',
-                                                    },
-                                                }}
-                                                error={touched.message && Boolean(errors.message)}
-                                                helperText={touched.message && errors.message}
-                                            />
-                                        </Controls.Grid>
-                                        <Controls.Grid item my={{ xs: 2, sm: 5 }}>
-                                            <Controls.Button variant='contained' sx={{ backgroundColor: theme.palette.one.green }} disabled={isSubmitting} type='submit'>Send Message</Controls.Button>
                                         </Controls.Grid>
 
+                                        <Controls.Grid item mt={{ xs: 2, sm: 2 }}>
+                                            <Controls.Button
+                                                variant='contained'
+                                                sx={{ backgroundColor: theme.palette.one.green }}
+                                                disabled={isSubmitting}
+                                                type='submit'
+                                            >
+                                                Send Message
+                                            </Controls.Button>
+                                        </Controls.Grid>
                                     </Form>
                                 )}
                             </Formik>
                         </Controls.Grid>
+
                         <Controls.Grid
                             item
                             xs={12}
-                            md={4}
+                            md={5} lg={4}
                             sx={{
                                 backgroundColor: theme.palette.one.fields,
                                 padding: "20px",
@@ -185,8 +206,7 @@ const GetInTouchComponent = () => {
                                 flexDirection: "column",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                // margin: "auto",  
-                                height: { xs: "350px", sm: "350px", md: '320px', lg: "300px" }
+                                height: "auto", 
                             }}
                         >
                             <Controls.Grid item sx={{ marginBottom: "10px", textAlign: "left", width: "100%" }}>
