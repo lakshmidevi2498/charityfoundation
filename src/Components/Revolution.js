@@ -12,7 +12,7 @@ const Revolution = () => {
                 <Controls.Grid item sx={{justifyContent:'center',textAlign:"center"}} mb={4}>
                     <Controls.Typography variant='caption1' sx={{
                         color: theme.palette.one.green, fontFamily: 'Poppins',
-                        fontSize: {xs:"1.8rem",sm:'2.5rem'},
+                        fontSize: {xs:"30px",sm:'40px'},
                         fontWeight: 400,
                         lineHeight: '60px',
                         textAlign: 'center',

@@ -62,10 +62,10 @@ const OurWorkThirdComponent = () => {
                                 <SwiperSlide key={index}>
                                     <Controls.Grid item justifyContent="center" alignItems="center" sx={{ height: "100%",display:{xs:"block",sm:"flex"} }} gap={1} >
                                         <Controls.Grid item xs={12} sm={5} md={6}>
-                                            <Controls.Box component="img" src={item} width='100%' height='100%' sx={{ width: {xs:'100%',sm:"100%",lg:"90%"}, height: "300px",padding:{xs:"15px",} }} />
+                                            <Controls.Box component="img" src={item} width='100%' height='100%' sx={{ width: {xs:'100%',sm:"100%"}, height: "300px",padding:{xs:"15px",} }} />
                                         </Controls.Grid>
                                         <Controls.Grid xs={12} sm={7}md={6} sx={{ display: "block",margin:"auto",paddingX:{xs:"10px",sm:0} }}>
-                                            <Controls.Grid item> <Controls.Typography variant='caption1' sx={{ fontWeight: "medium", fontSize: {xs:"18px",sm:"21px",md:"17px",lg:"19px"} }}>The simplest into they acts of kindness are by far more powerful than a thousand heads bowing in prayer.The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer far more powerful than a thousand heads bowing in prayer.</Controls.Typography>
+                                            <Controls.Grid item> <Controls.Typography variant='caption1' sx={{ fontWeight: "medium", fontSize: {xs:"18px",sm:"21px",md:"17px",lg:"21px"} }}>The simplest into they acts of kindness are by far more powerful than a thousand heads bowing in prayer.The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer.</Controls.Typography>
                                             </Controls.Grid>
                                             <Controls.Grid item><Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontWeight: "bold", fontSize: {xs:"20px",sm:"23px",md:"20px",lg:"24px"} }}>Fredrick Fringleston</Controls.Typography>
                                             </Controls.Grid>

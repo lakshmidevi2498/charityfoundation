@@ -18,7 +18,6 @@ const ImageComponent = () => {
                 height: '100vh',
                 overflowX: 'hidden',
                 overflowY: 'hidden',
-                 border:"2px solid red"
             }}
         >
             <Controls.Box
@@ -52,12 +51,11 @@ const ImageComponent = () => {
                     justifyContent: 'center',
                     height: '100vh', 
                     boxSizing: 'border-box',
-                    
                 }}
             >
                 <Controls.Grid
                     item
-                    xs={11} sm={11} md={10} lg={9}
+                    xs={11} sm={10} md={11} lg={10}
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -65,7 +63,6 @@ const ImageComponent = () => {
                         justifyContent: 'center',
                         textAlign: 'center',
                         height: '100%',
-                       
                     }}
                 >
                     <TypeAnimation
@@ -82,7 +79,7 @@ const ImageComponent = () => {
                         className="custom-text"
                         loop={Infinity}
                         style={{
-                            color: theme.palette.one.main  ,
+                            color: theme.palette.one.main,
                             fontWeight: 'bold',
                             fontFamily: 'Poppins',
                         }}
@@ -90,12 +87,11 @@ const ImageComponent = () => {
                     <Controls.Typography
                         variant="caption2"
                         sx={{
-                            fontSize: { xs: '1rem', sm: '1.6rem', md: '1.7rem', lg: '2rem',xl:"2.4rem" },
+                            fontSize: { xs: '14px', sm: '25px', md: '28px', lg: '32px' },
                             fontWeight: 700,
-                            lineHeight: { xs: '1.2rem', sm: '1.8rem', md: '2rem', lg: '2.6rem' },
+                            lineHeight: { xs: '20px', sm: '25px', md: '30px', lg: '39.5px' },
                             color: '#F2C21A',
                             textAlign: 'center',
-                            paddingX:{sm:"1.2rem",md:0}
                         }}
                     >
                         {isMobile ? (

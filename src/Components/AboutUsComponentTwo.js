@@ -6,7 +6,7 @@ const AboutUsComponentTwo = () => {
   return (
     <>
       <Controls.Grid container justifyContent="center" mt={5}   >
-        <Controls.Grid item xs={10}  lg={9} xl={10}>
+        <Controls.Grid item xs={10} md={11} lg={10}>
           <Controls.Grid container justifyContent="center" sx={{ display: { xs: "block", md: "flex" } }}>
             
             
@@ -24,12 +24,12 @@ const AboutUsComponentTwo = () => {
               }}
             >
               <Controls.Grid item>
-                <Controls.Typography variant='caption2' sx={{fontSize:{xs:'1.4rem',sm:"1.8rem",md:"1.4rem",lg:"1.8rem",xl:"2.2rem"}}}>About us</Controls.Typography>
+                <Controls.Typography variant='caption2' sx={{fontSize:{xs:'18px',sm:"20px"}}}>About us</Controls.Typography>
               </Controls.Grid>
-              <Controls.Grid item mb={2}>
+              <Controls.Grid item>
                 <Controls.Typography variant='caption4'
                   sx={{ 
-                    fontSize: {xs:"2rem",md:'1.7rem',lg:"2.1rem",xl:"2.6rem"},
+                    fontSize: {xs:"32px",md:'37px'},
                     fontWeight: 700,
                     lineHeight: '40px',
                     textAlign: 'left',
@@ -42,7 +42,7 @@ const AboutUsComponentTwo = () => {
               <Controls.Grid item>
                 <Controls.Typography variant='caption2'
                   sx={{ 
-                    fontSize: {xs:'1.2rem',md:"1.2rem",xl:"1.8rem"},
+                    fontSize: '16px',
                     fontWeight: 500,
                     lineHeight: '24px',
                     textAlign: 'left'
@@ -55,7 +55,7 @@ const AboutUsComponentTwo = () => {
               <Controls.Grid item>
                 <Controls.Typography variant='caption2'
                   sx={{ 
-                    fontSize: {xs:'1.2rem',md:"1.2rem",xl:"1.8rem"},
+                    fontSize: '16px',
                     fontWeight: 500,
                     lineHeight: '24px',
                     textAlign: 'left'
@@ -101,8 +101,8 @@ const AboutUsComponentTwo = () => {
                   position: "relative",
                   zIndex: 1,
                   border: "10px solid #219D8078",
-                  width: { xs: "180px",sm:"280px", md: "280px",lg:"300px",xl:"480px" },
-                  height: { xs: "160px", sm:"250px",md: "320px",lg:"350px",xl:"500px" },
+                  width: { xs: "180px",sm:"280px", md: "280px",lg:"300px" },
+                  height: { xs: "160px", sm:"250px",md: "320px",lg:"350px" },
                   objectFit: "cover",
                   marginRight:{xs:"50px",sm:"90px",md:" "},
                 }}
@@ -113,12 +113,12 @@ const AboutUsComponentTwo = () => {
                 sx={{
                   position: "absolute",
                   zIndex: 2,
-                  top: { xs: "75%", sm: "80%",md:"75%",lg:"75%",xl:"80%" },
-                  left: { xs: "69%", sm: "65%",md:"60%" ,lg:"55%",xl:"45%"},
+                  top: { xs: "75%", sm: "80%",md:"75%",lg:"75%" },
+                  left: { xs: "69%", sm: "65%",md:"60%" ,lg:"55%"},
                   transform: "translate(-50%, -50%)",
                   border: "10px solid #219D8078",
-                  width: { xs: "147px",sm:"220px", md: "270px",lg:"320px",xl:"380px" },
-                  height: { xs: "130px",sm:"200px", md: "260px",lg:"240px",xl:"350px" },
+                  width: { xs: "147px",sm:"220px", md: "270px",lg:"320px" },
+                  height: { xs: "130px",sm:"200px", md: "260px",lg:"240px" },
                   objectFit: "cover"
                 }}
               />

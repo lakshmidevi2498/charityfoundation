@@ -21,10 +21,10 @@ const FlipCardComponent = () => {
 
     return (
         <Controls.Grid container direction="row" spacing={2} justifyContent="center" my={5}>
-            <Controls.Grid item xs={10} sm={10} md={10} lg={9} xl={10} >
+            <Controls.Grid item xs={10} sm={10} md={11} lg={10}>
                 <Controls.Grid item>
                     <Controls.Typography variant='caption2' sx={{ 
-                        fontSize: '1.4rem',
+                        fontSize: '20px',
                         fontWeight: 600,
                         lineHeight: '28px',
                         textAlign: 'left',
@@ -33,7 +33,7 @@ const FlipCardComponent = () => {
                 <Controls.Grid item>
                     <Controls.Typography variant='caption1' sx={{ 
                         color: theme.palette.one.green,
-                        fontSize: {xs:"1.2rem",sm:'1.6rem'},
+                        fontSize: {xs:"18px",sm:'24px'},
                         fontWeight: 700,
                         lineHeight: {xs:"30px",sm:'40px',md:"50px"},
                         textAlign: 'left',
@@ -41,10 +41,10 @@ const FlipCardComponent = () => {
                 </Controls.Grid>
             </Controls.Grid>
 
-            <Controls.Grid item xs={10}  lg={9} xl={10}>
+            <Controls.Grid item xs={10} sm={10} md={11} lg={10}>
                 <Controls.Grid container spacing={2} justifyContent="center">
                     {frontCard.map((item, index) => (
-                        <Controls.Grid item key={index} xs={12} sm={6}  lg={3}>
+                        <Controls.Grid item key={index} xs={12} sm={6} md={4} lg={3}>
                             <CardFlip flipDirection="horizontal" isFlipped={flippedCards[index]}>
                                 <Controls.Card
                                     sx={{
@@ -65,7 +65,7 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",  }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px" }} />
-                                        <Controls.Typography variant="caption1" sx={{ color: theme.palette.one.green, fontWeight: "bold",alignItems:"center",fontSize:{xs:'1.2rem',sm:"1.8rem",md:"2rem",lg:"1.4rem",xl:"1.8rem"} }}>
+                                        <Controls.Typography variant="caption1" sx={{ color: theme.palette.one.green, fontWeight: "bold",alignItems:"center",fontSize:{xs:'18px',sm:"24px"} }}>
                                             {item}
                                         </Controls.Typography>
                                     </Controls.CardContent>
@@ -90,7 +90,7 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",   }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px", color: theme.palette.one.main }} />
-                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:{xs:'1rem',sm:"1.2rem",md:'1.2rem',lg:"1rem",xl:"1.4rem"}}}>
+                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:"18px"}}>
                                             {backCard[index]}  
                                         </Controls.Typography>
                                     </Controls.CardContent>

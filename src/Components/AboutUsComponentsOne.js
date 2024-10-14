@@ -5,15 +5,14 @@ import theme from '../Utilities/Theme'
 const AboutUsComponentsOne = () => {
   return (
     <>
-      <Controls.Grid container spacing={0} justifyContent='center'  >
-       
+      <Controls.Grid container spacing={0} justifyContent='center'>
+        <Controls.Grid item xs={12}>
           <Controls.Box
             src="./assests/images/unsplash_6ner152Cc6c.png"
             component="img"
-            width="100vw"
-            height="100vh"
+            width="100%"
             
-            sx={{ objectFit: "cover", position: "relative" ,zIndex:-1 ,
+            sx={{ objectFit: "cover", position: "relative" ,zIndex:-1,height:"480px",
               
             }}
           />
@@ -27,7 +26,7 @@ const AboutUsComponentsOne = () => {
               background: '#00000066',
               opactity:40,
               zIndex: 1, 
-              height:{xs:"596px",sm:"618px",xl:'1050px'}, 
+              height:{xs:"540px",sm:"560px"}, 
             }}
           />
 
@@ -35,23 +34,22 @@ const AboutUsComponentsOne = () => {
             container
             sx={{
               position: "absolute",
-              top: "60%",
+              top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              // display: "flex",
+              display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              textAlign: "center", 
+              textAlign: "center",
+              fontFamily: 'Lato',
               color: theme.palette.one.main,
               fontWeight: 700,
-              lineHeight: {xs:"30px",sm:"50px",md:'76.8px',xl:"120px"},
+              lineHeight: {xs:"30px",sm:"50px",md:'76.8px'},
               zIndex:2,
-              fontSize:{xs:"1.2rem",sm:"2.5rem",md:"3.5rem",lg:"4.3rem",xl:"5.8rem"},
-              
-            }} 
+              fontSize:{xs:"30px",sm:"48px"}
+            }}item xs={11} sm={10} md={8}
           >
-            < Controls.Grid item  xs={10} sm={10} lg={9} xl={10}  >
-            <Controls.Typography variant='caption3'  sx={{}}>
+            <Controls.Typography variant='caption4'  sx={{}}>
               The best way to find yourself is to lose   yourself in the 
               <Controls.Box
                 component="span"  
@@ -61,9 +59,9 @@ const AboutUsComponentsOne = () => {
               </Controls.Box>
             </Controls.Typography>
           </Controls.Grid>
-          </Controls.Grid>
 
 
+        </Controls.Grid>
 
 
       </Controls.Grid>

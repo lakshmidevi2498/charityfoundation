@@ -41,7 +41,7 @@ const AboutUsComponentThree = () => {
                             }}
                         >
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                                <Controls.Typography variant='caption2' sx={{ fontSize: {xs:"1.2rem",xl:"1.8rem"} }} >
+                                <Controls.Typography variant='caption2' sx={{ fontSize: "18px", }} >
                                     Welcome to charity
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
@@ -49,7 +49,7 @@ const AboutUsComponentThree = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption4'
                                     sx={{ 
-                                        fontSize: { xs: "1.8rem", sm: '2rem', md: "1.8rem", lg: "1.9rem" ,xl:"2rem"},
+                                        fontSize: { xs: "28px", sm: '32px', md: "28px", lg: "30px" },
                                         fontWeight: 700,
                                         lineHeight: {xs:"40px",sm:'50px'},
                                         textAlign: 'left',
@@ -63,7 +63,7 @@ const AboutUsComponentThree = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption2'
                                     sx={{ 
-                                        fontSize: {xs:'1rem',sm:'1.2rem',md:"1rem",xl:"1.4rem"},
+                                        fontSize: '16px',
                                         fontWeight: 500,
                                         lineHeight: '24px',
                                         textAlign: 'left'
@@ -80,9 +80,9 @@ const AboutUsComponentThree = () => {
                                         <Controls.Grid item  xs={5} sx={{ backgroundColor: "#EDF7F5", padding: {xs:"10px",sm:"20px"} }}>
                                             <Controls.Grid item sx={{ display: "flex", }} gap={1}>
                                                 <Controls.Box component='img' src={item.icon} width="20px" height="20px" />
-                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: 600,   fontSize: { xs: "0.5rem", sm: "0.8rem", md: "0.9rem", lg: "1rem" ,xl:"1.2rem"} }}>{item.text}</Controls.Typography>
+                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: 600,   fontSize: { xs: "12px", sm: "14px", md: "12px", lg: "16px" } }}>{item.text}</Controls.Typography>
                                             </Controls.Grid>
-                                            <Controls.Typography variant='caption2' sx={{ fontSize: { xs: "0.7rem", sm: "0.8rem",lg:"0.9rem",xl:'1.4rem' } }}>{item.descp}</Controls.Typography>
+                                            <Controls.Typography variant='caption2' sx={{ fontSize: { xs: "10px", sm: "12px",lg:"14px" } }}>{item.descp}</Controls.Typography>
                                         </Controls.Grid>
                                     </React.Fragment>
                                 ))}
@@ -91,7 +91,7 @@ const AboutUsComponentThree = () => {
                             <Controls.Grid item my={1}>
                                 {bar.map((item, index) => (
                                     <>
-                                        <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between",fontSize:{xs:"1rem",md:"1.2rem",lg:"1.5rem",xl:"2rem"} }} key={index}>
+                                        <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between" }} key={index}>
                                             <Controls.Typography variant='caption2'>{item.text}</Controls.Typography>
                                             <Controls.Typography variant='caption2'>{item.percentage}%</Controls.Typography>
 
@@ -133,8 +133,8 @@ const AboutUsComponentThree = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid #219D8078",
-                                    width: { xs: "100%", sm: "310px", md: "340px", lg: "470px" ,xl:"450px"},
-                                    height: { xs: "100%", sm: "320px", md: "370px", lg: "380px" ,xl:"400px"},
+                                    width: { xs: "100%", sm: "310px", md: "340px", lg: "470px" },
+                                    height: { xs: "100%", sm: "320px", md: "370px", lg: "350px" },
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "0 40px" },
                                     display: "block",
@@ -155,8 +155,8 @@ const AboutUsComponentThree = () => {
                                     left: { xs: "69%", sm: "60%", md: "68%", lg: "70%" },
                                     transform: "translate(-50%, -50%)",
                                     border: "10px solid #219D8078",
-                                    width: { xs: "147px", sm: "280px", md: "290px", lg: "330px" ,xl:"350px"},
-                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "250px" ,xl:'300px'},
+                                    width: { xs: "147px", sm: "280px", md: "290px", lg: "330px" },
+                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "250px" },
                                     display: {xs:"none",sm:"flex"},
                                     justifyContent: "center",
                                     alignItems: "center",

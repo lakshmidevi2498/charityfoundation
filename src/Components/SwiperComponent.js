@@ -42,9 +42,9 @@ const SwiperComponent = ({ images,swiperRef }) => {
                             <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: "bold",   textAlign: "left" }}>{item.text}</Controls.Typography>
                             </Controls.Grid>
                             <Controls.Grid item>
-                            <Controls.Typography variant='caption2' sx={{ fontWeight: "bold",fontSize:{xs:"1.2rem",md:"1.4rem",xl:"1.6rem"}   }}>{item.name}</Controls.Typography>
+                            <Controls.Typography variant='caption2' sx={{ fontWeight: "bold",fontSize:{xs:"18px",md:"22px"}   }}>{item.name}</Controls.Typography>
                             </Controls.Grid>
-                            <Controls.Typography sx={{ fontSize: "0.8rem" }}>{item.descp}</Controls.Typography>
+                            <Controls.Typography sx={{ fontSize: "14px" }}>{item.descp}</Controls.Typography>
                             <Controls.Grid item sx={{ justifyContent: "space-between", display: 'flex' }}>
                                 <Controls.Typography variant='caption2' sx={{  fontSize: "16px" }}>Donate</Controls.Typography>
                                 <Controls.Typography variant='caption2'mt={1} >{item.percent}%</Controls.Typography>
