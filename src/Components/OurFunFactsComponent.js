@@ -13,7 +13,7 @@ const OurFunFactsComponent = () => {
   return (
     <>
       <Controls.Box   position= 'relative'paddingY= "30px" >
-        <Controls.Grid container xs={12} sx={{ justifyContent: "center", }} item >
+        <Controls.Grid container sx={{ justifyContent: "center", }}  >
           <Controls.Box
             sx={{
               position: 'absolute',
@@ -22,8 +22,8 @@ const OurFunFactsComponent = () => {
               right: 0,
               bottom: 0,
               background: 'rgba(white 70%)',
-              zIndex: 1
-            }}
+              zIndex: 1,
+               }}
           />
           <Controls.Box
           component='img'
@@ -39,26 +39,28 @@ const OurFunFactsComponent = () => {
               bottom: 0, 
               objectFit: 'cover',
               opacity: 0.5,
-              zIndex: 1
+              zIndex: 1, 
             }}
           />
-          <Controls.Box sx={{ position: 'relative', zIndex: 3, }}>
-            <Controls.Grid container sx={{ justifyContent: "center", margin: "auto", alignItems: "center", }} item xs={12}  >
+          <Controls.Grid container sx={{ position: 'relative', zIndex: 3, justifyContent:"center" }}>
+           
 
-              <Controls.Grid item xs={10} md={11} lg={11} sx={{ paddingX:{md:"20px",lg:"100px"}}} >
+              <Controls.Grid item xs={10} md={11} lg={11} xl={10}sx={{ paddingX:{md:"20px",lg:"100px",xl:'0px'}, }} >
                 <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px",paddingX:{sm:"8px",lg:"10px" }}} >
                   <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                    <Controls.Typography variant='caption4' sx={{  fontSize: "18px", }} >
+                    <Controls.Typography variant='caption4' sx={{  fontSize: "1.2rem", }} >
                       Our Fun Facts
                     </Controls.Typography>
                     <Controls.Divider sx={{ flexBasis: '50px', height: '2px', width: "50px" }} />
                   </Controls.Box>
-                  <Controls.Typography variant='caption4' sx={{   fontSize: { xs: "18px", sm: "22px" }, fontWeight: 700, color: '#252A34', marginY: "10px" }}>
-                    We Believe that We can Save<br /> More Life’s with you
+                  <Controls.Grid item my={3} xs={12} lg={5} xl={12}>
+                  <Controls.Typography variant='caption4' sx={{   fontSize: { xs: "1.2rem", sm: "1.8rem" }, fontWeight: 700, color: '#252A34',   }}>
+                    We Believe that We can Save  More Life’s with you
                   </Controls.Typography>
+                  </Controls.Grid>
                 </Controls.Grid>
               </Controls.Grid>
-              <Controls.Grid  xs={10} md={11} lg={11} sx={{ paddingX:{md:"0px",lg:"90px"}}}   >
+              <Controls.Grid  xs={10} md={11} lg={11} xl={12} sx={{ paddingX:{md:"0px",lg:"90px",xl:17}}}   >
                 <Controls.Grid
                   container
                   sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }} 
@@ -73,8 +75,8 @@ const OurFunFactsComponent = () => {
                       <Controls.Card
                         sx={{
                           backgroundColor: theme.palette.one.green, 
-                          height: "300px",
-                          width: {xs:"350px",sm:"310px",md:"255px",lg:"247px"},
+                          height: {xs:"300px",xl:"350px"},
+                          width: {xs:"350px",sm:"310px",md:"255px",lg:"247px",xl:"400px"},
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',
@@ -113,8 +115,8 @@ const OurFunFactsComponent = () => {
               </Controls.Grid>
 
 
-            </Controls.Grid>
-          </Controls.Box>
+            
+          </Controls.Grid>
 
         </Controls.Grid>
       </Controls.Box>

@@ -43,8 +43,8 @@ const MySwiper = () => {
                     component='img'
                     src={img}
                     width="100%"
-                    height="350px"
-                    sx={{ borderRadius: '10px',  }}
+                    height="100%"
+                    sx={{ borderRadius: '10px',height:{xs:"350px",xl:"390px"}  }}
                   />
                 </Controls.Card>
               </SwiperSlide>

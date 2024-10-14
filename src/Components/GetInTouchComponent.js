@@ -31,7 +31,11 @@ const GetInTouchComponent = () => {
     const onSubmit = (values, actions) => {
         console.log("Form Values:", values);
         actions.resetForm();
+        handleMail(values)
     };
+    const handleMail = () => {
+        
+    }
 
     return (
         <>
@@ -46,7 +50,7 @@ const GetInTouchComponent = () => {
                     item xs={11} sm={10} md={11} lg={10}
                     sx={{ justifyContent: "center", paddingY: "30px", height: "auto" }} >
 
-                    <Controls.Grid item paddingX={{ xs: "0px", md: "15px", lg: "20px" }}>
+                    <Controls.Grid item  >
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px" } }}>
                                Get In Touch

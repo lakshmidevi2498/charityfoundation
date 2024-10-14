@@ -19,7 +19,7 @@ const HelpingComponent = () => {
         <>
             <Controls.Grid container justifyContent='center'>
                 <Controls.Grid item xs={12} md={10} paddingX="10px">
-                    <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
                         <Controls.Typography variant='caption1' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
                             Helping Story
                         </Controls.Typography>

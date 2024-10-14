@@ -72,8 +72,8 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <Controls.Box sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}>
-        <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "60px", sm: '80px' }, justifyContent: 'center', padding: { xs: "10px", sm: "10px", md: "20px" } }}>
+      <Controls.Box sx={{ flexGrow: 1, position: "relative", zIndex: 10 ,}}>
+        <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "3.8rem", sm: '5rem' }, justifyContent: 'center', padding: { xs: "0.6rem", sm: "0.6rem", md: "1.6rem" } }}>
           <Controls.Grid container alignItems="center" justifyContent="space-between">
             <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } ,cursor:"pointer"}} gap={1} onClick={handleHome}>
               <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={1} />

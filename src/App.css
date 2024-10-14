@@ -165,14 +165,20 @@
  
 @media (min-width: 1024px) {
   .custom-text {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 @media (min-width: 1440px) {
   .custom-text {
-    font-size: 74px;
+    font-size: 64px;
   }
 }
+@media (min-width: 2560px) {
+  .custom-text {
+    font-size: 84px;
+  }
+}
+
 
 
 

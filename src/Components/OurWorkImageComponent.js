@@ -23,7 +23,7 @@ const OurWorkImageComponent = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'rgba(#0F0E0E80 50%)',
+              background: 'rgba(15, 14, 14, 0.5)',
               zIndex: 2,
             }}
           />

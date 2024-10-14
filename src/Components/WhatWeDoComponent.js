@@ -47,10 +47,10 @@ const WhatWeDoComponent = () => {
 
       <Controls.Box sx={{ position: 'relative', zIndex: 3, }} >
         <Controls.Grid item sx={{ justifyContent: "center", zIndex: 2, }} >
-          <Controls.Grid item sx={{ justifyContent: "center", margin: "auto", zIndex: 2 }} container xs={10} md={10}lg={9}>
-            <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", zIndex: 2, fontSize: { xs: "40px", sm: "44px" } }}>What we do?</Controls.Typography>
+          <Controls.Grid item sx={{ justifyContent: "center", margin: "auto", zIndex: 2 }} container xs={10} md={10}lg={9} xl={10}>
+            <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", zIndex: 2, fontSize: { xs: "2.2rem", sm: "2.5rem" } }}>What we do?</Controls.Typography>
             <Controls.Grid item sx={{}}>
-              <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", color: theme.palette.one.main, fontSize: { xs: "15px", sm: "20px" } }}>
+              <Controls.Typography variant='caption1' sx={{ margin: "auto", textAlign: "center", color: theme.palette.one.main, fontSize: { xs: "1rem", sm: "1.5rem" } }}>
                 The greatness of a community is most accurately measured by the compassionate actions of its members. It is more blessed to give than to receive. A charity that costs nothing is worth nothing. Here about Charity:
               </Controls.Typography>
               <Controls.Grid container justifyContent='center' spacing={2} mt={2}>
@@ -94,8 +94,8 @@ const WhatWeDoComponent = () => {
                         </Controls.CardContent>
                       </Controls.Card>
                     ) : (
-                      <Controls.Grid container spacing={2}>
-                        <Controls.Grid item xs={5}  >
+                      <Controls.Grid container spacing={0} >
+                        <Controls.Grid item xs={4} xl={3} >
                           <Controls.Box
                             component='img'
                             src={item.gif}
