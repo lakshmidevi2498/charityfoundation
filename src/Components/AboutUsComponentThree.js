@@ -49,9 +49,9 @@ const AboutUsComponentThree = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption4'
                                     sx={{ 
-                                        fontSize: { xs: "30px", sm: '32px', md: "28px", lg: "30px" },
+                                        fontSize: { xs: "28px", sm: '32px', md: "28px", lg: "30px" },
                                         fontWeight: 700,
-                                        lineHeight: '50px',
+                                        lineHeight: {xs:"40px",sm:'50px'},
                                         textAlign: 'left',
                                         color: theme.palette.one.green
                                     }}
