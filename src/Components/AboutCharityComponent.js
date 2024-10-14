@@ -22,7 +22,7 @@ const AboutCharityComponent = () => {
           >
             Charity
           </Controls.Button>
-          <Controls.Grid item >
+          <Controls.Grid item mt={2}>
           <Controls.Typography variant='caption1'
             sx={{
               fontFamily: 'Poppins',

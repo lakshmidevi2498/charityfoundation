@@ -119,7 +119,7 @@ const TestimonialsComponent = () => {
                                                     position: "absolute",
                                                     zIndex:6,
                                                     // overflow: "visible",
-                                                    top: { xs: "-23%", sm: "-15%", md: "-60px" },
+                                                    top: { xs: "-25%", sm: "-15%", md: "-60px" },
                                                     left: { xs: "50.5%", sm: "50%", md: "50%" },
                                                     transform: "translateX(-50%)",
                                                     width: { xs: "210px", sm: '260px',md:"270px" },

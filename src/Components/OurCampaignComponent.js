@@ -81,7 +81,7 @@ const OurCampaignComponent = () => {
                             </Controls.Grid>
 
                             
-                            <Controls.Grid item xs={12}>
+                            <Controls.Grid item xs={12} >
                                 <Swiper
                                     spaceBetween={30}
                                     pagination={false}
@@ -97,7 +97,7 @@ const OurCampaignComponent = () => {
                                 >
                                     {content.map((item, index) => (
                                         <SwiperSlide key={index}>
-                                            <Controls.Card sx={{ display: 'flex', flexDirection: 'column', height: '100%', borderRadius: "20px" }}>
+                                            <Controls.Card sx={{ display: 'flex', flexDirection: 'column', height: '100%', borderRadius: "20px" ,border:"1px solid lightgray"}}>
                                                 <Controls.Grid container justifyContent="center" alignItems="center">
                                                     <Controls.CardMedia
                                                         component='img'

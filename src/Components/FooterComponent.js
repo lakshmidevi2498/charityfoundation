@@ -1,11 +1,19 @@
 import React from 'react';
 import Controls from '../commons/controls';
 import theme from '../Utilities/Theme';
+import { useNavigate } from 'react-router-dom';
 
 const FooterComponent = () => {
-    const content1 = [
-        "About Us", "Get Involved", "Our Work", "Blog", "Contact Us", "Donate Now"
-    ];
+    const navigate = useNavigate()
+    const links = [
+        { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/aboutus' },
+        { name: 'Get Involved', href: '/getinvolved' },
+        { name: 'Our Work', href: '/ourwork' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact Us', href: '/contactus' },
+        { name: 'Donate Now', href: '/donate'}
+      ];
 
     const content2 = [
         "Child Education Services", "Child Health & Nutrition Assistance", "Food & Shelter Programs",
@@ -27,6 +35,11 @@ const FooterComponent = () => {
         { Icon: Controls.InstagramIcon, key: 'instagram' }
     ]
 
+    const handleNavigate = (value) => {
+        // console.log("vlaue",value)
+        navigate(value)
+    }
+
     return (
         <Controls.Grid container justifyContent='center'>
             <Controls.Grid item xs={12} sx={{ backgroundColor: theme.palette.one.green, color: theme.palette.one.main }} gap={2} padding='20px'>
@@ -38,9 +51,9 @@ const FooterComponent = () => {
                                 Who We Are?
                             </Controls.Typography>
                             <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc', }}>
-                                {content1.map((item, index) => (
-                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item',fontFamily:"poppins" }}>
-                                        {item}
+                                {links.map((item, index) => (
+                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item',fontFamily:"poppins",cursor:"pointer" }} onClick={()=>{handleNavigate(item.href)}}>
+                                        {item.name}
                                     </Controls.ListItem>
                                 ))}
                             </Controls.List>

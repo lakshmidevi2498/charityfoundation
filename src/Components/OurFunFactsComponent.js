@@ -45,7 +45,7 @@ const OurFunFactsComponent = () => {
           <Controls.Box sx={{ position: 'relative', zIndex: 3, }}>
             <Controls.Grid container sx={{ justifyContent: "center", margin: "auto", alignItems: "center", }} item xs={12}  >
 
-              <Controls.Grid item xs={10} md={11} lg={10} sx={{ }} >
+              <Controls.Grid item xs={10} md={11} lg={11} sx={{ paddingX:{md:"20px",lg:"100px"}}} >
                 <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px",paddingX:{sm:"8px",lg:"10px" }}} >
                   <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
                     <Controls.Typography variant='caption4' sx={{  fontSize: "18px", }} >
@@ -58,7 +58,7 @@ const OurFunFactsComponent = () => {
                   </Controls.Typography>
                 </Controls.Grid>
               </Controls.Grid>
-              <Controls.Grid xs={10} sm={10} md={11} lg={10}item  >
+              <Controls.Grid  xs={10} md={11} lg={11} sx={{ paddingX:{md:"0px",lg:"90px"}}}   >
                 <Controls.Grid
                   container
                   sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }} 
@@ -74,7 +74,7 @@ const OurFunFactsComponent = () => {
                         sx={{
                           backgroundColor: theme.palette.one.green, 
                           height: "300px",
-                          width: {xs:"307px",sm:"300px",md:"300px",lg:"247px"},
+                          width: {xs:"350px",sm:"310px",md:"255px",lg:"247px"},
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',

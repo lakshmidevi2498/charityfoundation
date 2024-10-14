@@ -180,7 +180,7 @@ const GetInTouchComponent = () => {
                                             </Controls.Grid>
                                         </Controls.Grid>
 
-                                        <Controls.Grid item mt={{ xs: 2, sm: 2 }}>
+                                        <Controls.Grid item my={{ xs: 2, sm: 2 }}>
                                             <Controls.Button
                                                 variant='contained'
                                                 sx={{ backgroundColor: theme.palette.one.green }}

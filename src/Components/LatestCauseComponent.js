@@ -43,7 +43,7 @@ const LatestCauseComponent = () => {
                   cursor: 'pointer',
                   backgroundColor: "#D9F5EE",
                   position: 'absolute',
-                  top: {xs:'250px',sm:"-25px",},
+                  top: {xs:'180px',sm:"-25px",},
                   left: {xs:'0px',sm:"540px",md:"760px",lg:"980px",xl:"1040px"},    
                   zIndex: 100,
                   borderRadius: '50%',
@@ -61,12 +61,12 @@ const LatestCauseComponent = () => {
                   cursor: 'pointer',
                   backgroundColor: "#D9F5EE",
                   position: 'absolute',
-                  top: {xs:'250px',sm:"-25px"},   
+                  top: {xs:'180px',sm:"-25px"},   
                   right: {xs:'0px',sm:"20px"},  
                   zIndex: 100,
                   borderRadius: '50%',
                   padding: '5px',
-                  display: "flex",
+                  display: "flex", 
                 }}
                 onClick={() => swiperRef.current?.slideNext()}
               >

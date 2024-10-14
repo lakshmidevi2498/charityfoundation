@@ -21,7 +21,7 @@ const GalleryComponent = () => {
                             sx={{
                                 color: theme.palette.one.green,
                                 fontWeight: 'bold',
-                                fontSize: '30px',
+                                fontSize: {xs:"22px",sm:"24px",md:'30px'},
                             }}
                         >
                             Gallery Shows Our Presence

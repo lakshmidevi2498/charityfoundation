@@ -10,97 +10,107 @@ const ImageComponent = () => {
     const isMobile = useMediaQuery('(max-width: 769px)');
     return (
         <Controls.Grid
-    container 
-    justifyContent='center'
-    sx={{
-        position: 'relative',
-        width: '100%',  
-        height: '100vh',
-        overflowX: 'hidden',  
-        overflowY: 'hidden',  
-    }}
->
-    <Controls.Box
-        component='video'
-        sx={{
-            width: '100%', 
-            height: '100vh',
-            objectFit: 'cover',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            zIndex: -1,
-        }}
-        src='.\assests\images\We make a living by what we get, but we make a life by what we give. (1).mp4'
-        autoPlay
-        loop
-        muted
-        playsInline
-    />
-
-    <Controls.Grid
-        item
-        xs={12}
-        sx={{
-            textAlign: 'center',
-            zIndex: 1,
-            margin: "auto",
-            alignItems: "center",
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            height: '100%',
-        }}
-    >
-        {/* <Controls.Typography variant='caption1'
-            sx={{  
-                fontSize: { xs: "20px", sm: "40px", md: '56px', lg: "70px" },
-                fontWeight: 700,
-                lineHeight: { xs: "25px", sm: "45px", md: '74px', lg: "114px" },
-                color: "white",
-                mb: 3,
-            }}
-        >
-            We make a living by what we get, 
-            but we make a life  by what we give.
-        </Controls.Typography> */}
-        <TypeAnimation
-                    cursor={true}
-                    sequence={[  'We make a living by what we get, but we make a life by what we give.',  10000,  1000,  'We make a living by what we get, but we make a life by what we give.',  10000,  1000,  ]}
-                    wrapper="h1"
-                    className="custom-text"
-                    loop={Infinity}
-                    style={{
-                        color: theme.palette.one.main,
-                        fontWeight: 'bold',
-                        fontFamily: "Poppins",  
-                    }}
-                /> 
-
-        <Controls.Typography variant='caption2'
+            container
+            justifyContent='center'
             sx={{
-                fontSize: { xs: "14px", sm: "25px", md: '28px', lg: "32px" },
-                fontWeight: 700,
-                lineHeight: { xs: "20px", sm: "25px", md: '30px', lg: "39.5px" },
-                color: "#F2C21A",
-                mb: 3,
+                position: 'relative',
+                width: '100%',
+                height: '100vh',
+                overflowX: 'hidden',
+                overflowY: 'hidden',
             }}
         >
-            {isMobile
-                ? "The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer."
-                : (
-                    <>
-                        The simplest acts of kindness are by far more powerful than
-                        <br />
-                        a thousand heads bowing in prayer.
-                    </>
-                )
-            }
-        </Controls.Typography>
+            <Controls.Box
+                component='video'
+                sx={{
+                    width: '100%',
+                    height: '100vh',
+                    objectFit: 'cover',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    zIndex: -1,
+                }}
+                src='.\assests\images\We make a living by what we get, but we make a life by what we give. (1).mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+            />
 
-        <AnimatedButton />
-    </Controls.Grid>
-</Controls.Grid>
+            <Controls.Grid
+                item
+                xs={12}
+                sx={{
+                    textAlign: 'center',
+                    zIndex: 1,
+                    margin: 'auto',
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    height: '100vh', 
+                    boxSizing: 'border-box',
+                }}
+            >
+                <Controls.Grid
+                    item
+                    xs={11} sm={10} md={11} lg={10}
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        height: '100%',
+                    }}
+                >
+                    <TypeAnimation
+                        cursor={true}
+                        sequence={[
+                            'We make a living by what we get, but we make a life by what we give.',
+                            10000,
+                            1000,
+                            'We make a living by what we get, but we make a life by what we give.',
+                            10000,
+                            1000,
+                        ]}
+                        wrapper="h1"
+                        className="custom-text"
+                        loop={Infinity}
+                        style={{
+                            color: theme.palette.one.main,
+                            fontWeight: 'bold',
+                            fontFamily: 'Poppins',
+                        }}
+                    />
+                    <Controls.Typography
+                        variant="caption2"
+                        sx={{
+                            fontSize: { xs: '14px', sm: '25px', md: '28px', lg: '32px' },
+                            fontWeight: 700,
+                            lineHeight: { xs: '20px', sm: '25px', md: '30px', lg: '39.5px' },
+                            color: '#F2C21A',
+                            textAlign: 'center',
+                        }}
+                    >
+                        {isMobile ? (
+                            "The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer."
+                        ) : (
+                            <>
+                                The simplest acts of kindness are by far more powerful than
+                                <br />
+                                a thousand heads bowing in prayer.
+                            </>
+                        )}
+                    </Controls.Typography>
+                    <Controls.Grid item mt={5}>
+                        <AnimatedButton />
+                    </Controls.Grid>
+                </Controls.Grid>
+            </Controls.Grid>
+
+        </Controls.Grid>
     );
 };
 

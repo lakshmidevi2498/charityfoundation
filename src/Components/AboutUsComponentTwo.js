@@ -29,9 +29,9 @@ const AboutUsComponentTwo = () => {
               <Controls.Grid item>
                 <Controls.Typography variant='caption4'
                   sx={{ 
-                    fontSize: {xs:"30px",md:'39px'},
+                    fontSize: {xs:"32px",md:'37px'},
                     fontWeight: 700,
-                    lineHeight: '50px',
+                    lineHeight: '40px',
                     textAlign: 'left',
                     color: theme.palette.one.green
                   }}

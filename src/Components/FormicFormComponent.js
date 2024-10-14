@@ -55,6 +55,8 @@ const FormicFormComponent = ({ initialValues, validationSchema, dispatch, data }
         setSelectedRadio(null);
         setSelectedText(null);
         setSelected(null);
+        setCustomAmount('');
+        console.log("customAmount",customAmount)
     };
 
 
