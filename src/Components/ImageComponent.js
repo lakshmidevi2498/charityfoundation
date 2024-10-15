@@ -17,7 +17,7 @@ const ImageComponent = () => {
                 width: '100%',
                 height: '100vh',
                 overflowX: 'hidden',
-                overflowY: 'hidden',
+                overflowY: 'hidden', 
             }}
         >
             <Controls.Box
@@ -51,11 +51,12 @@ const ImageComponent = () => {
                     justifyContent: 'center',
                     height: '100vh', 
                     boxSizing: 'border-box',
+                    
                 }}
             >
                 <Controls.Grid
                     item
-                    xs={11} sm={10} md={11} lg={10}
+                    xs={11} sm={11} md={10} lg={9} xl={10}
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -63,6 +64,7 @@ const ImageComponent = () => {
                         justifyContent: 'center',
                         textAlign: 'center',
                         height: '100%',
+                       
                     }}
                 >
                     <TypeAnimation
@@ -79,7 +81,7 @@ const ImageComponent = () => {
                         className="custom-text"
                         loop={Infinity}
                         style={{
-                            color: theme.palette.one.main,
+                            color: theme.palette.one.main  ,
                             fontWeight: 'bold',
                             fontFamily: 'Poppins',
                         }}
@@ -87,19 +89,19 @@ const ImageComponent = () => {
                     <Controls.Typography
                         variant="caption2"
                         sx={{
-                            fontSize: { xs: '14px', sm: '25px', md: '28px', lg: '32px' },
+                            fontSize: { xs: '1rem', sm: '1.6rem', md: '1.7rem', lg: '2rem',xl:"3rem" },
                             fontWeight: 700,
-                            lineHeight: { xs: '20px', sm: '25px', md: '30px', lg: '39.5px' },
+                            lineHeight: { xs: '1.2rem', sm: '1.8rem', md: '2rem', lg: '2.6rem', },
                             color: '#F2C21A',
                             textAlign: 'center',
+                            paddingX:{sm:"1.2rem",md:0}
                         }}
                     >
                         {isMobile ? (
                             "The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer."
                         ) : (
                             <>
-                                The simplest acts of kindness are by far more powerful than
-                                <br />
+                                The simplest acts of kindness are by far more powerful than 
                                 a thousand heads bowing in prayer.
                             </>
                         )}

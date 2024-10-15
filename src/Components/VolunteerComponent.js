@@ -15,7 +15,7 @@ const VolunteerComponent = ({textColor}) => {
             <Controls.Grid conatiner justifyContent="center" mb={4} mt={1} pt={4}>
                 <Controls.Grid item xs={12} sx={{ justifyContent: "center", textAlign: "center" }}>
                     <Controls.Typography variant='caption1' sx={{
-                         fontSize: {xs:"16px",sm:'32px'},
+                         fontSize: {xs:"16px",sm:'32px',xl:"38px"},
                         fontWeight: 500,
                         lineHeight: {xs:"20px",sm:'48px'},
                         textAlign: 'left', 

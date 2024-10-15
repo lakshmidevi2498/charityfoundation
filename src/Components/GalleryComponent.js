@@ -21,7 +21,7 @@ const GalleryComponent = () => {
                             sx={{
                                 color: theme.palette.one.green,
                                 fontWeight: 'bold',
-                                fontSize: {xs:"22px",sm:"24px",md:'30px'},
+                                fontSize: {xs:"22px",sm:"24px",md:'30px',xl:"40px"},
                             }}
                         >
                             Gallery Shows Our Presence
@@ -35,7 +35,8 @@ const GalleryComponent = () => {
                         display='flex'
                         alignItems='center'
                         margin='auto'
-                        sx={{ maxWidth: '100%' }}  
+                        sx={{ maxWidth: '100%' }} 
+                        // gap={{xs:5,lg:0}} 
                     >
                         {images.map((img, index) => (
                             <Controls.Grid
@@ -46,11 +47,12 @@ const GalleryComponent = () => {
                                 lg={2.4}
                                 sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                 key={index}
+                                mb={{xs:5,lg:2}}
                             >
                                 <Controls.Card
                                     sx={{
                                         width: '100%',
-                                        height: '350px',
+                                        height: {xs:'350px',xl:"500px"},
                                         border: '2px solid black',
                                         margin: 0,
                                         boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",

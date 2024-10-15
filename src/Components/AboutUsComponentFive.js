@@ -42,18 +42,18 @@ const AboutUsComponentFive = () => {
                             <Controls.Grid item xs={9} sx={{ justifyContent: "center", margin: "auto", textAlign: "center" }}>
                                 <Controls.Grid item sx={{ display: "flex", alignItems: "center", justifyContent: "center" }} gap={1}>
                                     <Controls.Divider sx={{ backgroundColor: theme.palette.one.main, width: { xs: "50px", }, }} />
-                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main }}>Our Testimonials</Controls.Typography>
+                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main,fontSize:{xs:"14px",xl:"25px"} }}>Our Testimonials</Controls.Typography>
                                     <Controls.Divider sx={{ backgroundColor: theme.palette.one.main, width: { xs: "50px", }, }} />
                                 </Controls.Grid>
                                 <Controls.Grid item>
-                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A", fontSize: "25px", fontWeight: "bold" }}>What People Say</Controls.Typography>
+                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A", fontSize: {xs:"25px",sm:"30px"}, fontWeight: "bold" }}>What People Say</Controls.Typography>
                                 </Controls.Grid>
                                 <Controls.Box my={2} component='img' src={item.img} width="150px" height="150px" sx={{ borderRadius: '10px' }} />
                                 <Controls.Grid item>
-                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A" }}>{item.name}</Controls.Typography>
+                                    <Controls.Typography variant='caption2' sx={{ color: "#F2C21A",fontSize:{xs:"13px",xl:"22px"} }}>{item.name}</Controls.Typography>
                                 </Controls.Grid>
                                 <Controls.Grid item>
-                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main }} my={2}>{item.desig}</Controls.Typography>
+                                    <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.main,fontSize:{xs:"13px",xl:"18px"}  }} my={2}>{item.desig}</Controls.Typography>
                                 </Controls.Grid>
                                 <Controls.Grid item sx={{ position: 'relative' }}>
 
@@ -82,7 +82,7 @@ const AboutUsComponentFive = () => {
                                             sx={{
                                                 color: theme.palette.one.main,
                                                 textAlign: "center",
-                                                fontSize: { xs: "12px", md: "14px" },
+                                                fontSize: { xs: "12px", md: "14px",xl:"18px" },
                                                 position: "relative",
                                                 zIndex: 2,
                                             }}

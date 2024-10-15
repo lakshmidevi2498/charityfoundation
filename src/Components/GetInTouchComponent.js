@@ -3,6 +3,9 @@ import Controls from '../commons/controls'
 import theme from '../Utilities/Theme'
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios'; 
+import emailjs from 'emailjs-com';
+
 
 const validationSchema = Yup.object().shape({
     fname: Yup.string()
@@ -31,7 +34,35 @@ const GetInTouchComponent = () => {
     const onSubmit = (values, actions) => {
         console.log("Form Values:", values);
         actions.resetForm();
+        handleMail(values)
     };
+  
+
+    const handleMail = (values) => {
+        
+           const  service_id = 'service_okycvj8'
+           const template_id= 'template_p2n7w53'
+           const user_id = 'H9mKbRUHuFIU-z7Bh'
+           const template_params = {
+                from_name: values.fname + values.lname,
+                from_email:values.email,
+                from_number:values.phone,
+                message:values.message,
+                to_name:"Charity Foundation"
+            }
+       
+
+
+        
+       emailjs.send(service_id , template_id , template_params , user_id)
+       .then((response)=>{
+        console.log("Email sent successfully",response)
+       })
+       .catch((error)=>{
+        console.log("error sending Email",error)
+       })
+        
+    }
 
     return (
         <>
@@ -43,18 +74,18 @@ const GetInTouchComponent = () => {
                     borderRadius: '8px',
                 }}>
                 <Controls.Grid
-                    item xs={11} sm={10} md={11} lg={10}
+                    item xs={11} sm={10} lg={9} xl={10}
                     sx={{ justifyContent: "center", paddingY: "30px", height: "auto" }} >
 
-                    <Controls.Grid item paddingX={{ xs: "0px", md: "15px", lg: "20px" }}>
+                    <Controls.Grid item  >
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px" } }}>
+                            <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px",xl:"20px" } }}>
                                Get In Touch
                             </Controls.Typography>
                             <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px", marginLeft: '8px' }} />
                         </Controls.Box>
                         <Controls.Grid item my={2}>
-                        <Controls.Typography variant='caption1' sx={{ fontSize: "24px", fontWeight: "bold" }} >Send me a message</Controls.Typography>
+                        <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"24px",xl:"28px"}, fontWeight: "bold" }} >Send me a message</Controls.Typography>
                         </Controls.Grid>                    
                     </Controls.Grid>
 
@@ -66,7 +97,7 @@ const GetInTouchComponent = () => {
                         height="auto"
                         sx={{ flexGrow: 1 , }} 
                     >
-                        <Controls.Grid item xs={12} md={6} lg={7.5} justifyContent='center'>
+                        <Controls.Grid item xs={12} md={6} lg={7} justifyContent='center'>
                             <Formik
                                 initialValues={initialValues}
                                 validationSchema={validationSchema}

@@ -17,7 +17,7 @@ const [more ,setMore] = useState(false)
     return (
         <>
             <Controls.Grid container justifyContent='center' mt={5}>
-                <Controls.Grid item xs={10} md={11} lg={10}sx={{ justifyContent: "center" }}>
+                <Controls.Grid item xs={10} lg={9} xl={10}sx={{ justifyContent: "center" }}>
                     <Controls.Grid item mb={2}>
                         <Controls.Button
                             variant='outlined'
@@ -26,7 +26,8 @@ const [more ,setMore] = useState(false)
                                 border: "2px solid #ffc700",
                                 borderRadius: "20px",
                                 textTransform: "initial",
-                                paddingX: "25px"
+                                paddingX: "25px",
+                                fontSize:{xs:"16px",xl:"18px"}
                             }}
                         >
                             Our work
@@ -37,7 +38,7 @@ const [more ,setMore] = useState(false)
                         <Controls.Typography
                             variant='caption1'
                             sx={{
-                                fontSize: {xs:"20px",sm:"32px"},
+                                fontSize: {xs:"20px",sm:"32px",xl:"40px"},
                                 fontWeight: "bold",
                                 color: theme.palette.one.green
                             }}

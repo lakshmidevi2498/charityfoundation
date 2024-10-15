@@ -23,7 +23,7 @@ const OurWorkImageComponent = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'rgba(#0F0E0E80 50%)',
+              background: 'rgba(15, 14, 14, 0.5)',
               zIndex: 2,
             }}
           />
@@ -41,10 +41,10 @@ const OurWorkImageComponent = () => {
                     <Controls.Grid 
                         container   
                         item 
-                        xs={12} 
+                        xs={11} 
                         sm={10} 
-                        md={8} 
-                        lg={7}
+                        lg={9} 
+                        xl={10}
                         sx={{
                             justifyContent: "center",  
                             alignItems: "center",  
@@ -60,7 +60,7 @@ const OurWorkImageComponent = () => {
                             variant='caption1' 
                             sx={{
                                 color: theme.palette.one.main,
-                                fontSize: {xs:"20px",sm:"35px",md:"40px",lg:"45px"},
+                                fontSize: {xs:"20px",sm:"35px",md:"40px",lg:"45px",xl:"75px"},
                                 fontWeight: 700
                             }}
                         >

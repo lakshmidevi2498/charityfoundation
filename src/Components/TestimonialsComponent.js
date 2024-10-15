@@ -50,23 +50,23 @@ const TestimonialsComponent = () => {
                                 >
 
                                     <Controls.Grid item xs={12} sm={6} sx={{ order: { xs: 1, sm: 3 }, }}>
-                                        <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontSize: { xs: "14px", sm: "20px" }, fontWeight: "bold" }}>Testimonials</Controls.Typography>
-                                        <Controls.Typography variant='caption4' sx={{ fontSize: { xs: "22px", sm: "30px" }, fontWeight: "bold", display: { xs: "none", sm: "block" } }}>What People Say about
+                                        <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontSize: { xs: "14px", sm: "20px" ,xl:"26px"}, fontWeight: "bold" }}>Testimonials</Controls.Typography>
+                                        <Controls.Typography variant='caption4' sx={{ fontSize: { xs: "22px", sm: "30px",xl:"32px" }, fontWeight: "bold", display: { xs: "none", sm: "block" } }}>What People Say about
                                             <Controls.Box component='span' sx={{ color: theme.palette.one.green, }}> Our Organization</Controls.Box>
                                         </Controls.Typography>
-                                        <Controls.Typography variant='caption4' sx={{ fontSize: "14px", display: { xs: "none", sm: "block" } }}>
+                                        <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
                                             “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis pellentesque cras interdum ornare feugiat eget feugiat. Nunc, urna vitae pellentesque risus, ut volutpat eget libero vel. Vitae urna pharetra sem consectetur sed mi, nisi id feugiat. At egestas praesent mauris metus risus accumsan. Cras gravida natoque maecenas risus ultricies. Sed tincidunt porttitor viverra nunc neque, enim. Tristique molestie turpis turpis diam”
                                         </Controls.Typography>
                                         <Controls.Grid item sx={{ display: "flex", alignItems: "center" }} gap={2} my={2}>
 
                                             <Controls.Grid item sx={{ flex: 1, order: { xs: 2, md: 1 } }}>
                                                 <Controls.Grid item>
-                                                    <Controls.Typography variant="caption4" sx={{ fontSize: "20px", fontWeight: "bold" }}>
+                                                    <Controls.Typography variant="caption4" sx={{ fontSize: {xs:"20px",xl:"26px"}, fontWeight: "bold" }}>
                                                         Kay Henderson
                                                     </Controls.Typography>
                                                 </Controls.Grid>
                                                 <Controls.Grid item>
-                                                    <Controls.Typography variant="caption4" sx={{ fontSize: "14px" }}>
+                                                    <Controls.Typography variant="caption4" sx={{ fontSize: {xs:"14px",xl:"18px"} }}>
                                                         Businessman - Entrepreneur
                                                     </Controls.Typography>
                                                 </Controls.Grid>
@@ -101,8 +101,8 @@ const TestimonialsComponent = () => {
                                             item
                                             sx={{
                                                 backgroundColor: "#F2C21A",
-                                                height: { xs: "280px", sm: "320px" },
-                                                width: { xs: "250px", sm: "320px" },
+                                                height: { xs: "280px", sm: "320px",xl:"400px" },
+                                                width: { xs: "250px", sm: "320px",xl:"400px" },
                                                 alignItems: "center",
                                                 margin: "auto",
                                                 justifyContent: "center",
@@ -122,8 +122,8 @@ const TestimonialsComponent = () => {
                                                     top: { xs: "-25%", sm: "-15%", md: "-60px" },
                                                     left: { xs: "50.5%", sm: "50%", md: "50%" },
                                                     transform: "translateX(-50%)",
-                                                    width: { xs: "210px", sm: '260px',md:"270px" },
-                                                    height: { xs: "280px", sm: '370px', md: "380px" },
+                                                    width: { xs: "210px", sm: '260px',md:"270px",xl:"340px" },
+                                                    height: { xs: "280px", sm: '370px', md: "380px",xl:"420px" },
                                                     zIndex: 1,
                                                     borderTopLeftRadius: "10px",
                                                     borderBottomRightRadius: "10px", 

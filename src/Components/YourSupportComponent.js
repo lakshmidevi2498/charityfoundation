@@ -5,7 +5,7 @@ import theme from '../Utilities/Theme';
 const YourSupportComponent = () => {
   return (
     <>
-    <Controls.Grid container justifyContent="center" mt={5} >
+    <Controls.Grid container justifyContent="center" my={{xs:5,xl:8}} >
                 <Controls.Grid item xs={10} md={11} lg={10}sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
                     <Controls.Grid container sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", }}>
 
@@ -33,7 +33,7 @@ const YourSupportComponent = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption4'
                                     sx={{ 
-                                        fontSize: { xs: "30px", sm: '32px', md: "28px", lg: "30px" },
+                                        fontSize: { xs: "30px", sm: '32px', md: "28px", lg: "30px",xl:"34px" },
                                         fontWeight: 700,
                                         lineHeight: '50px',
                                         textAlign: 'left',
@@ -46,7 +46,7 @@ const YourSupportComponent = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption2'
                                     sx={{ 
-                                        fontSize: {xs:"14px",lg:'16px'},
+                                        fontSize: {xs:"14px",lg:'16px',xl:"20px"},
                                         fontWeight: 500,
                                         lineHeight: '24px',
                                         textAlign: 'left'
@@ -59,7 +59,7 @@ const YourSupportComponent = () => {
                                 <Controls.Typography variant='caption2'
                                     sx={{
                                         
-                                        fontSize: {xs:"14px",lg:'16px'},
+                                        fontSize: {xs:"14px",lg:'16px',xl:"20px"},
                                         fontWeight: 500,
                                         lineHeight: '24px',
                                         textAlign: 'left'
@@ -104,17 +104,17 @@ const YourSupportComponent = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid rgba(242, 194, 26, 0.18)",
-                                    width: { xs: "100%", sm: "330px", md: "340px", lg: "420px" },
-                                    height: { xs: "100%", sm: "280px", md: "350px", lg: "430px" },
+                                    width: { xs: "100%", sm: "330px", md: "340px", lg: "420px",xl:"500px" },
+                                    height: { xs: "100%", sm: "280px", md: "350px", lg: "430px",xl:"400px" },
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "0 40px" },
                                     display: "block",
                                     marginLeft: { xs: 0, sm: "80px", md: 0 },
-                                    // transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                                    // '&:hover': {
-                                    //     transform: "scale(1.07)",
-                                    //     boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
-                                    // },
+                                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                                    '&:hover': {
+                                        transform: "scale(1.07)",
+                                        boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+                                    },
                                 }}
                             />
                             <Controls.Box
@@ -124,12 +124,12 @@ const YourSupportComponent = () => {
                                     backgroundColor: theme.palette.one.main,
                                     position: "absolute",
                                     zIndex: 2,
-                                    top: { xs: "75%", sm: "90%", md: "70%", lg: "80%" },
-                                    left: { xs: "69%", sm: "70%", md: "70%", lg: "70%" },
+                                    top: { xs: "75%", sm: "90%", md: "70%", lg: "80%",xl:"80%" },
+                                    left: { xs: "69%", sm: "70%", md: "70%", lg: "70%",xl:"50%" },
                                     transform: "translate(-50%, -50%)",
                                     border: "10px solid rgba(242, 194, 26, 0.18)",
-                                    width: { xs: "147px", sm: "280px", md: "270px", lg: "330px" },
-                                    height: { xs: "130px", sm: "220px", md: "280px", lg: "300px" },
+                                    width: { xs: "147px", sm: "280px", md: "270px", lg: "330px" ,xl:"380px"},
+                                    height: { xs: "130px", sm: "220px", md: "280px", lg: "300px" ,xl:"320px"},
                                     display: {xs:"none",sm:"flex"},
                                     justifyContent: "center",
                                     alignItems: "center",

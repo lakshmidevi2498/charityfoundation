@@ -19,15 +19,15 @@ const FrequentlyQuestionsComponent = () => {
         <>
             <Controls.Grid container justifyContent='center' >
                 <Controls.Grid item sx={{ backgroundColor: "rgba(242, 194, 26, 0.10)", justifyContent: "center", alignItems: "center", display: 'flex' }} xs={12}>
-                    <Controls.Grid item xs={10} sm={11} md={11} lg={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, paddingY: "20px", alignItems: "center" }}gap={1}>
-                        <Controls.Grid item xs={12} md={6}>
+                    <Controls.Grid item xs={10} sm={11} md={11} lg={9} xl={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, paddingY: "20px", alignItems: "center" }}gap={1}>
+                        <Controls.Grid item xs={12} md={6} xl={4}>
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                                <Controls.Typography variant='caption2' sx={{  fontSize: "18px", }} >
+                                <Controls.Typography variant='caption2' sx={{  fontSize: {xs:"18px",xl:"24px"} }} >
                                     Have Any Question ?
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
                             </Controls.Box>
-                            <Controls.Typography variant='caption1' sx={{ fontSize: "24px", color: theme.palette.one.green, }}>Frequently Asked Questions</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"18px",md:"24px",sm:"30px"}, color: theme.palette.one.green, }}>Frequently Asked Questions</Controls.Typography>
 
                             <Controls.Box
 
@@ -36,8 +36,8 @@ const FrequentlyQuestionsComponent = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid rgba(242, 194, 26, 0.18)",
-                                    width: { xs: "100%", sm: "330px", md: "340px", lg: "450px" },
-                                    height: { xs: "100%", sm: "280px", md: "350px", lg: "400px" },
+                                    width: { xs: "100%", sm: "330px", md: "340px", lg: "450px",xl:"600px" },
+                                    height: { xs: "100%", sm: "280px", md: "350px", lg: "400px" ,xl:"450px"},
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "10px 40px" },
                                     display: "block",
@@ -50,7 +50,7 @@ const FrequentlyQuestionsComponent = () => {
                                 }}
                             />
                         </Controls.Grid>
-                        <Controls.Grid item xs={12} md={6} sx={{ justifyContent: "center", alignItems: "center", }}>
+                        <Controls.Grid item xs={12} md={6} xl={8}sx={{ justifyContent: "center", alignItems: "center", }}>
                             {content.map((item, index) => (
                                 <Controls.Grid item key={index}>
                                     <Controls.Accordion

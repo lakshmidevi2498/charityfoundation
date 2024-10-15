@@ -83,9 +83,9 @@ const ReadMoreCardsComponent = () => {
                                                     borderRadius: "30px",
                                                     textTransform: "initial",
                                                     paddingY: "7px",
-                                                    paddingX: {xs:"7px",sm:"10px"},
+                                                    paddingX: {xs:"7px",sm:"10px",lg:"5px"},
                                                     fontWeight: "bold",
-                                                    fontSize: {xs:"18px",sm:"20px"},
+                                                    fontSize: {xs:"18px",sm:"20px",lg:"18px"},
                                                 }}
                                                 onClick={() => handleCardClick(index)}
                                             >
@@ -119,7 +119,7 @@ const ReadMoreCardsComponent = () => {
                                             <Controls.Typography
                                                 variant="caption1"
                                                 component="div"
-                                                sx={{ color: theme.palette.one.main, fontSize: "18px" }}
+                                                sx={{ color: theme.palette.one.main, fontSize: {xs:"18px",xl:"22px"} }}
                                             >
                                                 {backCard[index]}
                                             </Controls.Typography>

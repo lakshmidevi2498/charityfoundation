@@ -22,17 +22,17 @@ const BlogSwiperComponent = () => {
     return (
         <>
             <Controls.Grid container justifyContent='center' py={5} sx={{backgroundColor:"#EDF7F5"}}>
-                <Controls.Grid item xs={10} sx={{ justifyContent: "center" }}>
+                <Controls.Grid item xs={10} lg={9} xl={10}sx={{ justifyContent: "center" }}>
                     <Controls.Grid item xs={12} sx={{ justifyContent: "space-between", display: "flex" }}>
-                        <Controls.Grid item mb={3}>
-                            <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Controls.Typography variant='caption1' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >
+                        <Controls.Grid item mb={3} >
+                            <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
+                                <Controls.Typography variant='caption1' sx={{ fontFamily: 'Montserrat', fontSize: {Xs:"18px",xl:"20px"}, }} >
                                     Latest News
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
                             </Controls.Box>
                             <Controls.Grid item>
-                                <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"22px",sm:"30px"}, color: theme.palette.one.green }}>Article You Also May Like</Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"22px",sm:"30px",xl:"35px"}, color: theme.palette.one.green }}>Article You Also May Like</Controls.Typography>
                             </Controls.Grid>
                         </Controls.Grid>
                         <Controls.Grid item>
@@ -42,8 +42,8 @@ const BlogSwiperComponent = () => {
                                     color: theme.palette.one.main,
                                     backgroundColor:theme.palette.one.button,
                                     position: 'absolute',
-                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "33%",xl:"25%" },
-                                    left: { xs: "10%",sm:"80%",md:"82%", lg: '1220px' ,xl:"1290px"},
+                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "25%",xl:"18%" },
+                                    left: { xs: "10%",sm:"80%",md:"82%", lg: '1250px' ,xl:"2230px"},
                                     zIndex: 100,
                                     borderRadius: '50%',
                                     padding: '2px',
@@ -62,8 +62,8 @@ const BlogSwiperComponent = () => {
                                     color: theme.palette.one.main,
                                     backgroundColor:theme.palette.one.button,
                                     position: 'absolute',
-                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "33%",xl:"25%" },
-                                    right: { xs: '40px',sm:"10%",md:"10%", lg: '10%',xl:"10%" },
+                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "25%",xl:"18%" },
+                                    right: { xs: '40px',sm:"10%",md:"10%", lg: '13%',xl:"10%" },
                                     zIndex: 100,
                                     borderRadius: '50%',
                                     padding: '2px',
@@ -110,9 +110,9 @@ const BlogSwiperComponent = () => {
                                                     </Controls.Grid>
                                                 </Controls.Grid>
                                                 <Controls.Grid item my={1}>
-                                                    <Controls.Typography variant='caption2' sx={{ fontSize: {xs:"16px",md:"18px"}, fontWeight: "bold",}}>{item.title}</Controls.Typography>
+                                                    <Controls.Typography variant='caption2' sx={{ fontSize: {xs:"16px",md:"18px",xl:"20px"}, fontWeight: "bold",}}>{item.title}</Controls.Typography>
                                                 </Controls.Grid>
-                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.lightgray }}>{item.descp}</Controls.Typography>
+                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.lightgray ,fontSize:{xs:"12px",xl:"18px"}}}>{item.descp}</Controls.Typography>
                                                 <Controls.CardActions>
                                                 <Controls.Button
                                                     variant={index === 0 ? 'contained' : 'outlined'}

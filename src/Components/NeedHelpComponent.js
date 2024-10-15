@@ -24,12 +24,12 @@ const NeedHelpComponent = () => {
   return (
     <>
       <Controls.Grid container justifyContent="center" my={5}>
-        <Controls.Grid item xs={10}md={11} lg={10} sx={{ justifyContent: "center", }}>
+        <Controls.Grid item xs={10}md={10} lg={9} xl={10} sx={{ justifyContent: "center", }}>
           <Controls.Grid item>
-          <Controls.Typography variant="caption1"sx={{ color: theme.palette.one.green, textAlign: "left", fontWeight: 700, fontSize: {xs:'24px',sm:"26px"},   }}>Still Need Help</Controls.Typography>
+          <Controls.Typography variant="caption1"sx={{ color: theme.palette.one.green, textAlign: "left", fontWeight: 700, fontSize: {xs:'24px',sm:"26px",xl:"30px"},   }}>Still Need Help</Controls.Typography>
           </Controls.Grid>
           <Controls.Grid item>
-          <Controls.Typography variant="caption1"sx={{   }}>We enjoy adapting our strategies to offer We believe in the equal value of every human being and the importance of respecting and honoring each individual; we know that change happens through people. every client the best solutions that are at the forefront of the industry.</Controls.Typography>
+          <Controls.Typography variant="caption1"sx={{ fontSize:{xs:"12px",sm:"14px",xl:"22px"}  }}>We enjoy adapting our strategies to offer We believe in the equal value of every human being and the importance of respecting and honoring each individual; we know that change happens through people. every client the best solutions that are at the forefront of the industry.</Controls.Typography>
           </Controls.Grid>
           <Controls.Grid container display='flex' spacing={{xs:2,sm:5,md:5,lg:10}}  >
   {content.map((item, index) => (
@@ -65,10 +65,10 @@ const NeedHelpComponent = () => {
             alt={item.text}
           />
           <Controls.Grid item>
-          <Controls.Typography variant="caption2" sx={{ fontSize: "24px",fontWeight:700 ,   }} my={2}>{item.text}</Controls.Typography>
+          <Controls.Typography variant="caption2" sx={{ fontSize: {xs:"24px",xl:"26px"},fontWeight:700 ,   }} my={2}>{item.text}</Controls.Typography>
           </Controls.Grid>
           <Controls.Grid item>
-          <Controls.Typography variant="caption2" sx={{ fontSize: '15px'   ,paddingX:"10px"}}>{item.descp}</Controls.Typography>
+          <Controls.Typography variant="caption2" sx={{ fontSize: {xs:'14px',md:"16px",xl:"22px"}   ,paddingX:"10px"}}>{item.descp}</Controls.Typography>
           </Controls.Grid>
         </Controls.Grid>
       </Controls.Card>

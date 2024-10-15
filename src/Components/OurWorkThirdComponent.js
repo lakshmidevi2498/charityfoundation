@@ -18,8 +18,8 @@ const OurWorkThirdComponent = () => {
                 <Controls.Grid item xs={12} sx={{ backgroundColor: "rgba(242, 194, 26, 0.16)",paddingY:'30px' }}>
                     <Controls.Grid item xs={12} sm={10}  sx={{ justifyContent: "center", alignItems: "center", margin: "auto", textAlign: "center" }} padding='10px'>
                         <Controls.Grid item sx={{ display: "block" }} mb={1}>
-                            <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"18px",md:"20px"}, fontWeight: "medium" }}>The measure of a life is not its duration, but its donation.</Controls.Typography><br />
-                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold", fontSize: {xs:"20px",sm:"20px",md:"26px",lg:"32px"}, color: theme.palette.one.green,paddingX:{xs:"2px",sm:0} }}>The smallest act of kindness is worth more than the grandest intention.</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"18px",md:"20px",xl:"26px"}, fontWeight: "medium" }}>The measure of a life is not its duration, but its donation.</Controls.Typography><br />
+                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold", fontSize: {xs:"20px",sm:"20px",md:"26px",lg:"32px",xl:"36px"}, color: theme.palette.one.green,paddingX:{xs:"2px",sm:0} }}>The smallest act of kindness is worth more than the grandest intention.</Controls.Typography>
                         </Controls.Grid>
                     </Controls.Grid>
                     <Controls.Grid item xs={11} sx={{ justifyContent: "center",alignItems:"center",margin:"auto" , }} >
@@ -61,15 +61,15 @@ const OurWorkThirdComponent = () => {
                             {content.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <Controls.Grid item justifyContent="center" alignItems="center" sx={{ height: "100%",display:{xs:"block",sm:"flex"} }} gap={1} >
-                                        <Controls.Grid item xs={12} sm={5} md={6}>
-                                            <Controls.Box component="img" src={item} width='100%' height='100%' sx={{ width: {xs:'100%',sm:"100%"}, height: "300px",padding:{xs:"15px",} }} />
+                                        <Controls.Grid item xs={12} sm={5} md={6}lg={5} xl={4}>
+                                            <Controls.Box component="img" src={item} width='100%' height='100%' sx={{ width: {xs:'100%', }, height: "300px",padding:{xs:"15px",} }} />
                                         </Controls.Grid>
-                                        <Controls.Grid xs={12} sm={7}md={6} sx={{ display: "block",margin:"auto",paddingX:{xs:"10px",sm:0} }}>
-                                            <Controls.Grid item> <Controls.Typography variant='caption1' sx={{ fontWeight: "medium", fontSize: {xs:"18px",sm:"21px",md:"17px",lg:"21px"} }}>The simplest into they acts of kindness are by far more powerful than a thousand heads bowing in prayer.The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer.</Controls.Typography>
+                                        <Controls.Grid xs={12} sm={7}md={6}lg={7} xl={7}sx={{ display: "block",margin:"auto",paddingX:{xs:"10px",sm:0} }}>
+                                            <Controls.Grid item> <Controls.Typography variant='caption1' sx={{ fontWeight: "medium", fontSize: {xs:"18px",sm:"21px",md:"17px",lg:"19px",xl:"26px"} }}>The simplest into they acts of kindness are by far more powerful than a thousand heads bowing in prayer.The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer far more powerful than a thousand heads bowing in prayer.</Controls.Typography>
                                             </Controls.Grid>
-                                            <Controls.Grid item><Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontWeight: "bold", fontSize: {xs:"20px",sm:"23px",md:"20px",lg:"24px"} }}>Fredrick Fringleston</Controls.Typography>
+                                            <Controls.Grid item><Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontWeight: "bold", fontSize: {xs:"20px",sm:"23px",md:"20px",lg:"24px",xl:"28px"} }}>Fredrick Fringleston</Controls.Typography>
                                             </Controls.Grid>
-                                            <Controls.Grid item><Controls.Typography variant='caption1' sx={{ fontWeight: "bold", fontSize: {xs:"20px",sm:"23px",md:"18px",lg:"20px"},marginBottom:{xs:"10px",sm:0} }}>United States of America</Controls.Typography>
+                                            <Controls.Grid item><Controls.Typography variant='caption1' sx={{ fontWeight: "bold", fontSize: {xs:"20px",sm:"23px",md:"16px",lg:"20px",xl:"@24px   "},marginBottom:{xs:"10px",sm:0} }}>United States of America</Controls.Typography>
                                             </Controls.Grid>
                                         </Controls.Grid>
                                     </Controls.Grid>

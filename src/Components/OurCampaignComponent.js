@@ -49,7 +49,7 @@ const OurCampaignComponent = () => {
                                     backgroundColor: theme.palette.one.button,
                                     position: 'absolute',
                                     top: {xs:'30%',sm:"-10%"}, 
-                                    left: {xs:'10px',sm:"85%",md:"88%",lg:"92%"},
+                                    left: {xs:'10px',sm:"85%",md:"88%",lg:"92%",xl:"95%"},
                                     zIndex: 100,
                                     borderRadius: '50%',
                                     padding: '2px',

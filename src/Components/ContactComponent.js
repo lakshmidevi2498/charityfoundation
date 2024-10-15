@@ -18,7 +18,7 @@ const ContactComponent = () => {
 
     return (
         <>
-            <Controls.Grid container justifyContent='center' alignItems='center' sx={{ position: 'relative', width: '100%', overflow: 'visible' }} mb={{xs:0,md:20,lg:15}}>
+            <Controls.Grid container justifyContent='center' alignItems='center' sx={{ position: 'relative', width: '100%', overflow: 'visible',height:"auto" }} mb={{xs:0,md:20,lg:15,xl:20}}>
 
                 <Controls.Grid
                     item
@@ -105,8 +105,8 @@ const ContactComponent = () => {
                             >
                                 <Controls.Card
                                     sx={{
-                                        width: '170px',
-                                        height: '200px',
+                                        width: {xs:'170px',xl:"220px"},
+                                        height: {xs:'200px',xl:"250px"},
                                         borderRadius: '10px',
                                         position: 'relative',
                                         transition: "transform 0.4s ease, background-color 0.3s ease",
@@ -125,8 +125,8 @@ const ContactComponent = () => {
                                             image={item}
                                             alt="Image"
                                             sx={{
-                                                width: "170px",
-                                                height: '200px',
+                                                width: {xs:'170px',xl:"220px"},
+                                                height: {xs:'200px',xl:"250px"},
                                                 borderRadius: '10px',
                                                 objectFit: 'cover',
                                             }}

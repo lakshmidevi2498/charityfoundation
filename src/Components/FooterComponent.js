@@ -43,16 +43,16 @@ const FooterComponent = () => {
     return (
         <Controls.Grid container justifyContent='center'>
             <Controls.Grid item xs={12} sx={{ backgroundColor: theme.palette.one.green, color: theme.palette.one.main }} gap={2} padding='20px'>
-                <Controls.Grid container xs={10} sx={{ margin: "auto" }} justifyContent='center' item>
+                <Controls.Grid container xs={10} lg={9} xl={10}sx={{ margin: "auto" }} justifyContent='center' item>
                     <Controls.Grid container sx={{ display: "flex", justifyContent: "space-between" }} mb={3}>
 
                         <Controls.Grid item xs={12} sm={6} md={4} lg={2}>
-                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>
+                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"22px",xl:"26px"} }}>
                                 Who We Are?
                             </Controls.Typography>
                             <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc', }}>
                                 {links.map((item, index) => (
-                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item',fontFamily:"poppins",cursor:"pointer" }} onClick={()=>{handleNavigate(item.href)}}>
+                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", padding: 1, display: 'list-item',fontFamily:"poppins",cursor:"pointer" ,fontSize:{xs:"16px",xl:"24px"}}} onClick={()=>{handleNavigate(item.href)}}>
                                         {item.name}
                                     </Controls.ListItem>
                                 ))}
@@ -61,10 +61,10 @@ const FooterComponent = () => {
 
 
                         <Controls.Grid item xs={12} sm={6} md={4} >
-                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>What We Do?</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"22px",xl:"26px"} }}>What We Do?</Controls.Typography>
                             <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                 {content2.map((item, index) => (
-                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
+                                    <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins",fontSize:{xs:"16px",xl:"24px"}}}>{item}</Controls.ListItem>
                                 ))}
                             </Controls.List>
                         </Controls.Grid>
@@ -72,20 +72,20 @@ const FooterComponent = () => {
 
                         <Controls.Grid item xs={12} sm={6} md={4}>
                             <Controls.Grid item>
-                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>Get Involved</Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"22px",xl:"26px"} }}>Get Involved</Controls.Typography>
                                 <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                     {content3.map((item, index) => (
-                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
+                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins",fontSize:{xs:"16px",xl:"24px"}}}>{item}</Controls.ListItem>
                                     ))}
                                 </Controls.List>
                             </Controls.Grid>
 
 
                             <Controls.Grid item>
-                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:"22px" }}>For any queries</Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"22px",xl:"26px"} }}>For any queries</Controls.Typography>
                                 <Controls.List sx={{ paddingLeft: '20px', listStyleType: 'disc' }}>
                                     {content4.map((item, index) => (
-                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins"}}>{item}</Controls.ListItem>
+                                        <Controls.ListItem key={index} sx={{ fontWeight: "medium", display: 'list-item', fontFamily:"poppins",fontSize:{xs:"16px",xl:"24px"}}}>{item}</Controls.ListItem>
                                     ))}
                                 </Controls.List>
                             </Controls.Grid>
@@ -121,7 +121,7 @@ const FooterComponent = () => {
                 </Controls.Grid>
                 <Controls.Grid sx={{ justifyContent: "center", textAlign: "center", display: "flex" }} mt={3} gap={1}>
                         <Controls.Box component='img' src='./assests/images/Vector (1).png'  sx={{width:{xs:"25px",sm:"30px"},height:{xs:"25px",sm:"30px"}}} />
-                        <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"12px",sm:"15px"} }}>All copyrights Reserved 2024 | Terms and Conditions | Privacy Policy | Charity No: ACT1002</Controls.Typography>
+                        <Controls.Typography variant='caption1' sx={{ fontWeight: "bold",fontSize:{xs:"12px",sm:"15px",xl:"24px"} }}>All copyrights Reserved 2024 | Terms and Conditions | Privacy Policy | Charity No: ACT1002</Controls.Typography>
                     </Controls.Grid>
             </Controls.Grid>
         </Controls.Grid>

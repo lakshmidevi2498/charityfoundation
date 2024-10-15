@@ -33,6 +33,7 @@ const NavbarComponent = () => {
     { name: 'Our Work', href: '/ourwork' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact Us', href: '/contactus' },
+    {name: 'Support Us', href: '/supportus' }
   ];
 
  
@@ -73,11 +74,11 @@ const NavbarComponent = () => {
   return (
     <>
       <Controls.Box sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}>
-        <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "60px", sm: '80px' }, justifyContent: 'center', padding: { xs: "10px", sm: "10px", md: "20px" } }}>
+        <AppBar position="static" sx={{ backgroundColor: '#107A66', height: { xs: "60px", sm: '80px' }, justifyContent: 'center', padding: { xs: "10px", sm: "10px", md: "20px" ,lg:"30px"} }}>
           <Controls.Grid container alignItems="center" justifyContent="space-between">
-            <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } ,cursor:"pointer"}} gap={1} onClick={handleHome}>
-              <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={1} />
-              <Controls.Typography variant="caption4" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { md: "5px",sm:"10px"  } }}>
+            <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } ,cursor:"pointer", alignItems:"center"}} gap={1} onClick={handleHome}>
+              <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={0} />
+              <Controls.Typography variant="caption4" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { xs:"0px",md: "5px",sm:"10px"  } ,marginBottom:{xs:'0px',sm:'8px',md:"0px"}}}>
                 Foundation
               </Controls.Typography>
             </Controls.Grid>
@@ -98,8 +99,9 @@ const NavbarComponent = () => {
                       style={({ isActive }) => ({
                         color: isActive ? '#ffc700' : 'white',
                         textDecoration: 'none',
-                        cursor: 'pointer',
+                        cursor: 'pointer',  
                       })}
+                      className="custom-navlink"
                       onClick={() => handleLinkClick(link.name)}  
                     >
                       {link.name}

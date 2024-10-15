@@ -4,6 +4,9 @@ import Loader from './Components/LoaderComponent';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import './App.css';
+import DonateFormComponent from './Components/DonateFormComponent';
+import FormicFormComponent from './Components/FormicFormComponent';
+import FormPage from './pages/FormPage';
 
  
 const LandingPage = lazy(() => import('./pages/LandingPage'));
@@ -38,6 +41,7 @@ function App() {
                 <Route path="/ourwork" element={<OurWorkPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/contactus" element={<ContactusPage />} />
+                <Route path="/supportus" element={<DonatePage />} />
                 <Route path="/donate" element={<DonatePage />} />
               </Routes>
             </Suspense>

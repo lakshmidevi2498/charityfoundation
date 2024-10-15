@@ -1,73 +1,86 @@
-import React from 'react'
-import Controls from '../commons/controls'
-import theme from '../Utilities/Theme'
+import React from 'react';
+import Controls from '../commons/controls';
+import theme from '../Utilities/Theme';
 
 const AboutUsComponentsOne = () => {
   return (
     <>
-      <Controls.Grid container spacing={0} justifyContent='center'>
-        <Controls.Grid item xs={12}>
-          <Controls.Box
-            src="./assests/images/unsplash_6ner152Cc6c.png"
-            component="img"
-            width="100%"
-            
-            sx={{ objectFit: "cover", position: "relative" ,zIndex:-1,height:"480px",
-              
-            }}
-          />
+      <Controls.Grid container justifyContent="center" sx={{ position: 'relative' }}>
+        <Controls.Grid item xs={12} sx={{ position: 'relative' }}>
+          {/* Image Container with Fixed Height */}
           <Controls.Box
             sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: '#00000066',
-              opactity:40,
-              zIndex: 1, 
-              height:{xs:"540px",sm:"560px"}, 
+              position: 'relative',
+              height: { xs: '540px', sm: '560px' }, // Consistent height
+              width: '100%',
             }}
-          />
-
-          <Controls.Grid
-            container
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              fontFamily: 'Lato',
-              color: theme.palette.one.main,
-              fontWeight: 700,
-              lineHeight: {xs:"30px",sm:"50px",md:'76.8px'},
-              zIndex:2,
-              fontSize:{xs:"30px",sm:"48px"}
-            }}item xs={11} sm={10} md={8}
           >
-            <Controls.Typography variant='caption4'  sx={{}}>
-              The best way to find yourself is to lose   yourself in the 
-              <Controls.Box
-                component="span"  
-                sx={{ color: theme.palette.one.yellow,  }}
+            {/* Background Image */}
+            <Controls.Box
+              src="./assests/images/unsplash_6ner152Cc6c.png"
+              component="img"
+              width="100%"
+              height="100%" // Ensures the image fills the box
+              sx={{ objectFit: 'cover' }}
+            />
+
+            {/* Overlay */}
+            <Controls.Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: '#00000066',
+                zIndex: 1,
+              }}
+            />
+
+            {/* Centered Text */}
+            <Controls.Grid
+              container
+              item
+              xs={11}
+              sm={10}
+              lg={9}
+              xl={10}
+              sx={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                color: theme.palette.one.main,
+                fontWeight: 700,
+                fontFamily: 'Lato',
+                zIndex: 2,
+              }}
+            >
+              <Controls.Typography
+                variant="caption4"
+                sx={{
+                  fontSize: { xs: '30px', sm: '48px' ,md:"48px",xl:"75px"},
+                  lineHeight: { xs: '30px', sm: '50px', md: '76.8px' },
+                }}
               >
-              &nbsp;service of others.
-              </Controls.Box>
-            </Controls.Typography>
-          </Controls.Grid>
-
-
+                The best way to find yourself is to lose yourself in the{' '}
+                <Controls.Box
+                  component="span"
+                  sx={{ color: theme.palette.one.yellow }}
+                >
+                  &nbsp;service of others.
+                </Controls.Box>
+              </Controls.Typography>
+            </Controls.Grid>
+          </Controls.Box>
         </Controls.Grid>
-
-
       </Controls.Grid>
-
     </>
-  )
-}
+  );
+};
 
-export default AboutUsComponentsOne
+export default AboutUsComponentsOne;
