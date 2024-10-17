@@ -43,6 +43,7 @@ function App() {
                 <Route path="/contactus" element={<ContactusPage />} />
                 <Route path="/supportus" element={<DonatePage />} />
                 <Route path="/donate" element={<DonatePage />} />
+                <Route path="/volunteer" element={<ContactusPage/>}/>
               </Routes>
             </Suspense>
           )}

@@ -7,10 +7,10 @@ const FlipCardComponent = () => {
     const [flippedCards, setFlippedCards] = useState(Array(4).fill(false));
     const frontCard = ["Who we are", "Our focus", "Why Excellence", "Our Values"];
     const backCard = [
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people."
+    "Charity refers to the voluntary act of giving help, support, or resources (such as money, food, time, or services) to those in need, typically through non-profit organizations, religious groups, or individuals.",
+    "The focus of charity is primarily on improving the well-being of individuals, communities, and the environment by addressing specific needs, alleviating suffering, and fostering positive change.",
+    "Charity is considered a form of excellence because it embodies values like generosity, compassion, and empathy, and it leads to positive, meaningful change in society.",
+    "Charity values are the core principles guiding organizations and individuals in helping others, focusing on compassion, generosity, and social responsibility."   
     ];
 
     const handleCardClick = (index) => {
@@ -44,7 +44,7 @@ const FlipCardComponent = () => {
             <Controls.Grid item xs={10}  lg={9} xl={10}>
                 <Controls.Grid container spacing={2} justifyContent="center">
                     {frontCard.map((item, index) => (
-                        <Controls.Grid item key={index} xs={12} sm={6}  lg={3}>
+                        <Controls.Grid item key={index} xs={12} sm={6} md={3} >
                             <CardFlip flipDirection="horizontal" isFlipped={flippedCards[index]}>
                                 <Controls.Card
                                     sx={{
@@ -65,7 +65,7 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",  }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px" }} />
-                                        <Controls.Typography variant="caption1" sx={{ color: theme.palette.one.green, fontWeight: "bold",alignItems:"center",fontSize:{xs:'1.2rem',sm:"1.8rem",md:"2rem",lg:"1.4rem",xl:"1.8rem"} }}>
+                                        <Controls.Typography variant="caption1" sx={{ color: theme.palette.one.green, fontWeight: "bold",alignItems:"center",fontSize:{xs:'1.2rem',sm:"1.8rem",md:"1rem",lg:"1.4rem",xl:"1.8rem"} }}>
                                             {item}
                                         </Controls.Typography>
                                     </Controls.CardContent>
@@ -90,7 +90,7 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",   }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px", color: theme.palette.one.main }} />
-                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:{xs:'1rem',sm:"1.2rem",md:'1.2rem',lg:"1rem",xl:"1.4rem"}}}>
+                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:{xs:'1rem',sm:"1.2rem",md:'0.8rem',lg:"1rem",xl:"1.4rem"}}}>
                                             {backCard[index]}  
                                         </Controls.Typography>
                                     </Controls.CardContent>

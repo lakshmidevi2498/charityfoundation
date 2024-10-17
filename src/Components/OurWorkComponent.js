@@ -43,9 +43,9 @@ const [more ,setMore] = useState(false)
                                 color: theme.palette.one.green
                             }}
                         >
-                            The smallest act of kindness is worth more than the grandest intention.
+                          The smallest act of kindness is worth more than the grandest intention.
                             <Controls.Box component='span' sx={{ color: theme.palette.one.yellow }}>
-                                Charity sees the need, not the cause.
+                            Charity sees the need, not the cause.
                             </Controls.Box>
                         </Controls.Typography>
                     </Controls.Grid>

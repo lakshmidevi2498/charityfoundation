@@ -8,9 +8,9 @@ import { Pagination } from 'swiper/modules';
 
 const AboutUsComponentFive = () => {
     const content = [
-        { img: "./assests/images/Ellipse 357.png", name: "Cameron Williamson", desig: "founder", descp: "Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark,  demoiselle whalefish snoek icefish velvet-belly sharkzebra lionfish mud cat pelican eel California halibut round stingray northern sea robin. Southern grayling trout-perchSharksucker sea toad candiru rocket  danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata Minnow snoek icefish velvet-belly shark." },
-        { img: "./assests/images/Ellipse 357 (1).png", name: "Cameron Williamson", desig: "founder", descp: "Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, demoiselle whalefish snoek icefish velvet-belly sharkzebra lionfish mud cat pelican eelCalifornia halibut round stingray northern sea robin. Southern grayling trout-perchSharksucker sea toad candiru rocket  danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata Minnow snoek icefish velvet-belly shark." },
-        { img: "./assests/images/Ellipse 357 (2).png", name: "Cameron Williamson", desig: "founder", descp: "Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish velvet-belly shark, demoiselle whalefish snoek icefish velvet-belly shark zebra lionfish mud cat pelican eel California halibut round stingray northern sea robin. Southern grayling trout-perchSharksucker sea toad candiru rocket  danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata Minnow snoek icefish velvet-belly shark." },
+        { img: "./assests/images/Ellipse 357.png", name: "Cameron Williamson", desig: "founder", descp: "At Charity, we believe that the voices of those we serve are the most powerful testament to our mission and impact. Testimonials from beneficiaries, volunteers, and supporters provide invaluable insights into the difference we are making in the lives of individuals and communities. Each story we hear is a reminder of why we do what we do—helping to uplift those in need and create lasting change" },
+        { img: "./assests/images/Ellipse 357 (1).png", name: "Emily Carter ", desig: "Chief Impact Officer", descp: "At Charity , we hold the belief that the experiences of those we serve are the clearest demonstration of our mission and its impact. The testimonials from our beneficiaries, volunteers, and supporters offer crucial insights into the positive changes we are fostering within our communities. Every story we receive reinforces our commitment to uplifting those in need and making a sustainable difference." },
+        { img: "./assests/images/Ellipse 357 (2).png", name: "Jason Lee", desig: "Volunteer Coordination Manager", descp: "At Charity, we are convinced that the voices of those we help are the most compelling evidence of our purpose and success. The feedback from beneficiaries, volunteers, and supporters provides essential perspectives on the positive impact we are creating in the lives of individuals and communities. Each narrative serves as a powerful reminder of our dedication to supporting those in need and achieving lasting change. " },
     ];
 
     const swiperRef = useRef(null);
@@ -66,9 +66,9 @@ const AboutUsComponentFive = () => {
                                         sx={{
                                             position: "absolute",
                                             top: { sm: 20, lg: 6, xl: 9 },
-                                            left: { sm: 260, md: 360, lg: 520, xl: 540 },
-                                            width: '50px',
-                                            height: '50px',
+                                            left: { sm: 260, md: 360, lg: 550, xl: 940 },
+                                            width: '40px',
+                                            height: '40px',
                                             zIndex: 1,
                                             justifyContent: "center",
                                             margin: "auto",

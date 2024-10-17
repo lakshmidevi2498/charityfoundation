@@ -5,13 +5,13 @@ import theme from '../Utilities/Theme';
 const AboutUsComponentThree = () => {
 
     const content = [
-        "Together, we're going to make the future", "children where we are able to fulfill all", "Their requirements to keep them safefrom withered world",
-        "We have already stepped out andstart changing the world", "Keeping safe them from war, inhumanity"
+        "Humanitarian Aid in Conflict Zones", "Collaboration with Local and Global Partners", "Disaster Preparedness and Risk Reduction",
+        "Resource mobilisation and Fundraising", "Advocacy and Policy Change"
     ]
 
     const content2 = [
-        { icon: "./assests/images/Group 3181.png", text: "Our Mission", descp: "Lorem ipsum dolor sit amet,consetetur elitr sed deim" },
-        { icon: "./assests/images/Group 3180.png", text: "Our Vision", descp: "Lorem ipsum dolor sit amet,consetetur elitr sed deim" }
+        { icon: "./assests/images/Group 3181.png", text: "Our Mission", descp: "Our mission is to empower individuals and communities by providing essential resources, support, and growth opportunities." },
+        { icon: "./assests/images/Group 3180.png", text: "Our Vision", descp: "Our vision is a world where everyone thrives in inclusive communities founded on kindness, empathy, and respect." }
     ]
 
     const bar = [
@@ -49,7 +49,7 @@ const AboutUsComponentThree = () => {
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption4'
                                     sx={{ 
-                                        fontSize: { xs: "1.8rem", sm: '2rem', md: "1.8rem", lg: "1.9rem" ,xl:"2.6rem"},
+                                        fontSize: { xs: "1.5rem", sm: '2rem', md: "1.8rem", lg: "1.9rem" ,xl:"2.6rem"},
                                         fontWeight: 700,
                                         lineHeight: {xs:"40px",sm:'50px'},
                                         textAlign: 'left',
@@ -69,25 +69,78 @@ const AboutUsComponentThree = () => {
                                         textAlign: 'left'
                                     }}
                                 >
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    nonumy tempor invidunt ut labore et dolore magna aliquyam
-                                    erat, sed diam voluptua. At vero eos et accusam et justo.
+                                   Every act of kindness counts, and every contribution matters. Welcome to our charity, where your involvement helps us create a brighter, more equitable future for all. Let us come together, harness our collective strength, and make a lasting impact in the lives of those we serve.
                                 </Controls.Typography>
                             </Controls.Grid>
-                            <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between" }} xs={12} my={2}>
-                                {content2.map((item, index) => (
-                                    <React.Fragment key={index}>
-                                        <Controls.Grid item  xs={5} sx={{ backgroundColor: "#EDF7F5", padding: {xs:"10px",sm:"20px"} }}>
-                                            <Controls.Grid item sx={{ display: "flex", }} gap={1}>
-                                                <Controls.Box component='img' src={item.icon} width="20px" height="20px" />
-                                                <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: 600,   fontSize: { xs: "0.5rem", sm: "0.8rem", md: "0.9rem", lg: "1rem" ,xl:"1.5rem"} }}>{item.text}</Controls.Typography>
-                                            </Controls.Grid>
-                                            <Controls.Typography variant='caption2' sx={{ fontSize: { xs: "0.7rem", sm: "0.8rem",lg:"0.9rem",xl:'1.4rem' } }}>{item.descp}</Controls.Typography>
-                                        </Controls.Grid>
-                                    </React.Fragment>
-                                ))}
+                            <Controls.Grid 
+  container 
+  item 
+  xs={12} 
+  my={2} 
+  sx={{ 
+    display: "flex", 
+    flexDirection: { xs: "column", sm: "row" }, 
+    justifyContent: { xs: "center", sm: "space-between" }, 
+    gap: 2 
+  }}
+>
+  {content2.map((item, index) => (
+    <Controls.Grid 
+      item 
+      xs={12} 
+      sm={5.5} 
+      key={index} 
+      sx={{ 
+        backgroundColor: "#EDF7F5", 
+        padding: { xs: "10px", sm: "20px" } 
+      }}
+    >
+      <Controls.Grid 
+        container 
+        item 
+        sx={{ display: "flex", alignItems: "center", gap: 1 }}
+      >
+        <Controls.Box 
+          component="img" 
+          src={item.icon} 
+          width="20px" 
+          height="20px" 
+        />
+        <Controls.Typography 
+          variant="caption2" 
+          sx={{ 
+            color: theme.palette.one.green, 
+            fontWeight: 600, 
+            fontSize: { 
+              xs: "0.7rem", 
+              sm: "0.8rem", 
+              md: "0.9rem", 
+              lg: "1rem", 
+              xl: "1.5rem" 
+            } 
+          }}
+        >
+          {item.text}
+        </Controls.Typography>
+      </Controls.Grid>
 
-                            </Controls.Grid>
+      <Controls.Typography 
+        variant="caption2" 
+        sx={{ 
+          fontSize: { 
+            xs: "0.7rem", 
+            sm: "0.8rem", 
+            lg: "0.9rem", 
+            xl: "1.4rem" 
+          } 
+        }}
+      >
+        {item.descp}
+      </Controls.Typography>
+    </Controls.Grid>
+  ))}
+</Controls.Grid>
+
                             <Controls.Grid item my={1}>
                                 {bar.map((item, index) => (
                                     <>
@@ -133,8 +186,8 @@ const AboutUsComponentThree = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid #219D8078",
-                                    width: { xs: "100%", sm: "310px", md: "340px", lg: "470px" ,xl:"600px"},
-                                    height: { xs: "100%", sm: "320px", md: "370px", lg: "380px" ,xl:"500px"},
+                                    width: { xs: "100%", sm: "350px", md: "370px", lg: "450px" ,xl:"600px"},
+                                    height: { xs: "100%", sm: "320px", md: "400px", lg: "430px" ,xl:"500px"},
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "0 40px" },
                                     display: "block",
@@ -151,12 +204,12 @@ const AboutUsComponentThree = () => {
                                     backgroundColor: theme.palette.one.main,
                                     position: "absolute",
                                     zIndex: 2,
-                                    top: { xs: "75%", sm: "90%", md: "73%", lg: "80%" },
-                                    left: { xs: "69%", sm: "60%", md: "68%", lg: "60%" },
+                                    top: { xs: "75%", sm: "100%", md: "75%", lg: "75%" },
+                                    left: { xs: "69%", sm: "65%", md: "65%", lg: "70%" },
                                     transform: "translate(-50%, -50%)",
                                     border: "10px solid #219D8078",
-                                    width: { xs: "147px", sm: "280px", md: "290px", lg: "330px" ,xl:"450px"},
-                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "250px" ,xl:'350px'},
+                                    width: { xs: "147px", sm: "300px", md: "310px", lg: "350px" ,xl:"450px"},
+                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "280px" ,xl:'350px'},
                                     display: {xs:"none",sm:"flex"},
                                     justifyContent: "center",
                                     alignItems: "center",

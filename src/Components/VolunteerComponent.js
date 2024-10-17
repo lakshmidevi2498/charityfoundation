@@ -10,6 +10,9 @@ const VolunteerComponent = ({textColor}) => {
         navigate('/donate')
 
     }
+    const handleVolunteer = () => {
+        navigate('/volunteer')
+    }
     return (
         <>
             <Controls.Grid conatiner justifyContent="center" mb={4} mt={1} pt={4}>
@@ -24,7 +27,7 @@ const VolunteerComponent = ({textColor}) => {
                     </Controls.Typography>
                     <Controls.Grid container sx={{ textAlign: "center", justifyContent: "center" }} my={5}>
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} >
-                            <Controls.Button variant='contained' sx={{ color: theme.palette.one.main, backgroundColor: theme.palette.one.green, borderRadius: "10px", textTransform: "inherit", paddingX: {xs:"5px",sm:"25px"},paddingY:"10px",fontSize:{xs:"10px",sm:"15px"}  }}>Become Volunteer</Controls.Button>
+                            <Controls.Button variant='contained' sx={{ color: theme.palette.one.main, backgroundColor: theme.palette.one.green, borderRadius: "10px", textTransform: "inherit", paddingX: {xs:"5px",sm:"25px"},paddingY:"10px",fontSize:{xs:"10px",sm:"15px"}  }} onClick={handleVolunteer}>Become Volunteer</Controls.Button>
                             <Controls.Divider sx={{ backgroundColor:"#107A66", height: '1px', width: {xs:"50px",sm:"150px"},  }} />
                             <Controls.Typography variant='caption1'sx={{ border: "2px solid #107A66", borderRadius: "50px", padding: "5px", dispaly: "flex" }}>OR</Controls.Typography>
                             <Controls.Divider sx={{ backgroundColor:"#107A66",  height: '1px', width: {xs:"50px",sm:"150px"},  }} />

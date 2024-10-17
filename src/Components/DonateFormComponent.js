@@ -10,6 +10,22 @@ import FormicFormComponent from './FormicFormComponent';
 
 
 const DonateFormComponent = () => {
+    const content = [
+        {title:"Provide Essential Support",text:"We offer critical assistance to individuals and families in need, including food, clothing, and shelter."},
+        {title:"Educational Programs",text:"We run educational initiatives aimed at empowering communities through knowledge, skills training, and literacy programs."},
+        {title:"Health and Wellness Services",text:"Our charity provides access to healthcare services, including medical check-ups, mental health support, and wellness workshops."},
+        {title:"Community Development",text:" We work on projects that promote sustainable development, including job training, micro-financing, and infrastructure improvement."},
+        {title:"Advocacy and Awareness",text:"We advocate for social change and raise awareness about important issues affecting vulnerable populations, encouraging community engagement and support."},
+        {title:"Volunteer Opportunities",text:" We engage community members by offering volunteer opportunities that allow individuals to contribute their time and skills to meaningful causes"},
+    ]
+    const content2 = [
+        "Program Funding: Donations help fund our various programs, including educational initiatives, healthcare services, and skill development workshops. These programs empower individuals and equip them with the tools they need to succeed.",
+        "Community Development: Your support enables us to invest in community development projects, creating sustainable solutions that uplift entire neighbourhood’s and foster long-term growth.",
+        "Emergency Relief: In times of crisis, such as natural disasters or economic downturns, your donations help us provide immediate relief and support to affected individuals and families,",
+        "ensuring they receive the assistance they need quickly.",
+        "Volunteer Support: Your donations help us train and coordinate volunteers, ensuring that our programs run smoothly and effectively. Volunteers are essential to our operations, and your support allows us to maximize their impact.",
+        "Sustainable Growth: By donating, you help us build a sustainable organization that can continue to serve those in need for years to come. Your investment in our charity contributes to a brighter future for the communities we serve."
+    ]
    
 
 

@@ -74,11 +74,11 @@ const ContactComponent = () => {
                             fontSize: { xs: "20px", sm: "28px", lg: '34px' },
                             fontWeight: "bold",
                             textAlign: 'center',
-                            lineHeight:{xs:"30px",sm:"40px",md:"50px",lg:"60px"},
+                            lineHeight:{xs:"30px",sm:"40px",md:"50px",lg:"50px"},
 
                         }} mt={45}
                     >
-                        The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer. Helping one person might not change the whole world, but it could change the world for one person.
+                        The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer. Helping one person might not change the whole world, but it could change the world for one person. not change the whole world, but it could change the world for one person.
                     </Controls.Typography>
                     </Controls.Grid>
                     <Controls.Grid item   marginTop='60px' marginBottom="20px" >

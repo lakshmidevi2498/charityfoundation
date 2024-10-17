@@ -29,7 +29,7 @@ const NeedHelpComponent = () => {
           <Controls.Typography variant="caption1"sx={{ color: theme.palette.one.green, textAlign: "left", fontWeight: 700, fontSize: {xs:'24px',sm:"26px",xl:"30px"},   }}>Still Need Help</Controls.Typography>
           </Controls.Grid>
           <Controls.Grid item>
-          <Controls.Typography variant="caption1"sx={{ fontSize:{xs:"12px",sm:"14px",xl:"22px"}  }}>We enjoy adapting our strategies to offer We believe in the equal value of every human being and the importance of respecting and honoring each individual; we know that change happens through people. every client the best solutions that are at the forefront of the industry.</Controls.Typography>
+          <Controls.Typography variant="caption1"sx={{ fontSize:{xs:"12px",sm:"14px",lg:"16px",xl:"22px"}  }}>Your generosity has the power to change lives and uplift communities. By making a donation to Charity, you are directly contributing to our mission of is to empower individuals and communities in need by providing essential resources, support, and opportunities for growth.</Controls.Typography>
           </Controls.Grid>
           <Controls.Grid container display='flex' spacing={{xs:2,sm:5,md:5,lg:10}}  >
   {content.map((item, index) => (
@@ -37,7 +37,7 @@ const NeedHelpComponent = () => {
       <Controls.Card
         sx={{
           backgroundColor: "rgba(242, 194, 26, 0.16)",
-          height: "230px",
+          height: {xs:"230px",xl:"300px"},
           display: 'flex',  
           justifyContent: "center",  
           alignItems: "center",  

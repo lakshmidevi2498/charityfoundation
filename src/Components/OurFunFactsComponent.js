@@ -68,7 +68,7 @@ const OurFunFactsComponent = () => {
                   {cards.map((item, index) => (
                     <Controls.Grid
                       item
-                      xs={12} sm={6}  lg={3}
+                      xs={12} sm={6} md={3}  lg={3}
                       key={index}
                       sx={{ display: "flex", justifyContent: "center" }}  
                     >
@@ -76,7 +76,7 @@ const OurFunFactsComponent = () => {
                         sx={{
                           backgroundColor: theme.palette.one.green, 
                           height: "300px",
-                          width: {xs:"350px",sm:"300px",md:"400px",lg:"247px",xl:"400px"},
+                          width: {xs:"350px",sm:"300px",md:"220px",lg:"247px",xl:"400px"},
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',

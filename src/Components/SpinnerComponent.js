@@ -9,15 +9,14 @@ const SpinnerComponent = () => {
                 <Controls.Grid item xs={12} md={10} lg={9} xl={10} sx={{ justifyContent: "space-between", display: {xs:"block",md:"flex"} }} spacing={10}  >
                     <Controls.Grid item xs={11} sm={10} md={6}   sx={{justifyContent:"center",margin:"auto"}}>
                         <Controls.Grid>
-                            <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontSize: {xs:"20px",sm:"25px",xl:"45px"}, fontWeight: "bold", textTransform: 'initial' }}>Our approach is modeled around bringing change at all levels</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontSize: {xs:"20px",sm:"25px",xl:"45px"}, fontWeight: "bold", textTransform: 'initial' }}>Our approach is modelled around bringing change at all levels :</Controls.Typography>
                         </Controls.Grid>
                         <Controls.Grid>
-                            <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"14px",sm:"18px",md:"16px",lg:"18px",xl:"30px"}, lineHeight: {xs:"20px",sm:"35px",md:"30px",lg:"35px",xl:"40px"} }}>With your support, we address children’s critical needs by working with parents, teachers, Anganwadi workers, communities, district and state level governments as well as the children themselves.<br />
-                                We focus on changing behaviours and practices at the grassroots level and influencing public policy at a systemic level – thereby creating an ecosystem where children are made the nation’s priority.</Controls.Typography>
+                            <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"14px",sm:"18px",md:"16px",lg:"18px",xl:"30px"}, lineHeight: {xs:"20px",sm:"35px",md:"30px",lg:"35px",xl:"40px"} }}>Our approach is designed to create meaningful change at every level—individual, community, and systemic. We believe that by addressing immediate needs while also tackling the root causes of societal challenges, we can bring about long-lasting transformation. Whether through direct support, education, or advocacy, our goal is to uplift individuals and empower communities, creating a ripple effect of positive change.</Controls.Typography>
                         </Controls.Grid>
                         <Controls.Grid>
                             <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"14px",sm:"18px",md:"16px",lg:"18px",xl:"30px"}, lineHeight:{xs:"20px",sm:"35px"} }}>
-                                We focus on changing behaviours and practices at the grassroots level and influencing public policy at a systemic level – thereby creating an ecosystem where children are made the nation’s priority.</Controls.Typography>
+                            Charity organizations, often called non-profits or NGOs, work to deliver aid and support to vulnerable populations. Whether through fundraising, volunteering, or advocacy, charity aims to create a positive impact and promote the welfare of others.</Controls.Typography>
                         </Controls.Grid>
                     </Controls.Grid>
                     <Controls.Grid item xs={12} md={6} sx={{ display: "block", alignItems: "center", textAlign: "center", height: "auto", position: "relative", margin:"auto"}}>

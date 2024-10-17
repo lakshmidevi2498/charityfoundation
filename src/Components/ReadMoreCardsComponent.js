@@ -13,14 +13,14 @@ const ReadMoreCardsComponent = () => {
     ];
 
     const backCard = [
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people.",
-        "Charity is a global leader within the worldwide movement dedicated to end. We are known everywhere for our unshakeable commitment to the dignity of the people."
+        "Charity focuses on reducing stunting because this reflects success on many fronts: food systems, health systems, education, WASH infrastructure, and safety nets, to name a few.",
+        "Our programs offer tailored support to help students overcome barriers, gain skills, and transition to secondary school or dignified livelihoods. We focus on improving marginalized girls' learning, retention, and well-being through a research-based, integrated approach",
+     "Charity drives value chain changes to create lasting impacts for marginalized households, improving income, employment, power dynamics, and access to services that empower them to improve their lives.",
+     "Charity is committed to supporting equality across all of its work. More than that, Charity acknowledges that this work is inextricably connected with race, class, ability, and gender identity, and other identities.",
+     "Children are the foundation of our future. Let’s invest in their potential today so they can become tomorrow’s leaders. Every child deserves an education, free from discrimination by gender, caste, or socio-economic status.",
+      "Charity, a leading children’s NGO in India, is dedicated to combating child trafficking. Our goal is to protect every child and help them reach their full potential, regardless of social or economic background",
+      "As a leading child health and nutrition NGO in India, Charity upholds every child's right to survival. We focus on providing proper nutrition and quality healthcare, ensuring no child suffers from malnutrition or poor health, regardless of their socio-economic background.",
+      "Charity’s Women’s Economic Justice initiative collaborates with the private sector, employs market-based approaches, and centers women to help them earn, save, and invest. Leveraging local expertise, this work reduces poverty and promotes equity.",
 
     ];
 
@@ -119,7 +119,7 @@ const ReadMoreCardsComponent = () => {
                                             <Controls.Typography
                                                 variant="caption1"
                                                 component="div"
-                                                sx={{ color: theme.palette.one.main, fontSize: {xs:"18px",xl:"22px"} }}
+                                                sx={{ color: theme.palette.one.main, fontSize: {xs:"16px",lg:"16px",xl:"22px"} }}
                                             >
                                                 {backCard[index]}
                                             </Controls.Typography>

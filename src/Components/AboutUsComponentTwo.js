@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Controls from '../commons/controls';
 import theme from '../Utilities/Theme';
 
 const AboutUsComponentTwo = () => {
+  const [more , setMore] = useState(false)
   return (
     <>
-      <Controls.Grid container justifyContent="center" mt={5}   >
+      <Controls.Grid container justifyContent="center" mt={5}    >
         <Controls.Grid item xs={10}  lg={9} xl={10}>
           <Controls.Grid container justifyContent="center" sx={{ display: { xs: "block", md: "flex" } }}>
             
@@ -20,7 +21,8 @@ const AboutUsComponentTwo = () => {
                 alignItems: "center",
                 margin: "auto",
                 paddingY: "40px",
-                textAlign: "justify"
+                textAlign: "justify",
+                height:"auto"
               }}
             >
               <Controls.Grid item>
@@ -47,12 +49,27 @@ const AboutUsComponentTwo = () => {
                     lineHeight: '24px',
                     textAlign: 'left'
                   }}
+                > Charity is the act of giving help, typically in the form of money, goods, or time, to those in need. It involves voluntary actions motivated by a desire to assist others without expecting anything in return.
+                  
+                  </Controls.Typography>
+                  </Controls.Grid>
+                 <Controls.Grid item mt={1}>
+                  <Controls.Typography variant='caption2'
+                  sx={{ 
+                    fontSize: {xs:'1.2rem',md:"1.2rem",xl:"1.8rem"},
+                    fontWeight: 500,
+                    lineHeight: '24px',
+                    textAlign: 'left'
+                  }}
                 >
-                  Charity is the act of giving help, typically in the form of money, goods, or time, to those in need. It involves voluntary actions motivated by a desire to assist others without expecting anything in return.
-                </Controls.Typography>
-              </Controls.Grid>
-              <br />
-              <Controls.Grid item>
+                   Its support is powerful because it has the ability to transform lives, strengthen communities, and create lasting positive change in society.
+                   </Controls.Typography>
+                    
+                  </Controls.Grid>
+                 
+             
+              {more ? <>
+                <Controls.Grid item mt={1}>
                 <Controls.Typography variant='caption2'
                   sx={{ 
                     fontSize: {xs:'1.2rem',md:"1.2rem",xl:"1.8rem"},
@@ -61,9 +78,24 @@ const AboutUsComponentTwo = () => {
                     textAlign: 'left'
                   }}
                 >
-                  Charity is the act of giving help, typically in the form of money, goods, or time, to those in need. It involves voluntary actions motivated by a desire to assist others without expecting anything in return.
+                 It plays a critical role across all sectors of society by filling gaps in government services and addressing unmet needs. From healthcare to education, environmental conservation to social justice, charity transforms lives, uplifts communities, and tackles some of the world’s most pressing challenges.
                 </Controls.Typography>
               </Controls.Grid>
+                <Controls.Grid item mt={5}>
+                <Controls.Button
+                  variant="contained"
+                  sx={{
+                    color: theme.palette.one.main,
+                    backgroundColor: theme.palette.one.green,
+                    border: "1px solid lightgray",
+                    borderRadius: "20px",
+                    textTransform: "inherit"
+                  }} onClick = {()=>setMore(false)}
+                >
+                  Read less
+                </Controls.Button>
+              </Controls.Grid>
+              </> : <>
               <Controls.Grid item mt={5}>
                 <Controls.Button
                   variant="contained"
@@ -73,11 +105,13 @@ const AboutUsComponentTwo = () => {
                     border: "1px solid lightgray",
                     borderRadius: "20px",
                     textTransform: "inherit"
-                  }}
+                  }} onClick = {()=>setMore(true)}
                 >
                   Read More
                 </Controls.Button>
               </Controls.Grid>
+              </>}
+              
               
             </Controls.Grid>
 
@@ -89,10 +123,10 @@ const AboutUsComponentTwo = () => {
               sx={{
                 order: { xs: 2, md: 1 },  
                 position: 'relative',
-                marginBottom: '30px',
+                // marginBottom: '30px',
                 display: 'flex',
-                justifyContent: { xs: 'center', md: 'flex-start' },
-              }}
+                justifyContent: { xs: 'center', md: 'flex-start' }, 
+                height:{xs:"230px",sm:"280px",md:"500px",lg:"500px"}              }}
             >
               <Controls.Box
                 component="img"

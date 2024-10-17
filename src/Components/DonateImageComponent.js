@@ -52,7 +52,7 @@ const DonateImageComponent = () => {
               margin:"auto", 
             }} xs={11} md={10} lg={9} xl={10}>
             <Controls.Typography variant='caption1' sx={{ color:theme.palette.one.main, fontSize: {xs:"30px",sm:"37px",md:"45px",xl:"70px"}, fontWeight: 'bold' }}>
-              Invest in the future of India’s children and get rewarded with tax savings.
+            Invest in the future of India’s children and get rewarded with tax savings.
             </Controls.Typography>
           </Controls.Grid>
 

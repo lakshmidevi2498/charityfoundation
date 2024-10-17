@@ -7,24 +7,24 @@ const AboutUsComponentsOne = () => {
     <>
       <Controls.Grid container justifyContent="center" sx={{ position: 'relative' }}>
         <Controls.Grid item xs={12} sx={{ position: 'relative' }}>
-          {/* Image Container with Fixed Height */}
+         
           <Controls.Box
             sx={{
               position: 'relative',
-              height: { xs: '540px', sm: '560px' }, // Consistent height
+              height: { xs: '540px', sm: '560px' },  
               width: '100%',
             }}
           >
-            {/* Background Image */}
+            
             <Controls.Box
               src="./assests/images/unsplash_6ner152Cc6c.png"
               component="img"
               width="100%"
-              height="100%" // Ensures the image fills the box
+              height="100%"  
               sx={{ objectFit: 'cover' }}
             />
 
-            {/* Overlay */}
+            
             <Controls.Box
               sx={{
                 position: 'absolute',
@@ -37,7 +37,7 @@ const AboutUsComponentsOne = () => {
               }}
             />
 
-            {/* Centered Text */}
+            
             <Controls.Grid
               container
               item
@@ -67,7 +67,7 @@ const AboutUsComponentsOne = () => {
                   lineHeight: { xs: '30px', sm: '50px', md: '76.8px' },
                 }}
               >
-                The best way to find yourself is to lose yourself in the{' '}
+              The best way to find yourself is to lose yourself in the{' '}
                 <Controls.Box
                   component="span"
                   sx={{ color: theme.palette.one.yellow }}

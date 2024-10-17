@@ -4,12 +4,12 @@ import theme from '../Utilities/Theme'
 
 const FrequentlyQuestionsComponent = () => {
     const content = [
-        { title: "Make a difference in the life of a child", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
-        { title: "Let's do the right thing now", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
-        { title: "Can I donate anonymously?", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
-        { title: "Join your hand with us for a better life", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
-        { title: "How do I cancel my recurring donation?", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
-        { title: "How can I join in this Foundation ?", descp: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat." },
+        { title: "Make a difference in the life of a child", descp: "we believe that every child deserves a bright future filled with opportunities and hope. Children are the heart of our communities, and by investing in their well-being and development, we are creating a better tomorrow for everyone." },
+        { title: "Let's do the right thing now", descp: "Your generosity has the power to change lives and uplift communities. By making a donation to Charity, you are directly contributing to our mission of is to empower individuals and communities in need by providing essential resources, support, and opportunities for growth." },
+        { title: "Can I donate anonymously?", descp: "Yes, charity allows individuals to donate anonymously. Keep in mind that if you donate anonymously, you may not be able to claim a tax deduction for your contribution since you won’t have a record of your donation." },
+        { title: "Join your hand with us for a better life", descp: "Together, we can create a world where every individual has the opportunity to thrive. By joining hands with Charity , you can be part of a movement dedicated to uplifting lives and making a meaningful difference in our community" },
+        { title: "How do I cancel my recurring donation?", descp: "You can also send an email or call the charity directly, providing them with your donation details (such as the amount and frequency) to assist in cancelling your recurring donation." },
+        { title: "How can I join in this Foundation ?", descp: ["Volunteering: Help with events, outreach, or administrative tasks.","Fundraising: Participate in or organize fundraising campaigns.","Advocacy: Support the foundation’s cause by raising awareness in your community.","Partnerships: If you represent an organization, inquire about partnership opportunities."] },
     ]
     const [expanded, setExpanded] = useState(0);
     const handleAccordionChange = (panel) => (event, isExpanded) => {
@@ -19,7 +19,7 @@ const FrequentlyQuestionsComponent = () => {
         <>
             <Controls.Grid container justifyContent='center' >
                 <Controls.Grid item sx={{ backgroundColor: "rgba(242, 194, 26, 0.10)", justifyContent: "center", alignItems: "center", display: 'flex' }} xs={12}>
-                    <Controls.Grid item xs={10} sm={11} md={11} lg={9} xl={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, paddingY: "20px", alignItems: "center" }}gap={1}>
+                    <Controls.Grid item xs={10} lg={9} xl={10} sx={{ display: {xs:"block",sm:"flex"}, justifyContent: {xs:"none",sm:"space-between"}, paddingY: "20px", alignItems: "center" }}gap={1}>
                         <Controls.Grid item xs={12} md={6} xl={4}>
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
                                 <Controls.Typography variant='caption2' sx={{  fontSize: {xs:"18px",xl:"24px"} }} >
@@ -67,9 +67,17 @@ const FrequentlyQuestionsComponent = () => {
                                             <Controls.Typography variant='caption1' sx={{ fontSize: "18px", fontWeight: "bold" }}>{item.title}</Controls.Typography>
                                         </Controls.AccordionSummary>
                                         <Controls.AccordionDetails>
-                                            <Controls.Typography variant='caption1' sx={{ fontSize: "16px", }}>
+                                            {index === 5 ? ( <>
+                                            {item.descp.map((point,index)=>(
+                                                <Controls.ListItem key={index}>{point}</Controls.ListItem>
+                                            ))}
+                                            </>):(<>
+                                                <Controls.Typography variant='caption1' sx={{ fontSize: "16px", }}>
                                                 {item.descp}
                                             </Controls.Typography>
+                                            
+                                            </>)}
+                                            
                                         </Controls.AccordionDetails>
                                     </Controls.Accordion>
                                 </Controls.Grid>

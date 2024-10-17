@@ -97,14 +97,7 @@ const ImageComponent = () => {
                             paddingX:{sm:"1.2rem",md:0}
                         }}
                     >
-                        {isMobile ? (
-                            "The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer."
-                        ) : (
-                            <>
-                                The simplest acts of kindness are by far more powerful than 
-                                a thousand heads bowing in prayer.
-                            </>
-                        )}
+                        Helping one person might not change the whole world, but it could change the world for one person.
                     </Controls.Typography>
                     <Controls.Grid item mt={5}>
                         <AnimatedButton />

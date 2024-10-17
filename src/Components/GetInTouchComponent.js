@@ -74,10 +74,11 @@ const GetInTouchComponent = () => {
                     borderRadius: '8px',
                 }}>
                 <Controls.Grid
-                    item xs={11} sm={10} lg={9} xl={10}
+                    item xs={10}   lg={9} xl={10}
                     sx={{ justifyContent: "center", paddingY: "30px", height: "auto" }} >
+                        <Controls.Grid container display='flex' justifyContent='space-between'  >
 
-                    <Controls.Grid item  >
+                        <Controls.Grid item  xs={12} md={7} lg={6} >
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Controls.Typography variant='caption1' sx={{ fontSize: { xs: "14px", sm: "18px",xl:"20px" } }}>
                                Get In Touch
@@ -87,7 +88,7 @@ const GetInTouchComponent = () => {
                         <Controls.Grid item my={2}>
                         <Controls.Typography variant='caption1' sx={{ fontSize: {xs:"24px",xl:"28px"}, fontWeight: "bold" }} >Send me a message</Controls.Typography>
                         </Controls.Grid>                    
-                    </Controls.Grid>
+                    
 
                     <Controls.Grid
                         container
@@ -95,9 +96,10 @@ const GetInTouchComponent = () => {
                         justifyContent={{ xs: "center", md: 'space-between' }}
                         gap={1}
                         height="auto"
+                        width="auto"
                         sx={{ flexGrow: 1 , }} 
                     >
-                        <Controls.Grid item xs={12} md={6} lg={7} justifyContent='center'>
+                        <Controls.Grid item  justifyContent='center'>
                             <Formik
                                 initialValues={initialValues}
                                 validationSchema={validationSchema}
@@ -226,10 +228,18 @@ const GetInTouchComponent = () => {
                             </Formik>
                         </Controls.Grid>
 
+                       
+
+
+                    </Controls.Grid>
+
+                    </Controls.Grid>
+                       
+                        <Controls.Grid item xs={12} md={5} lg={6}   margin="auto">
+
                         <Controls.Grid
                             item
-                            xs={12}
-                            md={5} lg={4}
+                            
                             sx={{
                                 backgroundColor: theme.palette.one.fields,
                                 padding: "20px",
@@ -255,7 +265,8 @@ const GetInTouchComponent = () => {
                                 <Controls.Typography variant='caption1' sx={{ fontWeight: "bold" }}>
                                     Location:
                                     <Controls.Box component='span' sx={{ fontWeight: "medium" }}>
-                                        D.No: 4-7-1, Tarvanipeta, Mandapeta,<br />Andhrapradesh, 533308, India.
+                                    D.No: 4-7-1, Tarvanipeta, Mandapeta,
+                                    <br />Andhrapradesh, 533308, India.
                                     </Controls.Box>
                                 </Controls.Typography>
                             </Controls.Grid>
@@ -273,14 +284,14 @@ const GetInTouchComponent = () => {
                                 <Controls.Typography variant='caption1' sx={{ fontWeight: "bold" }}>
                                     Email:
                                     <Controls.Box component='span' sx={{ fontWeight: "medium" }}>
-                                        givelifecharity@gmail.com
+                                    givelifefoundation2024@gmail.com
                                     </Controls.Box>
                                 </Controls.Typography>
                             </Controls.Grid>
                         </Controls.Grid>
+                        </Controls.Grid>
 
-
-                    </Controls.Grid>
+                        </Controls.Grid>
 
                 </Controls.Grid>
             </Controls.Grid>

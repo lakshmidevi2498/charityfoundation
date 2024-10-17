@@ -12,7 +12,9 @@ const TestimonialsComponent = () => {
     const swiperRef = useRef(null);
 
     const content = [
-        './assests/images/Layer 2@4x (1) 1.png', './assests/images/Layer 2@4x (1) 1 (1).png', './assests/images/Layer 2@4x (1) 2 (1).png',
+        {img:'./assests/images/Layer 2@4x (1) 1.png',text:"Volunteering with Charity has been one of the most rewarding experiences of my life. Seeing the direct impact of our efforts on the lives of those we serve is incredibly fulfilling. I am proud to be part of an organization that prioritizes compassion and community"},
+        {img: './assests/images/Layer 2@4x (1) 1 (1).png',text:"My experience as a volunteer with Charity has been nothing short of amazing. The organization is well-organized, and I always feel supported in my role. It’s rewarding to be part of something that brings hope and help to so many"},
+        {img: './assests/images/Layer 2@4x (1) 2 (1).png',text:"Being part of Charity has not only allowed me to give back but has also taught me the importance of community and compassion. Every event we host and every person we help reinforces why I joined this organization. I’m proud to be part of a team that truly makes a difference."}
     ]
     return (
         <Controls.Grid container justifyContent='center' my={7} height="480px" sx={{ display: "flex", alignItems: "center", position: 'relative', width: '100%',  overflow: "visible", backgroundColor: "#FAFAFA", justifyContent: "center", zIndex:1 }} mt={5}>
@@ -55,8 +57,8 @@ const TestimonialsComponent = () => {
                                             <Controls.Box component='span' sx={{ color: theme.palette.one.green, }}> Our Organization</Controls.Box>
                                         </Controls.Typography>
                                         <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
-                                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis pellentesque cras interdum ornare feugiat eget feugiat. Nunc, urna vitae pellentesque risus, ut volutpat eget libero vel. Vitae urna pharetra sem consectetur sed mi, nisi id feugiat. At egestas praesent mauris metus risus accumsan. Cras gravida natoque maecenas risus ultricies. Sed tincidunt porttitor viverra nunc neque, enim. Tristique molestie turpis turpis diam”
-                                        </Controls.Typography>
+                                           {item.text}
+                                           </Controls.Typography>
                                         <Controls.Grid item sx={{ display: "flex", alignItems: "center" }} gap={2} my={2}>
 
                                             <Controls.Grid item sx={{ flex: 1, order: { xs: 2, md: 1 } }}>
@@ -113,7 +115,7 @@ const TestimonialsComponent = () => {
                                         >
                                             <Controls.Box
                                                 component='img'
-                                                src={item}
+                                                src={item.img}
                                                 alt='image'
                                                 sx={{
                                                     position: "absolute",
@@ -131,7 +133,13 @@ const TestimonialsComponent = () => {
                                                     borderBottomLeftRadius: {xs:"100px",sm:"130px"},
                                                 }}
                                             />
+                                           
                                         </Controls.Grid>
+                                        {/* <Controls.Grid item sx={{display:{xs:"block",sm:"none"},border:"2px solid red"}}>
+                                             <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
+                                           {item.text}
+                                           </Controls.Typography>
+                                           </Controls.Grid> */}
                                     </Controls.Grid>
 
                                     <Controls.Grid item md={1} sx={{

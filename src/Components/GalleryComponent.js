@@ -35,15 +35,14 @@ const GalleryComponent = () => {
                         display='flex'
                         alignItems='center'
                         margin='auto'
-                        sx={{ maxWidth: '100%' }} 
-                        // gap={{xs:5,lg:0}} 
+                        sx={{ maxWidth: '100%' }}  
                     >
                         {images.map((img, index) => (
                             <Controls.Grid
                                 item
                                 xs={12}
                                 sm={4}
-                                md={3}
+                                md={2.4}
                                 lg={2.4}
                                 sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                                 key={index}
@@ -51,7 +50,7 @@ const GalleryComponent = () => {
                             >
                                 <Controls.Card
                                     sx={{
-                                        width: '100%',
+                                        width: {xs:'100%',md:"100%",lg:"100%"},
                                         height: {xs:'350px',xl:"500px"},
                                         border: '2px solid black',
                                         margin: 0,
