@@ -25,7 +25,7 @@ const FooterComponent = () => {
     ];
 
     const content4 = [
-        "Email: infocharity@actimize.in", "Contact No: +91 7396455771"
+        "Email: givelifefoundation2024@gmail.com", "Contact No: +91 7396455771"
     ];
 
     const icons = [

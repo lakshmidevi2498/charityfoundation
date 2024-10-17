@@ -27,7 +27,7 @@ const OurCampaignComponent = () => {
         <>
             <Controls.Grid container justifyContent='center' mt={5}>
                 <Controls.Grid item xs={12} sx={{ justifyContent: "center", backgroundColor: "rgba(242, 194, 26, 0.14)" }}>
-                    <Controls.Grid item xs={10} sx={{ justifyContent: "center", alignItems: "center", margin: "auto", paddingY: "20px" }}>
+                    <Controls.Grid item xs={10} lg={9} xl={10} sx={{ justifyContent: "center", alignItems: "center", margin: "auto", paddingY: "20px" }}>
                         <Controls.Grid item xs={12} sx={{ justifyContent: "space-between", display: "flex", }}>
                             <Controls.Grid item mb={2}> 
                                     <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontSize: "18px", }} >

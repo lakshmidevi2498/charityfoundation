@@ -5,7 +5,7 @@ import theme from '../Utilities/Theme';
 
 const FlipCardComponent = () => {
     const [flippedCards, setFlippedCards] = useState(Array(4).fill(false));
-    const frontCard = ["Who we are", "Our focus", "Why Excellence", "Our Values"];
+    const frontCard = [{text:"Who we are",img:"./assests/images/reports.gif"}, {text:"Our focus",img:"./assests/images/Cube 3d.gif"}, {text:"Why Excellence",img:"./assests/images/Trophy (1).gif"},{text: "Our Values",img:"./assests/images/Review (1).gif"}];
     const backCard = [
     "Charity refers to the voluntary act of giving help, support, or resources (such as money, food, time, or services) to those in need, typically through non-profit organizations, religious groups, or individuals.",
     "The focus of charity is primarily on improving the well-being of individuals, communities, and the environment by addressing specific needs, alleviating suffering, and fostering positive change.",
@@ -21,7 +21,7 @@ const FlipCardComponent = () => {
 
     return (
         <Controls.Grid container direction="row" spacing={2} justifyContent="center" my={5}>
-            <Controls.Grid item xs={10} sm={10} md={10} lg={9} xl={10} >
+            <Controls.Grid item xs={10}  lg={9} xl={10} >
                 <Controls.Grid item>
                     <Controls.Typography variant='caption2' sx={{ 
                         fontSize: '1.4rem',
@@ -65,9 +65,12 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",  }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px" }} />
+                                        <Controls.Box component='img' src={item.img} sx={{ width:"80px",height:"80px"}}/>
+                                        <Controls.Grid item>
                                         <Controls.Typography variant="caption1" sx={{ color: theme.palette.one.green, fontWeight: "bold",alignItems:"center",fontSize:{xs:'1.2rem',sm:"1.8rem",md:"1rem",lg:"1.4rem",xl:"1.8rem"} }}>
-                                            {item}
+                                            {item.text}
                                         </Controls.Typography>
+                                        </Controls.Grid>
                                     </Controls.CardContent>
                                 </Controls.Card>
 

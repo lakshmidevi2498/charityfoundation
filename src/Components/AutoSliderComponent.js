@@ -67,8 +67,8 @@ const AutoSlider = () => {
 
   return (
     <>
-      <Controls.Grid container justifyContent='center'border="2px solid red" >
-        <Controls.Grid item xs={10} lg={9} xl={10}sx={{ justifyContent: "center", textAlign: "center", }} my={3} border="2px solid red">
+      <Controls.Grid container justifyContent='center' >
+        <Controls.Grid item xs={10} lg={9} xl={10}sx={{ justifyContent: "center", textAlign: "center", }} my={3} >
           <Controls.Grid item >
             <Controls.Typography variant= "caption4"sx={{ color: "#F2C21A", fontSize: { xs:"22px",sm:"26px",md: "32px",lg:"38px" }, fontWeight: 700,  }}>Our volunteers are our everyday heroes in the truest sense
             </Controls.Typography>

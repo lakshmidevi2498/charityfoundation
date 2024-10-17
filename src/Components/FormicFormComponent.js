@@ -6,6 +6,7 @@ import theme from '../Utilities/Theme';
 import { connect } from 'react-redux';
 import { postDonarDataError, postDonarDataStart, postDonarDataSuccess } from '../redux/actions/postDonationAction';
 import { donateMoney } from '../backend/donateApi';
+import emailjs from 'emailjs-com'
 
 
 
@@ -64,6 +65,33 @@ const FormicFormComponent = ({ dispatch, data }) => {
         console.log("Form Values:", values);
 
 
+        const  service_id = 'service_okycvj8'
+        const template_id= 'template_izpnvkk'
+        const user_id = 'H9mKbRUHuFIU-z7Bh'
+        const template_params = {
+             from_name: values.fname + values.lname,
+             from_email:values.email,
+             from_number:values.phone,
+             message : values.message,
+             from_citizenship:values.citizenship,
+             from_donationFrequency:values.donationFrequency,
+             from_donationAmount:values.donationAmount,
+             to_name:"Charity Foundation"
+         }
+    
+
+
+     
+    emailjs.send(service_id , template_id , template_params , user_id)
+    .then((response)=>{
+     console.log("Email sent successfully",response)
+    })
+    .catch((error)=>{
+     console.log("error sending Email",error)
+    })
+
+
+
         const paymentSuccess = await handlePayment(values);
         if (paymentSuccess) {
 
@@ -91,9 +119,6 @@ const FormicFormComponent = ({ dispatch, data }) => {
             };
             console.log("orderOptions", orderOptions)
 
-            // const response = await donateMoney(orderOptions);
-            // const order = response;
-            // console.log("response from api", order) 
 
             const paymentOptions = {
                 key: 'rzp_test_mqSCiPTo2G5Peh',

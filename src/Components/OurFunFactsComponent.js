@@ -45,8 +45,8 @@ const OurFunFactsComponent = () => {
           <Controls.Grid container sx={{ position: 'relative', zIndex: 3, justifyContent:"center" }}>
            
 
-              <Controls.Grid item xs={10} md={11} lg={11} xl={10}sx={{ paddingX:{md:"20px",lg:"100px",xl:'0px'}, }} >
-                <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px",paddingX:{sm:"8px",lg:"10px" }}} >
+              <Controls.Grid item xs={10}   lg={9} xl={10}sx={{ }} >
+                <Controls.Grid item xs={12} sx={{ textAlign: "left", marginBottom: "20px", }} >
                   <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
                     <Controls.Typography variant='caption4' sx={{  fontSize: "1.2rem", }} >
                       Our Fun Facts
@@ -59,11 +59,11 @@ const OurFunFactsComponent = () => {
                   </Controls.Typography>
                   </Controls.Grid>
                 </Controls.Grid>
-              </Controls.Grid>
-              <Controls.Grid  xs={10} md={11} lg={11} xl={12} sx={{ paddingX:{md:"0px",lg:"90px",xl:17}}}   >
+              
+              {/* <Controls.Grid  xs={10}   lg={9} xl={10} sx={{  border:"2px solid red"}}   > */}
                 <Controls.Grid
                   container
-                  sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }} 
+                  sx={{ justifyContent: "center", textAlign: "center", alignItems: "center", }} spacing={{xs:2,xl:5}}
                 >
                   {cards.map((item, index) => (
                     <Controls.Grid
@@ -76,14 +76,15 @@ const OurFunFactsComponent = () => {
                         sx={{
                           backgroundColor: theme.palette.one.green, 
                           height: "300px",
-                          width: {xs:"350px",sm:"300px",md:"220px",lg:"247px",xl:"400px"},
+                          // width: {xs:"350px",sm:"300px",md:"200px",lg:"247px",xl:"400px"},
+                          width:"100%",
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',
                           justifyContent: 'center',
                           textAlign: 'center',
                           transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                          marginBottom:{xs:"20px",lg:"10px"},
+                          marginBottom:{xs:"10px",lg:"5px"},
                           '&:hover': {
                             transform: "scale(1.07)",
                             boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
@@ -112,6 +113,7 @@ const OurFunFactsComponent = () => {
                     </Controls.Grid>
                   ))}
                 </Controls.Grid>
+              {/* </Controls.Grid> */}
               </Controls.Grid>
 
 

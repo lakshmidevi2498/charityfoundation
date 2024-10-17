@@ -21,7 +21,7 @@ const AboutUsComponentThree = () => {
     return (
         <>
             <Controls.Grid container justifyContent="center" mt={10}  >
-                <Controls.Grid item xs={10} md={11} lg={10} sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
+                <Controls.Grid item xs={10}   lg={9} xl={10}sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
                     <Controls.Grid container sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", }}>
 
 

@@ -13,7 +13,7 @@ const AboutUsComponentFour = () => {
     return (
         <>
             <Controls.Grid container justifyContent='center' my={5}>
-                <Controls.Grid item xs={10} md={11} lg={10}sx={{ justifyContent: "center" }}>
+                <Controls.Grid item xs={10}  lg={9} xl={10}sx={{ justifyContent: "center" }}>
                     <Controls.Grid item >
                         <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={2}>
                             <Controls.Typography variant='caption4' sx={{ fontFamily: 'Montserrat', fontSize: "18px", }} >

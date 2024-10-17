@@ -52,12 +52,12 @@ const FrequentlyQuestionsComponent = () => {
                         </Controls.Grid>
                         <Controls.Grid item xs={12} md={6} xl={8}sx={{ justifyContent: "center", alignItems: "center", }}>
                             {content.map((item, index) => (
-                                <Controls.Grid item key={index}>
+                                <Controls.Grid item key={index} >
                                     <Controls.Accordion
                                         defaultExpanded={index === 0}
                                         expanded={expanded === index}
                                         onChange={handleAccordionChange(index)}
-                                        sx={{ backgroundColor: expanded === index ? "#D0E7E2" : "white" }} // Correct syntax
+                                        sx={{ backgroundColor: expanded === index ? "#D0E7E2" : "white" ,marginBottom: 0.5}} 
                                     >
                                         <Controls.AccordionSummary
                                             expandIcon={expanded === index ? <Controls.RemoveIcon /> : <Controls.AddIcon />}
