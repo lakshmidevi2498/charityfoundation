@@ -203,7 +203,7 @@ const GetInTouchComponent = () => {
                                                     rows={4}
                                                     fullWidth
                                                     sx={{
-                                                        width: {xl:'700px'},
+                                                        width: {xl:'820px'},
                                                         '& .MuiInputBase-root': {
                                                             backgroundColor: theme.palette.one.fields,
                                                             padding: 0,

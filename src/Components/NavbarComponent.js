@@ -78,7 +78,7 @@ const NavbarComponent = () => {
           <Controls.Grid container alignItems="center" justifyContent="space-between">
             <Controls.Grid item sx={{ display: 'flex', order: { xs: 1 } ,cursor:"pointer", alignItems:"center"}} gap={1} onClick={handleHome}>
               <Controls.Box component="img" src="assests/images/Vector.png" alt="Vector Image" width="30px" height="30px" mt={0} />
-              <Controls.Typography variant="caption4" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { xs:"0px",md: "5px",sm:"10px"  } ,marginBottom:{xs:'0px',sm:'8px',md:"0px"}}}>
+              <Controls.Typography variant="caption4" component="div" sx={{ display: { xs: 'none', sm: "block" }, fontSize: { xs: '10px', sm: "15px", md: "24px" }, marginTop: { xs:"0px",md: "5px",sm:"10px"  } ,marginBottom:{xs:'0px',sm:'8px',md:"10px"}}}>
                 Foundation
               </Controls.Typography>
             </Controls.Grid>
