@@ -16,7 +16,7 @@ const HelpingComponent = () => {
     const [readMoreStates, setReadMoreStates] = useState({});
 
     const handleNavigate = () => {
-        navigate('/donate')
+        navigate('/supportus/donate')
     }
     const handleToggle = (index) => {
         setReadMoreStates((prevState) => ({
@@ -73,8 +73,8 @@ const HelpingComponent = () => {
                                             display: 'flex',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            padding: { xs: "30px", sm: "90px", lg: "80px", xl: "110px" },
-                                            margin: "auto",
+                                            padding: { xs: "30px", sm: "80px", lg: "60px", xl: "110px" },
+                                            margin: "auto", 
                                         }}
                                     >
                                         <Controls.CardMedia
@@ -98,7 +98,7 @@ const HelpingComponent = () => {
                                                     sx={{
                                                         color: theme.palette.one.green,
                                                         fontWeight: 'bold',
-                                                        fontSize: { xs: '19px', sm: '22px', md: "20px", xl: '40px' },
+                                                        fontSize: { xs: '15px', sm: '16px', md: "18px",lg:"20px", xl: '35px' },
                                                     }}
                                                 >
                                                     {item.title}
@@ -107,7 +107,7 @@ const HelpingComponent = () => {
 
                                             <Controls.Typography
                                                 variant="caption1"
-                                                sx={{ fontSize: { xs: '14px', sm: '19px', md: "16px", lg: "18px", xl: '30px' } }}
+                                                sx={{ fontSize: { xs: '12px', sm: '14px', md: "16px", lg: "17px", xl: '30px' } }}
                                             >
                                                 {item.text}
                                             </Controls.Typography>
@@ -117,7 +117,7 @@ const HelpingComponent = () => {
                                                     <Controls.Grid item mt={1}>
                                                         <Controls.Typography
                                                             variant="caption1"
-                                                            sx={{fontSize: { xs: '14px', sm: '19px', md: "16px", lg: "18px", xl: '30px' }  }}
+                                                            sx={{fontSize: { xs: '12px', sm: '14px', md: "16px", lg: "17px", xl: '30px' }  }}
                                                         >
                                                             {item.moreText}
                                                         </Controls.Typography>

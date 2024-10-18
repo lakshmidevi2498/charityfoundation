@@ -18,7 +18,7 @@ const DonatePage = () => {
   const isMediumOrLargerScreen = useMediaQuery('(min-width:960px)'); 
 
   useEffect(() => {
-    if (location.pathname === '/donate') {
+    if (location.pathname === '/supportus/donate') {
       let scrollPosition = 505;  
 
       

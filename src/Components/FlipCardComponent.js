@@ -93,7 +93,7 @@ const FlipCardComponent = () => {
                                 >
                                     <Controls.CardContent sx={{ textAlign: "center",   }}>
                                         <Controls.StarBorderIcon sx={{ position: "absolute", top: 20, right: "50px", color: theme.palette.one.main }} />
-                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:{xs:'1rem',sm:"1.2rem",md:'0.8rem',lg:"1rem",xl:"1.4rem"}}}>
+                                        <Controls.Typography variant="caption1" component="div" sx={{ color: theme.palette.one.main ,fontSize:{xs:'1rem',sm:"1.1rem",md:'0.8rem',lg:"1rem",xl:"1.4rem"}}}>
                                             {backCard[index]}  
                                         </Controls.Typography>
                                     </Controls.CardContent>

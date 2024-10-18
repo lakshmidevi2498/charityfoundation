@@ -44,7 +44,7 @@ const AboutUsComponentTwo = () => {
               <Controls.Grid item>
                 <Controls.Typography variant='caption2'
                   sx={{ 
-                    fontSize: {xs:'1.2rem',md:"1.2rem",xl:"1.8rem"},
+                    fontSize: {xs:'1.1rem',md:"1.2rem",xl:"1.8rem"},
                     fontWeight: 500,
                     lineHeight: '24px',
                     textAlign: 'left'

@@ -3,12 +3,20 @@ import Controls from '../commons/controls'
 import theme from '../Utilities/Theme'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify';
 
 const Revolution = () => {
     const [message , setMessage] = useState('')
+    const [error , setError] = useState(false)
 
     const handleMail = () => {
+        if(message === ""){
+            setError(true)
+            
+        }
+        else{
         setMessage('')
+        setError(false)
         const  service_id = 'service_okycvj8'
         const template_id= 'template_p2n7w53'
         const user_id = 'H9mKbRUHuFIU-z7Bh'
@@ -23,10 +31,13 @@ const Revolution = () => {
     emailjs.send(service_id , template_id , template_params , user_id)
     .then((response)=>{
      console.log("Email sent successfully",response)
+     toast.success("Your request sent successfully!"); 
     })
     .catch((error)=>{
      console.log("error sending Email",error)
+     toast.error("Error sending request. Please try again.");
     })
+}
      
 
     }
@@ -47,9 +58,14 @@ const Revolution = () => {
                     </Controls.Grid>
 
                     <Controls.Grid item sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",}} xs={12} sm={10}gap={3} >
-                        <Controls.TextField label="Enter Message" size='small'value={message} sx={{ width: {xs:"85%",sm:'40%',md:"35%",lg:"25%"}, }} xs={8} sm={6} onChange={(e) => {setMessage(e.target.value)}}></Controls.TextField>
+                            
+                        <Controls.TextField label="Enter Message" size='small'value={message} sx={{ width: {xs:"85%",sm:'40%',md:"35%",lg:"25%"}, }} xs={8} sm={6} onChange={(e) => {setMessage(e.target.value)}} required></Controls.TextField>
+                      
                         <Controls.Button variant='contained' sx={{color:theme.palette.one.main,backgroundColor:theme.palette.one.green,textTransform:"inherit",paddingX:{xs:"10px",sm:"35px",md:"60px"},paddingY:{xs:"6px",sm:"8px"} }} xs={4} sm={6} onClick={handleMail}> {isMobile ? "submit" : "Submit  Message"}</Controls.Button>
                     </Controls.Grid>
+                    {error && <Controls.Typography variant="caption1" sx={{color:"red" , display:"block",textAlign:"center",marginRight:{xs:"200px",sm:"270px",md:"350px",lg:"370px",xl:"550px"}}} >Message is required</Controls.Typography>}
+                        
+                    
                 </Controls.Grid>
 
             </Controls.Grid>

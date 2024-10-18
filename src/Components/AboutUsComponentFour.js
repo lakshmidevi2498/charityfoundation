@@ -24,7 +24,7 @@ const AboutUsComponentFour = () => {
                         <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontFamily: "lato", fontWeight: 700, fontSize: "30px" }}>Our Features</Controls.Typography>
 
                     </Controls.Grid>
-                    <Controls.Grid container justifyContent="center" spacing={{xs:5,md:2,xl:5}} >
+                    <Controls.Grid container justifyContent="center" spacing={{xs:7,md:2,xl:5}} >
                         {cards.map((item, index) => (
                             <Controls.Grid item key={index} xs={12} sm={6} md={4}  height="auto">
                                 <Controls.Card 

@@ -13,7 +13,7 @@ const ContactComponent = () => {
         "./assests/images/Rectangle 2965.png"
     ];
     const handleDonatePage = () => {
-        navigate('/donate')
+        navigate('/supportus/donate')
       }
 
     return (
@@ -81,7 +81,7 @@ const ContactComponent = () => {
                         The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer. Helping one person might not change the whole world, but it could change the world for one person. not change the whole world, but it could change the world for one person.
                     </Controls.Typography>
                     </Controls.Grid>
-                    <Controls.Grid item   marginTop='60px' marginBottom="20px" >
+                    <Controls.Grid item   marginTop='60px' marginBottom="30px" >
                         <Controls.Button variant='outlined' sx={{ color: theme.palette.one.main, border: "2px solid white" ,textTransform:'initial',paddingX:"50px",borderRadius:"10px"}} onClick={handleDonatePage}>Donate Now</Controls.Button>
                     </Controls.Grid> 
                     <Controls.Grid
@@ -160,6 +160,7 @@ const ContactComponent = () => {
                                                         textTransform: "initial",
                                                         fontWeight: "bold",
                                                         marginTop: "10px",
+                                                        
                                                     }} onClick={handleDonatePage}
                                                 >
                                                     Donate Now

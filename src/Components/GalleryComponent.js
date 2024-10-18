@@ -1,6 +1,7 @@
 import React from 'react';
 import Controls from '../commons/controls';
 import theme from '../Utilities/Theme';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const GalleryComponent = () => {
     const images = [
@@ -10,6 +11,11 @@ const GalleryComponent = () => {
         './assests/images/Rectangle 3010.png',
         './assests/images/unsplash_Mn7Wv6-FfCM.png',
     ];
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.only('sm'));  
+   
+    const displayedImages = isSmallScreen ? images.slice(0, 3) : images;
+    
 
     return (
         <>
@@ -37,7 +43,7 @@ const GalleryComponent = () => {
                         margin='auto'
                         sx={{ maxWidth: '100%' }}  
                     >
-                        {images.map((img, index) => (
+                        {displayedImages.map((img, index) => (
                             <Controls.Grid
                                 item
                                 xs={12}

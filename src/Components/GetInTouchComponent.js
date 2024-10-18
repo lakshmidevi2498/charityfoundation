@@ -5,6 +5,7 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'; 
 import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 
 const validationSchema = Yup.object().shape({
@@ -57,9 +58,11 @@ const GetInTouchComponent = () => {
        emailjs.send(service_id , template_id , template_params , user_id)
        .then((response)=>{
         console.log("Email sent successfully",response)
+        toast.success("Your request sent successfully!"); 
        })
        .catch((error)=>{
         console.log("error sending Email",error)
+        toast.error("Error sending request. Please try again.");
        })
         
     }
@@ -242,7 +245,7 @@ const GetInTouchComponent = () => {
                             
                             sx={{
                                 backgroundColor: theme.palette.one.fields,
-                                padding: "20px",
+                                padding: {xs:"10px",sm:"20px"},
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "center",
@@ -255,13 +258,13 @@ const GetInTouchComponent = () => {
                             </Controls.Grid>
 
                             <Controls.Grid item sx={{ marginBottom: "10px", textAlign: "left", width: "100%" }}>
-                                <Controls.Typography variant="caption1" sx={{ fontSize: { xs: "16px", sm: "18px", md: "14px", lg: "16px" } }}>
+                                <Controls.Typography variant="caption1" sx={{ fontSize: { xs: "14px", sm: "18px", md: "14px", lg: "16px" } }}>
                                     If you still have questions, please fill out the form below and our Supporter Services team will get back to you.
                                     If you prefer, you can give us a call at 6305196668.
                                 </Controls.Typography>
                             </Controls.Grid>
 
-                            <Controls.Grid item sx={{ marginBottom: "10px", fontSize: { xs: "16px", sm: "18px", md: "14px", lg: "16px" }, textAlign: "left", width: "100%" }}>
+                            <Controls.Grid item sx={{ marginBottom: "10px", fontSize: { xs: "14px", sm: "18px", md: "14px", lg: "16px" }, textAlign: "left", width: "100%" }}>
                                 <Controls.Typography variant='caption1' sx={{ fontWeight: "bold" }}>
                                     Location:
                                     <Controls.Box component='span' sx={{ fontWeight: "medium" }}>
@@ -271,7 +274,7 @@ const GetInTouchComponent = () => {
                                 </Controls.Typography>
                             </Controls.Grid>
 
-                            <Controls.Grid item sx={{ marginBottom: "10px", fontSize: { xs: "16px", sm: "18px", md: "14px", lg: "16px" }, textAlign: "left", width: "100%" }}>
+                            <Controls.Grid item sx={{ marginBottom: "10px", fontSize: { xs: "14px", sm: "18px", md: "14px", lg: "16px" }, textAlign: "left", width: "100%" }}>
                                 <Controls.Typography variant='caption1' sx={{ fontWeight: "bold" }}>
                                     Phone:
                                     <Controls.Box component='span' sx={{ fontWeight: "medium" }}>
@@ -280,7 +283,7 @@ const GetInTouchComponent = () => {
                                 </Controls.Typography>
                             </Controls.Grid>
 
-                            <Controls.Grid item sx={{ fontSize: { xs: "16px", sm: "18px", md: "16px" }, textAlign: "left", width: "100%" }}>
+                            <Controls.Grid item sx={{ fontSize: { xs: "14px", sm: "18px", md: "16px" }, textAlign: "left", width: "100%" }}>
                                 <Controls.Typography variant='caption1' sx={{ fontWeight: "bold" }}>
                                     Email:
                                     <Controls.Box component='span' sx={{ fontWeight: "medium" }}>

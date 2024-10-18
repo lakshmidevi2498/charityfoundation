@@ -21,7 +21,7 @@ const AboutUsComponentThree = () => {
     return (
         <>
             <Controls.Grid container justifyContent="center" mt={10}  >
-                <Controls.Grid item xs={10}   lg={9} xl={10}sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
+                <Controls.Grid item xs={10} lg={9} xl={10} sx={{ marginBottom: { sm: "80px", md: "0px" } }}  >
                     <Controls.Grid container sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", }}>
 
 
@@ -31,27 +31,27 @@ const AboutUsComponentThree = () => {
                             md={6}
                             lg={5}
                             sx={{
-                                order: { xs: 2, md: 1 }, 
+                                order: { xs: 2, md: 1 },
                                 justifyContent: "center",
                                 alignItems: "center",
                                 marginBlockStart: "auto",
                                 paddingY: "40px",
                                 textAlign: "start",
-                                paddingRight: { md: "15px", lg: "0px" }, 
+                                paddingRight: { md: "15px", lg: "0px" },
                             }}
                         >
                             <Controls.Box sx={{ display: 'flex', alignItems: 'center' }} gap={1}>
-                                <Controls.Typography variant='caption2' sx={{ fontSize: {xs:"1.2rem",xl:"1.8rem"} }} >
+                                <Controls.Typography variant='caption2' sx={{ fontSize: { xs: "1.2rem", xl: "1.8rem" } }} >
                                     Welcome to charity
                                 </Controls.Typography>
                                 <Controls.Divider sx={{ flexBasis: '50px', height: '1px', width: "50px" }} />
                             </Controls.Box>
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption4'
-                                    sx={{ 
-                                        fontSize: { xs: "1.5rem", sm: '2rem', md: "1.8rem", lg: "1.9rem" ,xl:"2.6rem"},
+                                    sx={{
+                                        fontSize: { xs: "1.5rem", sm: '2rem', md: "1.8rem", lg: "1.9rem", xl: "2.6rem" },
                                         fontWeight: 700,
-                                        lineHeight: {xs:"40px",sm:'50px'},
+                                        lineHeight: { xs: "40px", sm: '50px' },
                                         textAlign: 'left',
                                         color: theme.palette.one.green
                                     }}
@@ -62,89 +62,89 @@ const AboutUsComponentThree = () => {
                             </Controls.Grid>
                             <Controls.Grid item>
                                 <Controls.Typography variant='caption2'
-                                    sx={{ 
-                                        fontSize: {xs:'1rem',sm:'1.2rem',md:"1rem",xl:"1.8rem"},
+                                    sx={{
+                                        fontSize: { xs: '1rem', sm: '1.2rem', md: "1rem", xl: "1.8rem" },
                                         fontWeight: 500,
                                         lineHeight: '24px',
                                         textAlign: 'left'
                                     }}
                                 >
-                                   Every act of kindness counts, and every contribution matters. Welcome to our charity, where your involvement helps us create a brighter, more equitable future for all. Let us come together, harness our collective strength, and make a lasting impact in the lives of those we serve.
+                                    Every act of kindness counts, and every contribution matters. Welcome to our charity, where your involvement helps us create a brighter, more equitable future for all. Let us come together, harness our collective strength, and make a lasting impact in the lives of those we serve.
                                 </Controls.Typography>
                             </Controls.Grid>
-                            <Controls.Grid 
-  container 
-  item 
-  xs={12} 
-  my={2} 
-  sx={{ 
-    display: "flex", 
-    flexDirection: { xs: "column", sm: "row" }, 
-    justifyContent: { xs: "center", sm: "space-between" }, 
-    gap: 2 
-  }}
->
-  {content2.map((item, index) => (
-    <Controls.Grid 
-      item 
-      xs={12} 
-      sm={5.5} 
-      key={index} 
-      sx={{ 
-        backgroundColor: "#EDF7F5", 
-        padding: { xs: "10px", sm: "20px" } 
-      }}
-    >
-      <Controls.Grid 
-        container 
-        item 
-        sx={{ display: "flex", alignItems: "center", gap: 1 }}
-      >
-        <Controls.Box 
-          component="img" 
-          src={item.icon} 
-          width="20px" 
-          height="20px" 
-        />
-        <Controls.Typography 
-          variant="caption2" 
-          sx={{ 
-            color: theme.palette.one.green, 
-            fontWeight: 600, 
-            fontSize: { 
-              xs: "0.7rem", 
-              sm: "0.8rem", 
-              md: "0.9rem", 
-              lg: "1rem", 
-              xl: "1.5rem" 
-            } 
-          }}
-        >
-          {item.text}
-        </Controls.Typography>
-      </Controls.Grid>
+                            <Controls.Grid
+                                container
+                                item
+                                xs={12}
+                                my={2}
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: { xs: "column", sm: "row" },
+                                    justifyContent: { xs: "center", sm: "space-between" },
+                                    gap: 2
+                                }}
+                            >
+                                {content2.map((item, index) => (
+                                    <Controls.Grid
+                                        item
+                                        xs={12}
+                                        sm={5.5}
+                                        key={index}
+                                        sx={{
+                                            backgroundColor: "#EDF7F5",
+                                            padding: { xs: "10px", sm: "20px" }
+                                        }}
+                                    >
+                                        <Controls.Grid
+                                            container
+                                            item
+                                            sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                                        >
+                                            <Controls.Box
+                                                component="img"
+                                                src={item.icon}
+                                                width="20px"
+                                                height="20px"
+                                            />
+                                            <Controls.Typography
+                                                variant="caption2"
+                                                sx={{
+                                                    color: theme.palette.one.green,
+                                                    fontWeight: 600,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        sm: "0.8rem",
+                                                        md: "0.9rem",
+                                                        lg: "1rem",
+                                                        xl: "1.5rem"
+                                                    }
+                                                }}
+                                            >
+                                                {item.text}
+                                            </Controls.Typography>
+                                        </Controls.Grid>
 
-      <Controls.Typography 
-        variant="caption2" 
-        sx={{ 
-          fontSize: { 
-            xs: "0.7rem", 
-            sm: "0.8rem", 
-            lg: "0.9rem", 
-            xl: "1.4rem" 
-          } 
-        }}
-      >
-        {item.descp}
-      </Controls.Typography>
-    </Controls.Grid>
-  ))}
-</Controls.Grid>
+                                        <Controls.Typography
+                                            variant="caption2"
+                                            sx={{
+                                                fontSize: {
+                                                    xs: "0.7rem",
+                                                    sm: "0.8rem",
+                                                    lg: "0.9rem",
+                                                    xl: "1.4rem"
+                                                }
+                                            }}
+                                        >
+                                            {item.descp}
+                                        </Controls.Typography>
+                                    </Controls.Grid>
+                                ))}
+                            </Controls.Grid>
 
                             <Controls.Grid item my={1}>
                                 {bar.map((item, index) => (
                                     <>
-                                        <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between",fontSize:{xs:"1rem",md:"1.2rem",lg:"1.3rem",xl:"2rem"} }} key={index}>
+                                        <Controls.Grid item sx={{ display: "flex", justifyContent: "space-between", fontSize: { xs: "1rem", md: "1.2rem", lg: "1.3rem", xl: "2rem" } }} key={index}>
                                             <Controls.Typography variant='caption2'>{item.text}</Controls.Typography>
                                             <Controls.Typography variant='caption2'>{item.percentage}%</Controls.Typography>
 
@@ -177,7 +177,7 @@ const AboutUsComponentThree = () => {
                                 position: 'relative',
                                 marginBottom: { xs: "0px", sm: '30px' },
                                 display: 'flex',
-                                justifyContent: { xs: 'center', md: 'flex-start' }, 
+                                justifyContent: { xs: 'center', md: 'flex-start' },
                             }}
                         >
                             <Controls.Box
@@ -186,12 +186,12 @@ const AboutUsComponentThree = () => {
                                 sx={{
                                     zIndex: 1,
                                     border: "10px solid #219D8078",
-                                    width: { xs: "100%", sm: "350px", md: "370px", lg: "450px" ,xl:"600px"},
-                                    height: { xs: "100%", sm: "320px", md: "400px", lg: "430px" ,xl:"500px"},
+                                    width: { xs: "100%", sm: "350px", md: "350px", lg: "450px", xl: "600px" },
+                                    height: { xs: "100%", sm: "320px", md: "390px", lg: "430px", xl: "500px" },
                                     objectFit: "cover",
                                     margin: { xs: "10px auto", md: "0 40px" },
                                     display: "block",
-                                    marginLeft: { xs: 0, sm: "80px", md: 0 },
+                                    marginLeft: { xs: 0, sm: "80px", md: 2,lg:0 },
                                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                     '&:hover': {
                                         transform: "scale(1.07)",
@@ -205,15 +205,15 @@ const AboutUsComponentThree = () => {
                                     position: "absolute",
                                     zIndex: 2,
                                     top: { xs: "75%", sm: "100%", md: "75%", lg: "75%" },
-                                    left: { xs: "69%", sm: "65%", md: "65%", lg: "70%" },
+                                    left: { xs: "69%", sm: "65%", md: "68%", lg: "70%" },
                                     transform: "translate(-50%, -50%)",
                                     border: "10px solid #219D8078",
-                                    width: { xs: "147px", sm: "300px", md: "310px", lg: "350px" ,xl:"450px"},
-                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "280px" ,xl:'350px'},
-                                    display: {xs:"none",sm:"flex"},
+                                    width: { xs: "147px", sm: "300px", md: "290px", lg: "350px", xl: "450px" },
+                                    height: { xs: "130px", sm: "260px", md: "320px", lg: "280px", xl: '350px' },
+                                    display: { xs: "none", sm: "flex" },
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    overflow: "hidden",   
+                                    overflow: "hidden",
                                     // transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                     // '&:hover': {
                                     //     transform: "scale(1.05)",  
@@ -233,19 +233,19 @@ const AboutUsComponentThree = () => {
                                         justifyContent: "center",
                                         alignItems: "center",
                                         textAlign: "center",
-                                        overflow: "hidden",   
-                                        paddingLeft: "20px",
+                                        overflow: "hidden",
+                                        paddingLeft: "30px",
                                     }}
                                 >
                                     {content.map((item, index) => (
                                         <Controls.ListItem
                                             sx={{
                                                 display: 'list-item',
-                                                fontSize: { sm: "12px", md: "14px",xl:"18px" },
+                                                fontSize: { sm: "12px", md: "14px", xl: "18px" },
                                                 color: index === 0 ? theme.palette.one.green : "black",
                                                 fontWeight: 600,
                                                 fontFamily: "Poppins",
-                                                transition: "color 0.3s ease",   
+                                                transition: "color 0.3s ease",
                                             }}
                                             key={index}
                                         >

@@ -7,14 +7,14 @@ const LatestCauseComponent = () => {
   const swiperRef = useRef(null);
 
     const images = [
-        {text:"Homeless",name:"Childern We Wotk ",image:"./assests/images/unsplash_ZQDWu8RgjDE.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"85",progressbar:"85",raised:"8500",goal:"10000"},
-        {text:"Education",name:"Help For Education",image:"./assests/images/unsplash_83tkHLPgg2Q.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"90",progressbar:"90",raised:"9000",goal:"2000"},
-        {text:"Food",name:"Help For Food",image:"./assests/images/unsplash_tqwOJAvUih4.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"75",progressbar:"75",raised:"1,500",goal:"1500"},
-        {text:"Homeless",name:"Childern We Wotk ",image:"./assests/images/unsplash_41fytYZ_-mM.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"85",progressbar:"85",raised:"1,0000",goal:"1000"},
-        {text:"Education",name:"Help For Education",image:"./assests/images/unsplash_iYtYZ5H-9ws.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"90",progressbar:"90",raised:"8500",goal:"2000"},
-        {text:"Food",name:"Help For Food",image:"./assests/images/unsplash_83tkHLPgg2Q.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"75",progressbar:"75",raised:"1500",goal:"1500"},
-        {text:"Education",name:"Help For Education",image:"./assests/images/unsplash_41fytYZ_-mM.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"90",progressbar:"90",raised:"9000",goal:"5000"},
-        {text:"Food",name:"Help For Food ",image:"./assests/images/unsplash_tqwOJAvUih4.png",descp:"Lorem ipsum dolor sit amet, consetes elitr, sed diam nonumy....",percent:"75",progressbar:"75",raised:"8500",goal:"2000"},
+        {text:"Support Child Education",name:"Help For Child Education",image:"./assests/images/unsplash_ZQDWu8RgjDE.png",descp:"Charity empowers children in India through quality education and community engagement.",percent:"85",progressbar:"85",raised:"8500",goal:"10000"},
+        {text:"Homeless",name:"Giving Shelter so Many People",image:"./assests/images/unsplash_83tkHLPgg2Q.png",descp:"Charities provide shelter to the homeless,offering safety, dignity, & an opportunity to rebuild their lives.",percent:"90",progressbar:"90",raised:"9000",goal:"2000"},
+        {text:"Food",name:"Habitual the Nutritional Food Diet for Kids",image:"./assests/images/unsplash_tqwOJAvUih4.png",descp:"These programs provide meals to children at schools & shelters to promote health & break the hunger cycle.",percent:"75",progressbar:"75",raised:"1,500",goal:"1500"},
+        {text:"Disaster Relief",name:"Send help to those who fight the disaster ",image:"./assests/images/unsplash_41fytYZ_-mM.png",descp:"Disaster relief provides immediate and long-term aid, including food, water, shelter, and medical care, to those affected by natural disasters.",percent:"85",progressbar:"85",raised:"1,0000",goal:"1000"},
+        {text:"Prevent child trafficking",name:"Stop trafficking & Educate them",image:"./assests/images/unsplash_iYtYZ5H-9ws.png",descp:"Prevent child trafficking by raising awareness, educating vulnerable communities, and supporting protective services for at-risk children.",percent:"90",progressbar:"90",raised:"8500",goal:"2000"},
+        {text:"Health care",name:"Creating health camps in slum areas",image:"./assests/images/unsplash_83tkHLPgg2Q.png",descp:"provides essential medical care and health education to underserved communities, improving their well-being.",percent:"75",progressbar:"75",raised:"1500",goal:"1500"},
+        {text:"Stop child labour",name:" Prevent child labour works",image:"./assests/images/unsplash_41fytYZ_-mM.png",descp:"Prevent child labour by enforcing strict laws, providing education, and supporting vulnerable families with sustainable livelihood opportunities.",percent:"90",progressbar:"90",raised:"9000",goal:"5000"},
+        {text:"Clean Water",name:"Provide clear water facilities to the slum area people  ",image:"./assests/images/unsplash_tqwOJAvUih4.png",descp:"Charities play a crucial role in ensuring that people living in slum areas have access to clean water.",percent:"75",progressbar:"75",raised:"8500",goal:"2000"},
 
     ]
 

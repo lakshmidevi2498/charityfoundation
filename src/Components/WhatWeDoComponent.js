@@ -10,10 +10,10 @@ const WhatWeDoComponent = () => {
   const content = [
     { text: "Global health issues stem from inequalities in wealth, access, and infrastructure. Although solutions exist, they haven't reached the poorest and most vulnerable populations. ",more:"CARE's Right to Health strategy aims to support 50 million people in realizing their right to health, including 30 million women and girls' sexual and reproductive health rights (SRHR) by 2030.", gif: "./assests/images/Affiliate (1).gif" ,title:"Health Care"},
     { text: "Earthquakes occur suddenly, leading to significant fatalities and injuries. When they happen near coastlines or in the ocean, they can trigger tsunamis, resulting in further destruction.",more:" The aftermath of major quakes often leaves many homeless and in urgent need of medical supplies and care. Direct Relief collaborates with local organizations in impacted areas to provide essential medication and support to the most vulnerable populations.",  gif: "./assests/images/home (1).gif" ,title:"Housing and Infrastructure" },
-    { text: "Charity is dedicated to empowering children through quality education, fostering sustainable change by educating parents, teachers, and communities. ",more:" We collaborate with the government to influence public policy and ensure our programs align with the Right to Education Act (2009) and the National Education Policy 2020, establishing ourselves as a trusted NGO in India.",  gif: "./assests/images/Blog (1).gif"  ,title:"Education"},
-    { text: "Incorporating arts and culture into charitable work is a powerful way to enhance creativity, preserve heritage, and strengthen communities.Many charities support arts initiatives to promote education, healing, and social cohesion. ",more:" Organizations focusing on cultural preservation aim to safeguard at-risk traditions, languages, and art forms, ensuring that future generations can learn from their rich heritage. These charities may fund museum projects, cultural festivals, or community workshops that preserve traditional crafts and folklore.",  gif: "./assests/images/Currency (2).gif"  ,title:"Arts & Culture"},
-    { text: "In charity work, human rights and social justice are essential principles that drive efforts toward a more equitable world. Charities in this space address systemic inequalities to ensure fair treatment for all individuals. ",more:" The economic justice practice focuses on engaging private sector actors and utilizing market-based approaches, centering on women's empowerment. By leveraging local expertise and networks, these charities help women earn, save, and invest more, reducing poverty and promoting equity.",  gif: "./assests/images/Team (2).gif"  ,title:"Human Rights and Social Justice"},
-    { text: "Disaster relief and humanitarian aid are essential components of many charities’ missions, offering immediate and long-term support to individuals and communities affected by natural disasters, conflicts, or crises.", more:" Charities are vital in responding to these emergencies, saving lives and helping restore dignity to those impacted.", gif: "./assests/images/Chatbot (1).gif" ,title:"Disaster Relief and Humanitarian Aid" },
+    { text: " Charity is dedicated to empowering children through quality education, fostering sustainable change  for India’s children by educating parents,  teachers, and communities. ",more:" We collaborate with the government to influence public policy and ensure our programs align with the Right to Education Act (2009) and the National Education Policy 2020, establishing ourselves as a trusted NGO in India.",  gif: "./assests/images/Blog (1).gif"  ,title:"Education"},
+    { text: "Incorporating arts and culture into charity fosters creativity, preserves heritage, & unites communities. Many charities use arts to promote education, healing, & social cohesion. ",more:" Organizations focusing on cultural preservation aim to safeguard at-risk traditions, languages, and art forms, ensuring that future generations can learn from their rich heritage. These charities may fund museum projects, cultural festivals, or community workshops that preserve traditional crafts and folklore.",  gif: "./assests/images/Currency (2).gif"  ,title:"Arts & Culture"},
+    { text: "Human rights and social justice are key principles in charity work, driving efforts toward equity. These charities tackle systemic inequalities to ensure fair treatment for all.",more:" The economic justice practice focuses on engaging private sector actors and utilizing market-based approaches, centering on women's empowerment. By leveraging local expertise and networks, these charities help women earn, save, and invest more, reducing poverty and promoting equity.",  gif: "./assests/images/Team (2).gif"  ,title:"Human Rights and Social Justice"},
+    { text: "Disaster relief and humanitarian aid are key to many charities, providing immediate and long-term support to those affected by natural disasters, conflicts, or crises.", more:" Charities are vital in responding to these emergencies, saving lives and helping restore dignity to those impacted.", gif: "./assests/images/Chatbot (1).gif" ,title:"Disaster Relief and Humanitarian Aid" },
   ];
 
   const handleToggle = (index) => {
@@ -99,7 +99,7 @@ const WhatWeDoComponent = () => {
                           </Controls.Typography>
                           </Controls.Grid>
                         <Controls.Grid item>
-                          <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main }}>
+                          <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main,fontSize:{xs:"12px",sm:"14px",} }}>
                             {item.text}
                           </Controls.Typography>
                         </Controls.Grid>
@@ -159,11 +159,11 @@ const WhatWeDoComponent = () => {
                       </Controls.Grid>
                       <Controls.Grid item xs={7}>
                       <Controls.Grid item>
-                          <Controls.Typography variant='caption1' sx={{  fontWeight:"bold",fontSize:"16px" }}>
+                          <Controls.Typography variant='caption1' sx={{  fontWeight:"bold",fontSize:{md:"18px",lg:"16px"} }}>
                             {item.title}
                           </Controls.Typography>
                           </Controls.Grid>
-                        <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main, }}>
+                        <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.main,fontSize:{md:"17px",lg:"14px"} }}>
                           {item.text}
                         </Controls.Typography>
 

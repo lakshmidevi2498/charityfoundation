@@ -16,7 +16,7 @@ const ContactusPage = () => {
   const isMediumOrLargerScreen = useMediaQuery('(min-width:960px)'); 
 
   useEffect(() => {
-    if (location.pathname === '/volunteer') {
+    if (location.pathname === '/contactus/volunteer') {
       let scrollPosition = 700;  
 
       

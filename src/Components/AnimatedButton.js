@@ -58,7 +58,7 @@ const AnimatedButton = () => {
   };
 
   const handleDonatePage = () => {
-    navigate('/donate')
+    navigate('/supportus/donate')
   }
   return (
     <>

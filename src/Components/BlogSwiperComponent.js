@@ -51,7 +51,7 @@ const BlogSwiperComponent = () => {
                                     color: theme.palette.one.main,
                                     backgroundColor:theme.palette.one.button,
                                     position: 'absolute',
-                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "28%",xl:"19%" },
+                                    top: { xs: '50%', sm:"35%",md:"33%",lg: "25%",xl:"19%" },
                                     left: { xs: "10%",sm:"80%",md:"82%", lg: '1250px' ,xl:"2230px"},
                                     zIndex: 100,
                                     borderRadius: '50%',
@@ -71,7 +71,7 @@ const BlogSwiperComponent = () => {
                                     color: theme.palette.one.main,
                                     backgroundColor:theme.palette.one.button,
                                     position: 'absolute',
-                                    top: { xs: '57%', sm:"35%",md:"33%",lg: "28%",xl:"19%" },
+                                    top: { xs: '50%', sm:"35%",md:"33%",lg: "25%",xl:"19%" },
                                     right: { xs: '40px',sm:"10%",md:"10%", lg: '13%',xl:"10%" },
                                     zIndex: 100,
                                     borderRadius: '50%',
@@ -127,10 +127,10 @@ const BlogSwiperComponent = () => {
                                                     <Controls.Grid item>
                                                     <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.lightgray }}>{item.descp}</Controls.Typography>
                                                     </Controls.Grid>
-                                                    <Controls.Button
+                                                    <Controls.Button 
                                                     variant=  'contained'  
                                                     sx={{
-                                                        backgroundColor:   theme.palette.one.green  ,color:  theme.palette.one.main ,border:"2px solid #107A66 ",
+                                                        backgroundColor:   theme.palette.one.green  ,color:  theme.palette.one.main ,border:"2px solid #107A66 ",marginTop:"10px",
                                                         textTransform: "initial"
                                                     }} onClick={() => handleToggle(index)}
                                                 >
@@ -142,7 +142,7 @@ const BlogSwiperComponent = () => {
                                                 <Controls.Button
                                                     variant={index === 0 ? 'contained' : 'outlined'}
                                                     sx={{
-                                                        backgroundColor:   theme.palette.one.green  ,color: theme.palette.one.main  ,border:"2px solid #107A66 ",
+                                                        backgroundColor:   theme.palette.one.green  ,color: theme.palette.one.main  ,border:"2px solid #107A66 ",marginTop:"10px",
                                                         textTransform: "initial"
                                                     }} onClick={() => handleToggle(index)}
                                                 >

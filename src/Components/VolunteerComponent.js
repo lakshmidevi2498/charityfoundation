@@ -7,11 +7,11 @@ const VolunteerComponent = ({textColor}) => {
     const navigate = useNavigate()
 
     const handleNaviagte = () => {
-        navigate('/donate')
+        navigate('/supportus/donate')
 
     }
     const handleVolunteer = () => {
-        navigate('/volunteer')
+        navigate('/contactus/volunteer')
     }
     return (
         <>

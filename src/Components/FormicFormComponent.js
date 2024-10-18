@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { postDonarDataError, postDonarDataStart, postDonarDataSuccess } from '../redux/actions/postDonationAction';
 import { donateMoney } from '../backend/donateApi';
 import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify';
 
 
 
@@ -85,9 +86,11 @@ const FormicFormComponent = ({ dispatch, data }) => {
     emailjs.send(service_id , template_id , template_params , user_id)
     .then((response)=>{
      console.log("Email sent successfully",response)
+     toast.success("Your request sent successfully!"); 
     })
     .catch((error)=>{
      console.log("error sending Email",error)
+     toast.error("Error sending request. Please try again.");
     })
 
 

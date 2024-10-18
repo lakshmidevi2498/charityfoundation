@@ -12,7 +12,7 @@ const FooterComponent = () => {
         { name: 'Our Work', href: '/ourwork' },
         { name: 'Blog', href: '/blog' },
         { name: 'Contact Us', href: '/contactus' },
-        { name: 'Donate Now', href: '/donate'}
+        { name: 'Support Us', href: '/supportus'}
       ];
 
     const content2 = [

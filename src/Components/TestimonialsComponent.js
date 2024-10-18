@@ -37,7 +37,7 @@ const TestimonialsComponent = () => {
                 {content.map((item, index) => (
                     <SwiperSlide key={index}>
 
-                        <Controls.Grid item sx={{ justifyContent: "center", height: "400px", alignItems: "center", position: "relative  " , overflowY:'visible',zIndex:2, }} xs={12} mt={{ xs: 1, md: 4 }}>
+                        <Controls.Grid item sx={{ justifyContent: "center", height: "auto", alignItems: "center", position: "relative  " , overflowY:'visible',zIndex:2, }} xs={12} mt={{ xs: 1, md: 4 }}>
                             <Controls.Grid item justifyContent='center' alignItems='center' margin="auto" sx={{ paddingY: { xs: "5px", sm: '40px' } }}>
                                 <Controls.Grid
                                     item
@@ -53,7 +53,7 @@ const TestimonialsComponent = () => {
 
                                     <Controls.Grid item xs={12} sm={6} sx={{ order: { xs: 1, sm: 3 }, }}>
                                         <Controls.Typography variant='caption4' sx={{ color: theme.palette.one.green, fontSize: { xs: "14px", sm: "20px" ,xl:"26px"}, fontWeight: "bold" }}>Testimonials</Controls.Typography>
-                                        <Controls.Typography variant='caption4' sx={{ fontSize: { xs: "22px", sm: "30px",xl:"32px" }, fontWeight: "bold", display: { xs: "none", sm: "block" } }}>What People Say about
+                                        <Controls.Typography variant='caption4' sx={{ fontSize: { xs: "22px", sm: "25px",md:"30px",xl:"32px" }, fontWeight: "bold", display: { xs: "none", sm: "block" } }}>What People Say about
                                             <Controls.Box component='span' sx={{ color: theme.palette.one.green, }}> Our Organization</Controls.Box>
                                         </Controls.Typography>
                                         <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
@@ -103,7 +103,7 @@ const TestimonialsComponent = () => {
                                             item
                                             sx={{
                                                 backgroundColor: "#F2C21A",
-                                                height: { xs: "280px", sm: "320px",xl:"400px" },
+                                                height: { xs: "225px", sm: "320px",xl:"400px" },
                                                 width: { xs: "250px", sm: "320px",xl:"400px" },
                                                 alignItems: "center",
                                                 margin: "auto",
@@ -135,11 +135,10 @@ const TestimonialsComponent = () => {
                                             />
                                            
                                         </Controls.Grid>
-                                        {/* <Controls.Grid item sx={{display:{xs:"block",sm:"none"},border:"2px solid red"}}>
-                                             <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
+                                        {/* <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
                                            {item.text}
-                                           </Controls.Typography>
-                                           </Controls.Grid> */}
+                                           </Controls.Typography> */}
+                                        
                                     </Controls.Grid>
 
                                     <Controls.Grid item md={1} sx={{

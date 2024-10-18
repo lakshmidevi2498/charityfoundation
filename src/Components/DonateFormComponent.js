@@ -52,7 +52,7 @@ const DonateFormComponent = () => {
                         </Controls.Grid>
                         <Controls.Grid item xs={12}>
                             <Controls.Grid item>
-                                <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontSize: { xs: "22px", md: "28px", xl: "40px" }, fontWeight: "bold" }}>How will your<Controls.Box component="span" sx={{ color: theme.palette.one.yellow, fontSize: { xs: "22px", md: "28px" }, fontWeight: "bold" }}>Donation Help?</Controls.Box></Controls.Typography>
+                                <Controls.Typography variant='caption1' sx={{ color: theme.palette.one.green, fontSize: { xs: "22px", md: "28px", xl: "40px" }, fontWeight: "bold" }}>How will your<Controls.Box component="span" sx={{ color: theme.palette.one.yellow, fontSize: { xs: "22px", md: "28px" }, fontWeight: "bold" }}> &nbsp;Donation Help?</Controls.Box></Controls.Typography>
                             </Controls.Grid>
                             <Controls.List sx={{ listStyleType: "numbers",paddingLeft:"10px" , }}>
                                             {content2.map((point, innerindex) => (

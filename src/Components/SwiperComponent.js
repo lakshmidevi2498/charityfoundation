@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const SwiperComponent = ({ images,swiperRef }) => {
     const navigate = useNavigate()
     const handleDonatePage = () => {
-        navigate('/donate')
+        navigate('/supportus/donate')
       }
  
     return (
@@ -27,9 +27,9 @@ const SwiperComponent = ({ images,swiperRef }) => {
             }}
         >
             {images.map((item, index) => (
-                <Controls.Grid item xs={12} sm={6} md={4} lg={3} >
+                <Controls.Grid item xs={12} sm={6} md={4} lg={3}   >
                 <SwiperSlide  style={{ width: '100%', }} key={index}>
-                    <Controls.Card sx={{boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.2)' ,border:"1px solid lightgray",borderRadius:"2px"}} >
+                    <Controls.Card sx={{boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.2)' ,border:"1px solid lightgray",borderRadius:"2px",height:{xs:"650px"},}} >
                         <Controls.CardMedia
                             component='img'
                             src={item.image}
@@ -39,12 +39,12 @@ const SwiperComponent = ({ images,swiperRef }) => {
                         />
                         <Controls.CardContent>
                             <Controls.Grid item>
-                            <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: "bold",   textAlign: "left" }}>{item.text}</Controls.Typography>
+                            <Controls.Typography variant='caption2' sx={{ color: theme.palette.one.green, fontWeight: "bold",   textAlign: "left",fontSize:{xs:"18px",md:"22px"} }}>{item.text}</Controls.Typography>
                             </Controls.Grid>
                             <Controls.Grid item>
-                            <Controls.Typography variant='caption2' sx={{ fontWeight: "bold",fontSize:{xs:"18px",md:"22px"}   }}>{item.name}</Controls.Typography>
+                            <Controls.Typography variant='caption2' sx={{ fontWeight: "bold",fontSize:{xs:"16px",md:"17px"}   }}>{item.name}</Controls.Typography>
                             </Controls.Grid>
-                            <Controls.Typography sx={{ fontSize: "14px" }}>{item.descp}</Controls.Typography>
+                            <Controls.Typography sx={{ fontSize: "13px" }}>{item.descp}</Controls.Typography>
                             <Controls.Grid item sx={{ justifyContent: "space-between", display: 'flex' }}>
                                 <Controls.Typography variant='caption2' sx={{  fontSize: "16px" }}>Donate</Controls.Typography>
                                 <Controls.Typography variant='caption2'mt={1} >{item.percent}%</Controls.Typography>

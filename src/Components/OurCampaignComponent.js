@@ -20,7 +20,7 @@ const OurCampaignComponent = () => {
         { img: "./assests/images/unsplash_76HhAKI5JXI.png", text: "massive invasion of Palestine, war in the Gaza strip", low: "28,200", high: "64,400", }
     ];
     const handleDonatePage = () => {
-        navigate('/donate')
+        navigate('/supportus/donate')
       }
 
     return (

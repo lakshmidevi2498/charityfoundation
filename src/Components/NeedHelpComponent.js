@@ -7,7 +7,7 @@ const NeedHelpComponent = () => {
     {
       icon: "./assests/images/Group 3293.png",
       text: "Call support",
-      descp: "We analyse your website’s structure, internal architecture & other key"
+      descp: "We can connect with us using this mobile Number  6305196668"
     },
     {
       icon: "./assests/images/Group 3294.png",
@@ -17,7 +17,7 @@ const NeedHelpComponent = () => {
     {
       icon: "./assests/images/Group 3427.png",
       text: "Address ",
-      descp: "4517 Washington Ave. Manchester Kentucky 39495. Kentucky 6543"
+      descp: " D.No: 4-7-1, Tarvanipeta, Mandapeta,Andhrapradesh, 533308, India."
     },
   ];
 
