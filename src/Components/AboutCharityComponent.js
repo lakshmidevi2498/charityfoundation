@@ -33,7 +33,7 @@ const AboutCharityComponent = () => {
               marginY: 2
             }}
           >
-            About Charity<Controls.Box component="span" sx={{ color: theme.palette.one.yellow, }}>Support</Controls.Box> is Really Powerful.
+            About Charity<Controls.Box component="span" sx={{ color: theme.palette.one.yellow, }}>&nbsp;Support</Controls.Box> is Really Powerful.
           </Controls.Typography>
           </Controls.Grid>
           <Controls.Grid item >

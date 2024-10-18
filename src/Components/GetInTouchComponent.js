@@ -100,7 +100,7 @@ const GetInTouchComponent = () => {
                         gap={1}
                         height="auto"
                         width="auto"
-                        sx={{ flexGrow: 1 , }} 
+                        sx={{ flexGrow: 1 , }}  
                     >
                         <Controls.Grid item  justifyContent='center'>
                             <Formik
@@ -109,8 +109,8 @@ const GetInTouchComponent = () => {
                                 onSubmit={onSubmit}
                             >
                                 {({ errors, touched, isSubmitting }) => (
-                                    <Form>
-                                        <Controls.Grid item sx={{ height: "auto" }}>
+                                    <Form >
+                                        <Controls.Grid item sx={{ height: "auto",  }}>
                                             <Controls.Grid
                                                 item
                                                 sx={{ display: { xs: "block", md: 'flex' }, justifyContent: { xs: "center", md: 'space-between' } }}
@@ -124,6 +124,7 @@ const GetInTouchComponent = () => {
                                                         size="small"
                                                         fullWidth
                                                         sx={{
+                                                            width: {xl:'400px'}, 
                                                             '& .MuiInputBase-input': {
                                                                 backgroundColor: theme.palette.one.fields,
                                                             },
@@ -140,6 +141,7 @@ const GetInTouchComponent = () => {
                                                         size="small"
                                                         fullWidth
                                                         sx={{
+                                                            width: {xl:'400px'},
                                                             '& .MuiInputBase-input': {
                                                                 backgroundColor: theme.palette.one.fields,
                                                             },
@@ -163,6 +165,7 @@ const GetInTouchComponent = () => {
                                                         size="small"
                                                         fullWidth
                                                         sx={{
+                                                            width: {xl:'400px'},
                                                             '& .MuiInputBase-input': {
                                                                 backgroundColor: theme.palette.one.fields,
                                                             },
@@ -179,6 +182,7 @@ const GetInTouchComponent = () => {
                                                         size="small"
                                                         fullWidth
                                                         sx={{
+                                                            width: {xl:'400px'},
                                                             '& .MuiInputBase-input': {
                                                                 backgroundColor: theme.palette.one.fields,
                                                             },
@@ -199,6 +203,7 @@ const GetInTouchComponent = () => {
                                                     rows={4}
                                                     fullWidth
                                                     sx={{
+                                                        width: {xl:'700px'},
                                                         '& .MuiInputBase-root': {
                                                             backgroundColor: theme.palette.one.fields,
                                                             padding: 0,

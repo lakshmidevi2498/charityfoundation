@@ -56,7 +56,7 @@ const TestimonialsComponent = () => {
                                         <Controls.Typography variant='caption4' sx={{ fontSize: { xs: "22px", sm: "25px",md:"30px",xl:"32px" }, fontWeight: "bold", display: { xs: "none", sm: "block" } }}>What People Say about
                                             <Controls.Box component='span' sx={{ color: theme.palette.one.green, }}> Our Organization</Controls.Box>
                                         </Controls.Typography>
-                                        <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "none", sm: "block" } }}>
+                                        <Controls.Typography variant='caption4' sx={{ fontSize: {xs:"14px",xl:"18px"}, display: { xs: "block", sm: "block" } }}>
                                            {item.text}
                                            </Controls.Typography>
                                         <Controls.Grid item sx={{ display: "flex", alignItems: "center" }} gap={2} my={2}>

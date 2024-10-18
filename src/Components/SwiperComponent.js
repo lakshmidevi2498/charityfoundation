@@ -29,7 +29,7 @@ const SwiperComponent = ({ images,swiperRef }) => {
             {images.map((item, index) => (
                 <Controls.Grid item xs={12} sm={6} md={4} lg={3}   >
                 <SwiperSlide  style={{ width: '100%', }} key={index}>
-                    <Controls.Card sx={{boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.2)' ,border:"1px solid lightgray",borderRadius:"2px",height:{xs:"650px"},}} >
+                    <Controls.Card sx={{boxShadow: '2px 4px 6px rgba(0, 0, 0, 0.2)' ,border:"1px solid lightgray",borderRadius:"2px",height:{xs:"650px",xl:"600px"},}} >
                         <Controls.CardMedia
                             component='img'
                             src={item.image}
